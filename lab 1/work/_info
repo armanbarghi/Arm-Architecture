@@ -4,22 +4,42 @@ K3
 cModel Technology
 Z0 dD:\term8\TA\OO-TA
 vIF_Stage
-!i10b 1
-!s100 lZ6Kl@6]g8jnX:@X7o:F@2
-IFRm2DLV=kN`kaN@j<Z;J81
-Z1 VCNhX:IY17]AEC8H2hL7TQ0
-dD:\term8\Memari lab\Arm-Architecture\lab 1
-Z2 w1649743746
-8D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v
-FD:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v
+Z1 !s100 lZ6Kl@6]g8jnX:@X7o:F@2
+Z2 IFRm2DLV=kN`kaN@j<Z;J81
+Z3 VCNhX:IY17]AEC8H2hL7TQ0
+Z4 dD:\term8\Memari lab\Arm-Architecture\lab 1
+Z5 w1649744521
+Z6 8D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v
+Z7 FD:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v
 L0 1
-Z3 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v|
+Z10 o-work work -O0
+Z11 n@i@f_@stage
+!i10b 1
+!s85 0
+Z12 !s108 1649744612.647000
+Z13 !s107 D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v|
+!s101 -O0
+vIF_Stage_Reg
+!i10b 1
+Z14 !s100 j7T`EkdmYK[PNQ6aFIPBB2
+Z15 I3ZN]a[6SDieDohSd:9TC?0
+Z16 V?<R3VBk[>A:7D_bH?JOH]1
+R4
+Z17 w1649744527
+Z18 8D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v
+Z19 FD:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v
+L0 1
+R8
 r1
 !s85 0
 31
-!s108 1649744086.316000
-!s107 D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v|
-!s90 -reportprogress|300|-work|work|D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v|
+!s108 1649744612.684000
+!s107 D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v|
+Z20 !s90 -reportprogress|300|-work|work|D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v|
 !s101 -O0
-Z4 o-work work -O0
-Z5 n@i@f_@stage
+R10
+Z21 n@i@f_@stage_@reg
