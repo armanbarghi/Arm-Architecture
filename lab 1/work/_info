@@ -4,102 +4,102 @@ K3
 cModel Technology
 Z0 dD:\term8\TA\OO-TA
 vIF_Stage
-Z1 IFbVKzBlYkJO=lNk?oAE1M2
-Z2 VCNhX:IY17]AEC8H2hL7TQ0
-Z3 dD:\term8\Memari lab\Arm-Architecture\lab 1
-Z4 w1649747533
-Z5 8D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage.v
-Z6 FD:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage.v
+Z1 !s100 zO8CY<_FfW=c_3H?F]_DD1
+Z2 ID4chU4a?86MS3jZXKm7jR2
+Z3 VCNhX:IY17]AEC8H2hL7TQ0
+Z4 dD:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1
+Z5 w1649749561
+Z6 8D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/IF_Stage.v
+Z7 FD:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/IF_Stage.v
 L0 1
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -reportprogress|300|-work|work|D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage.v|
-Z9 o-work work -O0
-Z10 n@i@f_@stage
-Z11 !s100 a>OM6XLRTl=joI3U5eHFC3
-Z12 !s108 1649747973.039000
-Z13 !s107 D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage.v|
+Z9 !s90 -reportprogress|300|-work|work|D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/IF_Stage.v|
+Z10 o-work work -O0
+Z11 n@i@f_@stage
+Z12 !s108 1649750168.466000
+Z13 !s107 D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/IF_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Stage_Reg
-Z14 IQDoZW`88l=5QnimOLGKGS3
+Z14 IK]i<8]Z50a:LfLnk:QR^a1
 Z15 V?<R3VBk[>A:7D_bH?JOH]1
-R3
-Z16 w1649747968
-Z17 8D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v
-Z18 FD:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v
+R4
+Z16 w1649750146
+Z17 8D:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\IF_Stage_Reg.v
+Z18 FD:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\IF_Stage_Reg.v
 L0 1
-R7
+R8
 r1
 31
-Z19 !s90 -reportprogress|300|-work|work|D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v|
-R9
-Z20 n@i@f_@stage_@reg
-Z21 !s100 _V5d51A5R5AUD]=WkDQT@0
-Z22 !s108 1649747973.080000
-Z23 !s107 D:\term8\Memari lab\Arm-Architecture\lab 1\IF_Stage_Reg.v|
+R10
+Z19 n@i@f_@stage_@reg
+Z20 !s100 6Njz>G;;gzNlCA[Z34GkE3
+Z21 !s108 1649750168.609000
+Z22 !s107 D:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\IF_Stage_Reg.v|
+Z23 !s90 -reportprogress|300|-work|work|D:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\IF_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vInstMemory
-!i10b 1
-Z24 !s100 @[nlH<RDTb^X0o7YW3f^]1
-Z25 I=UoFjYknMhGie@GH@JMZ42
-Z26 VAD?<[gIeDM9G=Xj:aVTX30
-R3
-Z27 w1649747377
-Z28 8D:\term8\Memari lab\Arm-Architecture\lab 1\InstMemory.v
-Z29 FD:\term8\Memari lab\Arm-Architecture\lab 1\InstMemory.v
+Z24 IVR_=6VCdI@2JKEo9@B[oZ0
+Z25 VAD?<[gIeDM9G=Xj:aVTX30
+R4
+Z26 w1649750157
+Z27 8D:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\InstMemory.v
+Z28 FD:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\InstMemory.v
 L0 1
-R7
+R8
 r1
-!s85 0
 31
-!s108 1649747973.270000
-!s107 D:\term8\Memari lab\Arm-Architecture\lab 1\InstMemory.v|
-Z30 !s90 -reportprogress|300|-work|work|D:\term8\Memari lab\Arm-Architecture\lab 1\InstMemory.v|
+R10
+Z29 n@inst@memory
+Z30 !s100 Eb[3zb3?5kgoaX2;?_AmY2
+Z31 !s108 1649750168.749000
+Z32 !s107 D:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\InstMemory.v|
+Z33 !s90 -reportprogress|300|-work|work|D:\Users\arman\Documents\Uni\Term8\Az Memari\Arm-Architecture\lab 1\InstMemory.v|
+!i10b 1
+!s85 0
 !s101 -O0
-R9
-Z31 n@inst@memory
 vMux2to1_32b
-Z32 !s100 FVQP9@;H]Z^z<3N98lQ?R0
-Z33 IjJCIKGPNWHKS@zmEbfg493
-Z34 VB0V]kzH^@jL1bQiZYeS3D1
-R3
-Z35 w1649745476
-Z36 8D:\term8\Memari lab\Arm-Architecture\lab 1\Mux2to1_32b.v
-Z37 FD:\term8\Memari lab\Arm-Architecture\lab 1\Mux2to1_32b.v
+Z34 !s100 2g^V[8L?8nUBHnkDM^YU`3
+Z35 I_eemAQQkSoN9d[3U`@:8N0
+Z36 VB0V]kzH^@jL1bQiZYeS3D1
+R4
+Z37 w1649749910
+Z38 8D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Mux2to1_32b.v
+Z39 FD:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Mux2to1_32b.v
 L0 1
-R7
+R8
 r1
 31
-Z38 !s90 -reportprogress|300|-work|work|D:\term8\Memari lab\Arm-Architecture\lab 1\Mux2to1_32b.v|
-R9
-Z39 n@mux2to1_32b
+Z40 !s90 -reportprogress|300|-work|work|D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Mux2to1_32b.v|
+R10
+Z41 n@mux2to1_32b
 !i10b 1
 !s85 0
-Z40 !s108 1649747973.222000
-Z41 !s107 D:\term8\Memari lab\Arm-Architecture\lab 1\Mux2to1_32b.v|
+Z42 !s108 1649750169.021000
+Z43 !s107 D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Mux2to1_32b.v|
 !s101 -O0
 vRegister
-Z42 !s100 lf@hTlYO820dXQcaBU96_2
-Z43 Ijl8YGSJnGznh0D[[i7]P=2
-Z44 V=]j620MQ55LDKEC2KlzYg1
-R3
-Z45 w1649746566
-Z46 8D:\term8\Memari lab\Arm-Architecture\lab 1\Register.v
-Z47 FD:\term8\Memari lab\Arm-Architecture\lab 1\Register.v
-L0 1
-R7
-r1
-31
-Z48 !s90 -reportprogress|300|-work|work|D:\term8\Memari lab\Arm-Architecture\lab 1\Register.v|
-R9
-Z49 n@register
-Z50 !s108 1649747973.186000
-Z51 !s107 D:\term8\Memari lab\Arm-Architecture\lab 1\Register.v|
 !i10b 1
+Z44 !s100 NaO[oJgS3]e5D0BZWUVMH3
+Z45 Iej11lCd;Ij=8dQmSGE=P?2
+Z46 V=]j620MQ55LDKEC2KlzYg1
+R4
+Z47 w1649749242
+Z48 8D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Register.v
+Z49 FD:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Register.v
+L0 1
+R8
+r1
 !s85 0
+31
+!s108 1649750169.211000
+!s107 D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Register.v|
+Z50 !s90 -reportprogress|300|-work|work|D:/Users/arman/Documents/Uni/Term8/Az Memari/Arm-Architecture/lab 1/Register.v|
 !s101 -O0
+R10
+Z51 n@register

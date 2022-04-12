@@ -1,4 +1,6 @@
-module Register #(parameter N = 32) (d_in, clk, sclr, ld, d_out);
+module Register #(parameter N = 32) (
+  d_in, clk, sclr, ld, d_out
+);
   input [N-1:0] d_in;
   input clk, sclr, ld;
   output [N-1:0] d_out;
