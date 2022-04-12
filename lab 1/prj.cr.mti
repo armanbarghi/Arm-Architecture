@@ -1,0 +1,14 @@
+{D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage_Reg.v} {1 {vlog -work work {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v} {1 {vlog -work work {D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Stage
+
+Top level modules:
+	IF_Stage
+
+} {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage.v} {1 {vlog -work work {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}}
