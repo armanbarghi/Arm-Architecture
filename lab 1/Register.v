@@ -1,15 +1,17 @@
-module reg_32b (d_in, sclr, ld, clk, d_out);
-  input [31:0] d_in;
-  input sclr, ld, clk;
-  output [31:0] d_out;
-  reg [31:0] d_out;
+module Register #(parameter N = 32) (d_in, clk, sclr, ld, d_out);
+  input [N-1:0] d_in;
+  input clk, sclr, ld;
+  output [N-1:0] d_out;
+  reg [N-1:0] d_out;
   
-  always @(posedge clk)
+  always @(posedge clk, posedge sclr)
   begin
-    if (sclr==1'b1)
-      d_out = 32'd0;
-    else if (ld)
+    if (sclr == 1'b1)
+      d_out = 0;
+    else if(ld == 1'b1)
       d_out = d_in;
+    else
+      d_out = d_out;
   end
   
 endmodule

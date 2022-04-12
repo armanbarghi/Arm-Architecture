@@ -1,12 +1,26 @@
-{D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage_Reg.v} {1 {vlog -work work {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage_Reg.v}
+{D:/term8/Memari lab/Arm-Architecture/lab 1/Register.v} {1 {vlog -work work {D:\term8\Memari lab\Arm-Architecture\lab 1\Register.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-
-} {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v} {1 {vlog -work work {D:/term8/Memari lab/Arm-Architecture/lab 1/IF_Stage.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module IF_Stage
+-- Compiling module Register
 
 Top level modules:
-	IF_Stage
+	Register
+
+} {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage_Reg.v} {1 {vlog -work work {D:\term8\Memari lab\Arm-Architecture\lab 1\ID_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/Mux2to1_32b.v} {1 {vlog -work work {D:\term8\Memari lab\Arm-Architecture\lab 1\Mux2to1_32b.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux2to1_32b
+
+Top level modules:
+	Mux2to1_32b
+
+} {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/InstMemory.v} {1 {vlog -work work {D:\term8\Memari lab\Arm-Architecture\lab 1\InstMemory.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InstMemory
+
+Top level modules:
+	InstMemory
 
 } {} {}} {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage.v} {1 {vlog -work work {D:/term8/Memari lab/Arm-Architecture/lab 1/ID_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
