@@ -6,7 +6,7 @@ module ALU (
     result
 );
     input [31:0] in1, in2;
-    input carry;
+    input carry_in;
     input [3:0] exe_cmd;
     output [3:0] status_bits;
     output [31:0] result;
