@@ -36,7 +36,6 @@ module ControlUnit (
                 4'b1010: exe_cmd = 4'b0100; //CMP
                 4'b1000: exe_cmd = 4'b0110; //TST
                 default: exe_cmd= 4'b0000;
-            endcase
         end
         else
             exe_cmd= 4'b0000;

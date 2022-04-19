@@ -27,8 +27,8 @@ module ALU (
     assign N = (result[31] == 1'b1) ? 1'b1 : 1'b0;
     assign Z = (result == 32'b0) ? 1'b1 : 1'b0;
     assign V = ((exe_cmd == 4'b0010 | exe_cmd == 4'b0011) & (in1[31] == 1'b0 & in2[31] == 1'b0 & result[31] == 1'b1)) ? 1'b1:
-               ((exe_cmd == 4'b0010 | exe_cmd == 4'b0011) & (in1[31] == 1'b1 & in2[31] == 1'b1 & result[31] == 1'b0)) ? 1'b1:
-                1'b0;
+               ((exe_cmd == 4'b0010 | exe_cmd == 4'b0011) & (in1[31] == 1'b1 & in2[31] == 1'b1 & result[31] == 1'b0)) ? 1'b1;
+               :1'b0;
                
     assign status_bits = {N, Z, C, V};
 
