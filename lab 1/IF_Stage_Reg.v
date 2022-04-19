@@ -8,7 +8,7 @@ module IF_Stage_Reg (
     input [31:0] PC_in, Inst_in;
     output reg [31:0] PC, Inst;
     
-    always @(posedge clk, posedge flush, posedge freeze)
+    always @(posedge clk, posedge rst)
         begin
             if(rst == 1'b1)begin
                 PC <= 32'b0;
