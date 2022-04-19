@@ -21,4 +21,5 @@ module ALU (
                     (exe_cmd == 4'b0111) ? (in1 | in2) :    //ORR
                     (exe_cmd == 4'b1000) ? (in1 ^ in2) :    //EOR
                     32'b0 ;
+    // FIXME: update status_bits
 endmodule

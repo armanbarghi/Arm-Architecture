@@ -19,12 +19,13 @@ module IF_Stage (
             .d_out(PC_out)
         );
 
-    Mux2to1_32b mux32b (
-        .i0(PC), 
-        .i1(BranchAddr), 
-        .sel(Branch_taken), 
-        .y(Mux_out)
-    );
+    Mux2to1 #(.N(32))
+        mux32b (
+            .i0(PC), 
+            .i1(BranchAddr), 
+            .sel(Branch_taken), 
+            .y(Mux_out)
+        );
 
     InstMemory InstMem (
         .AddrIn(PC_out),
