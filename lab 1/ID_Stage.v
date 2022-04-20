@@ -41,8 +41,8 @@ module ID_Stage (
 
     or(bubble, ~cond_out, hazard);
 
-    Mux2to1 #(.N(32))
-        mux32b (
+    Mux2to1 #(.N(4))
+        mux4b (
             .i0(instruction[3:0]), 
             .i1(dest), 
             .sel(mem_w_en), 
@@ -82,7 +82,7 @@ module ID_Stage (
     RegisterFile reg_file(
         .clk(clk),
         .rst(rst),
-        .srcl(src1),
+        .src1(src1),
         .src2(src2),
         .Dest_wb(wb_dest),
         .Result_WB(wb_value),

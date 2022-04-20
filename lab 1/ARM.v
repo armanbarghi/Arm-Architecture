@@ -8,7 +8,7 @@ module ARM (
     wire [31:0] pc_id, instruction_id;
     wire [31:0] pc_exe;
     wire [3:0] status_bits_in, status_bits_out;
-    wire s_id, s_exe, b_exe;
+    wire s_id, s_exe, b_exe, two_src_id;
     wire [31:0] wb_val;
     wire [3:0] wb_dest;
     wire imm_id, mem_r_en_id, mem_w_en_id, wb_en_id, b_id;
@@ -58,7 +58,7 @@ module ARM (
         .status_reg(status_bits_out),
         .wb_value(wb_val),
         .wb_dest(wb_dest),
-        .two_src(1'b0),
+        .two_src(two_src_id),
         .imm(imm_id),
         .mem_r_en(mem_r_en_id),
         .mem_w_en(mem_w_en_id),

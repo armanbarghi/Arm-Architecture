@@ -6,7 +6,7 @@ module RegisterFile (
     reg1, reg2
 );
     input clk, rst;
-    input[3:0] src1, src2, Dest_wb;
+    input [3:0] src1, src2, Dest_wb;
     input[31:0] Result_WB;
     output writeBackEn;
     output [31:0] reg1, reg2;
