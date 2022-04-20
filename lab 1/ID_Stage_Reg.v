@@ -1,12 +1,12 @@
 module ID_Stage_Reg (
     clk, rst, flush,
-    mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in,
+    imm_in, mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in,
     exe_cmd_in,
     dest_in, status_reg_in,
     shift_operand_in,
     signed_imm_24_in,
     pc_in, val_rn_in, val_rm_in,
-    mem_r_en, mem_w_en, wb_en, b, s,
+    imm, mem_r_en, mem_w_en, wb_en, b, s,
     exe_cmd,
     dest, status_reg,
     shift_operand,
@@ -14,13 +14,13 @@ module ID_Stage_Reg (
     pc, val_rn, val_rm
 );
     input clk, rst, flush;
-    input mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in;
+    input imm_in, mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in;
     input [3:0] exe_cmd_in;
     input [3:0] dest_in, status_reg_in;
     input [11:0] shift_operand_in;
     input [23:0] signed_imm_24_in;
     input [31:0] pc_in, val_rn_in, val_rm_in;
-    output reg mem_r_en, mem_w_en, wb_en, b, s;
+    output reg imm, mem_r_en, mem_w_en, wb_en, b, s;
     output reg [3:0] exe_cmd;
     output reg [3:0] dest, status_reg;
     output reg [11:0] shift_operand;
@@ -29,6 +29,7 @@ module ID_Stage_Reg (
 
     always @(posedge clk, posedge rst) begin
         if ((rst == 1'b1) || (flush == 1'b1)) begin
+            imm <= 1'b0;
             mem_r_en <= 1'b0;
             mem_w_en <= 1'b0;
             wb_en <= 1'b0;
@@ -44,6 +45,7 @@ module ID_Stage_Reg (
             val_rm <= 32'b0;
         end
         else begin
+            imm <= imm_in;
             mem_r_en <= mem_r_en_in;
             mem_w_en <= mem_w_en_in;
             wb_en <= wb_en_in;

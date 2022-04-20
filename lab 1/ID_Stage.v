@@ -1,7 +1,6 @@
 module ID_Stage (
     clk, rst,
     wb_wb_en, hazard,
-    pc_in,
     instruction,
     status_reg,
     wb_value,
@@ -12,11 +11,10 @@ module ID_Stage (
     src1, src2, dest,
     shift_operand,
     signed_imm_24,
-    pc, val_rn, val_rm
+    val_rn, val_rm
 );
     input clk, rst;
     input wb_wb_en, hazard;
-    input [31:0] pc_in;
     input [31:0] instruction;
     input [31:0] wb_value;
     input [3:0] status_reg;
@@ -27,7 +25,7 @@ module ID_Stage (
     output [3:0] src1, src2, dest;
     output [11:0] shift_operand;
     output [23:0] signed_imm_24;
-    output [31:0] pc, val_rn, val_rm;
+    output [31:0] val_rn, val_rm;
 
     wire cu_mem_r_en, cu_mem_w_en, cu_wb_en, cu_b, cu_s;
     wire [3:0] cu_exe_cmd;
@@ -36,7 +34,6 @@ module ID_Stage (
     assign src1 = instruction[19:16];
     assign dest = instruction[15:12];
     assign imm = instruction[25];
-    assign pc = pc_in;
     assign shift_operand = instruction[11:0];
     assign signed_imm_24 = {{16{instruction[7]}}, instruction[7:0]};
     

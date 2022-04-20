@@ -1,4 +1,4 @@
-module MEM_Stage_Reg (
+module EXE_Stage (
     clk,
     exe_cmd, mem_r_en, mem_w_en,
     PC, val_Rn, val_Rm, imm, shift_operand,
