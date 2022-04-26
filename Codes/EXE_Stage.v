@@ -19,7 +19,7 @@ module EXE_Stage (
     wire control_input;
     wire [31:0] val2;
 
-    ALU alu_unit(
+    ALU alu_unit (
         .in1(val_Rn),
         .in2(val2),   
         .carry_in(SR[1]),
@@ -28,7 +28,7 @@ module EXE_Stage (
         .result(alu_res)
     );
 
-    Val2_Generator val2_gen(
+    Val2_Generator val2_gen (
         .shift_operand(shift_operand),
         .imm(imm),
         .val_rm(val_Rm),
@@ -36,7 +36,7 @@ module EXE_Stage (
         .Val2(val2)
     );
 
-    assign br_addr = PC + signed_imm_24; 
+    assign br_addr = PC + ({{8{Signed_imm_24[23]}}, Signed_imm_24} + 32'd1) << 2; 
     assign control_input = mem_r_en | mem_w_en;
 
 endmodule
