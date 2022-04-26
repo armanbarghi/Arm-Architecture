@@ -12,7 +12,7 @@ module Memory (
     reg [31:0] mem[0:63];
     initial
 		begin
-			$readmemb("DataMem.txt", mem);
+			$readmemb("../Codes/DataMem.txt", mem);
 		end
 	
     // Divide address into 4 to align the memory

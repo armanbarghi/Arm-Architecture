@@ -27,7 +27,7 @@ module ID_Stage_Reg (
     output reg [23:0] signed_imm_24;
     output reg [31:0] pc, val_rn, val_rm;
 
-    always @(posedge clk, posedge rst) begin
+    always @(posedge clk, negedge rst) begin
         if (rst == 1'b1) begin
             imm <= 1'b0;
             mem_r_en <= 1'b0;

@@ -9,4 +9,6 @@ module ConditionCheck (
     input [3:0] status_reg;
     output cond_out;
 
+    assign cond_out = 1'b1;
+
 endmodule

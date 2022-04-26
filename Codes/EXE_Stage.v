@@ -16,15 +16,27 @@ module EXE_Stage (
     output [31:0] alu_res, br_addr;
     output [3:0] status;
 
+    wire control_input;
+    wire [31:0] val2;
+
     ALU alu_unit(
-    .in1(val_Rn),
-    .in2(val_Rm),   ///should change!!!!
-    .carry_in(SR[1]),
-    .exe_cmd(exe_cmd),
-    .status_bits(status),
-    .result(alu_res)
+        .in1(val_Rn),
+        .in2(val2),   
+        .carry_in(SR[1]),
+        .exe_cmd(exe_cmd),
+        .status_bits(status),
+        .result(alu_res)
+    );
+
+    Val2_Generator val2_gen(
+        .shift_operand(shift_operand),
+        .imm(imm),
+        .val_rm(val_Rm),
+        .control_input(control_input),
+        .Val2(val2)
     );
 
     assign br_addr = PC + signed_imm_24; 
+    assign control_input = mem_r_en | mem_w_en;
 
 endmodule
