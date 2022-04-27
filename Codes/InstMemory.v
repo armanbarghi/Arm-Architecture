@@ -11,9 +11,9 @@ module InstMemory (
 
 	initial
 		begin
-			for(i=0; i<65536; i=i+1)begin
-				mem[i] = 32'b1110_00_0_0000_0_0000_0000_000000000000;
-			end
+			//for(i=0; i<65536; i=i+1)begin
+			//	mem[i] = 32'b0000_00_0_0000_0_0000_0000_000000000000;
+			//end
 			$readmemb("../Codes/InstMem.txt", mem);
 		end
 	

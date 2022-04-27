@@ -5,7 +5,7 @@ module ConditionCheck (
 );
     input clk, rst;
     input [3:0] cond, status_reg;
-    output reg cond_out;
+    output cond_out;
 
     wire n, z, c, v;
     assign n = status_reg[3];
