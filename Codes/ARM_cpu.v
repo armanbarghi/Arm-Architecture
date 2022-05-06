@@ -15,7 +15,7 @@ module ARM_cpu (
     wire [3:0] exe_cmd_id;
     wire imm_exe, mem_r_en_exe, mem_w_en_exe, wb_en_exe;
     wire [3:0] exe_cmd_exe;
-    wire [3:0] src1, src2;  // FIXME: connect to hazard unit
+    wire [3:0] src1, src2;
     wire [3:0] dest_id, dest_exe, dest_mem;
     wire [11:0] shift_operand_id, shift_operand_exe;
     wire [23:0] signed_imm_24_id, signed_imm_24_exe;
@@ -27,12 +27,13 @@ module ARM_cpu (
     wire [31:0] mem_res_wb;
     wire [31:0] mem_res;
     wire mem_r_en_wb, wb_en_wb;
+    wire hazard;
 
     IF_Stage if_stage (
         .clk(clk),
         .rst(rst),
-        .freeze(1'b0),
-        .Branch_taken(1'b0),
+        .freeze(hazard),
+        .Branch_taken(1'b0),   // FIXME: connect to branchTaken
         .BranchAddr(branch_addr),
         .PC(pc_if),
         .Inst(instruction_if)
@@ -41,8 +42,8 @@ module ARM_cpu (
     IF_Stage_Reg if_stage_reg (
         .clk(clk),
         .rst(rst),
-        .freeze(1'b0),
-        .flush(1'b0),
+        .freeze(hazard),
+        .flush(1'b0),   // FIXME: connect to branchTaken
         .PC_in(pc_if),
         .Inst_in(instruction_if),
         .PC(pc_id),
@@ -53,7 +54,7 @@ module ARM_cpu (
         .clk(clk),
         .rst(rst),
         .wb_wb_en(wb_en_wb),
-        .hazard(1'b0),
+        .hazard(hazard),
         .instruction(instruction_id),
         .status_reg(status_bits_out),
         .wb_value(wb_val),
@@ -75,10 +76,23 @@ module ARM_cpu (
         .val_rm(val_rm_id)
     );
 
+    Hazard_Detection_Unit hazard_unit (
+        .clk(clk),
+        .rst(rst),
+        .two_src(two_src_id),
+        .exe_wb_en(wb_en_exe),
+        .mem_wb_en(wb_en_mem),
+        .src1(src1),
+        .src2(src2),
+        .exe_dest(dest_exe),
+        .mem_dest(dest_mem),
+        .hazard(hazard)
+    );
+
     ID_Stage_Reg id_stage_reg (
         .clk(clk),
         .rst(rst),
-        .flush(1'b0),
+        .flush(1'b0),   // FIXME: connect to branchTaken
         .imm_in(imm_id),
         .mem_r_en_in(mem_r_en_id),
         .mem_w_en_in(mem_w_en_id),
