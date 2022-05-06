@@ -51,6 +51,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-lab 1/prj.cr.mti
-lab 1/transcript
-lab 1/work
+Codes/*.bak
