@@ -33,7 +33,7 @@ module EXE_Stage (
         .imm(imm),
         .val_rm(val_Rm),
         .control_input(control_input),
-        .Val2(val2)
+        .val2(val2)
     );
 
     assign br_addr = PC + (({{8{signed_imm_24[23]}}, signed_imm_24} + 32'd1) << 2); 

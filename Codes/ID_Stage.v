@@ -87,7 +87,7 @@ module ID_Stage (
         .Dest_wb(wb_dest),
         .Result_WB(wb_value),
         .writeBackEn(wb_wb_en),
-        .reg1(val_rn),  //FIXME: rn or rm??
+        .reg1(val_rn),
         .reg2(val_rm)
     );
 
