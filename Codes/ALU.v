@@ -21,13 +21,13 @@ module ALU (
                          (exe_cmd == 4'b0110) ? (in1 & in2) :    //AND, TST
                          (exe_cmd == 4'b0111) ? (in1 | in2) :    //ORR
                          (exe_cmd == 4'b1000) ? (in1 ^ in2) :    //EOR
+                          32'b0;    //B
+    // FIXME: (exe_cmd == 4'b0101) ? (in1 - in2 - {31'b0, ~carry_in})
 
-                          32'b0 ;
- 
-    assign N = (result[31] == 1'b1) ? 1'b1 : 1'b0;
+    assign N = result[31];
     assign Z = (result == 32'b0) ? 1'b1 : 1'b0;
-    assign V = ((exe_cmd == 4'b0010 | exe_cmd == 4'b0011) & (in1[31] == 1'b0 & in2[31] == 1'b0 & result[31] == 1'b1)) ? 1'b1:
-               ((exe_cmd == 4'b0010 | exe_cmd == 4'b0011) & (in1[31] == 1'b1 & in2[31] == 1'b1 & result[31] == 1'b0)) ? 1'b1:
+    assign V = (  (exe_cmd == 4'b0010 | exe_cmd == 4'b0011)  &  ( ((~in1[31])&(~in2[31])&result[31]) | (in1[31]&in2[31]&(~result[31])) )  ) ? 1'b1:
+               (  (exe_cmd == 4'b0100 | exe_cmd == 4'b0101)  &  ( (in1[31]&(~in2[31])&(~result[31])) | ((~in1[31])&in2[31]&result[31]) )  ) ? 1'b1:
                 1'b0;
                
     assign status_bits = {N, Z, C, V};
