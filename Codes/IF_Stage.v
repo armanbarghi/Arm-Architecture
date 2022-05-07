@@ -12,10 +12,10 @@ module IF_Stage (
 
     Register #(.N(32))
         PC_reg (
-            .d_in(Mux_out),
             .clk(clk),
-            .sclr(rst), 
+            .rst(rst), 
             .ld(~freeze), 
+            .d_in(Mux_out),
             .d_out(PC_out)
         );
 

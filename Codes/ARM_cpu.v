@@ -159,10 +159,10 @@ module ARM_cpu (
 
     Register #(.N(4))
         status_reg (
-            .d_in(status_bits_in),
             .clk(clk),
-            .sclr(1'b0),
-            .ld(s_exe),
+            .rst(1'b0),    // FIXME: should be zero?
+            .ld(s_exe),    // FIXME: s_exe or ~s_exe?
+            .d_in(status_bits_in),
             .d_out(status_bits_out)
         );
 
