@@ -1,16 +1,30 @@
-{D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v}
+{D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module RegisterFile
 
 Top level modules:
 	RegisterFile
 
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v}
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v} {1 {vlog -work work {D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Register
+-- Compiling module ARM_Testbench
 
 Top level modules:
-	Register
+	ARM_Testbench
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM_cpu
+
+Top level modules:
+	ARM_cpu
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -19,14 +33,7 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Val2_Generator
 
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM_TB
-
-Top level modules:
-	ARM_TB
-
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v}
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v} {1 {vlog -work work {D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\ARM.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ARM
 
@@ -39,15 +46,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	Mux2to1
-
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v} {2 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ControlUnit
-** Warning: D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-
-
-Top level modules:
-	ControlUnit
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -70,6 +68,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	WB_Stage
 
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage
+
+Top level modules:
+	EXE_Stage
+
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ID_Stage_Reg
@@ -86,33 +91,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ConditionCheck
 
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EXE_Stage
-
-Top level modules:
-	EXE_Stage
-
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module InstMemory
 
 Top level modules:
 	InstMemory
-
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MEM_Stage_Reg
-
-Top level modules:
-	MEM_Stage_Reg
-
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Hazard_Detection_Unit
-
-Top level modules:
-	Hazard_Detection_Unit
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -121,6 +105,20 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	IF_Stage_Reg
 
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Hazard_Detection_Unit
+
+Top level modules:
+	Hazard_Detection_Unit
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_Stage_Reg
+
+Top level modules:
+	MEM_Stage_Reg
+
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ID_Stage
@@ -128,27 +126,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ID_Stage
 
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module test
-
-Top level modules:
-	test
-
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Memory
 
 Top level modules:
 	Memory
-
-} {} {}} D:/term8/TA/OO-TA/C17.v {1 {vlog -work work D:/term8/TA/OO-TA/C17.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module c17
--- Compiling module mytb
-
-Top level modules:
-	mytb
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

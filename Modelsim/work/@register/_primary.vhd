@@ -5,10 +5,10 @@ entity \Register\ is
         N               : integer := 32
     );
     port(
-        d_in            : in     vl_logic_vector;
         clk             : in     vl_logic;
-        sclr            : in     vl_logic;
+        rst             : in     vl_logic;
         ld              : in     vl_logic;
+        d_in            : in     vl_logic_vector;
         d_out           : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;

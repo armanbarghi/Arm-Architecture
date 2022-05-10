@@ -41,7 +41,7 @@ module ControlUnit (
             endcase
         end
         else
-            exe_cmd= 4'b0000;
+            exe_cmd = 4'b0000;
     end
 
 
