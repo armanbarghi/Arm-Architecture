@@ -14,24 +14,25 @@ module Hazard_Detection_Unit (
         if (exe_wb_en == 1'b1) begin
             if (two_src == 1'b1) begin
                 if ((exe_dest == src1) || (exe_dest == src2)) begin
-                    hazard <= 1'b1;
+                    hazard = 1'b1;
                 end
             else
                 if (exe_dest == src1) begin
-                    hazard <= 1'b1;
+                    hazard = 1'b1;
                 end 
             end
         end
         if (mem_wb_en == 1'b1) begin
             if (two_src == 1'b1) begin
                 if ((mem_dest == src1) || (mem_dest == src2)) begin
-                    hazard <= 1'b1;
+                    hazard = 1'b1;
                 end
             else
                 if (mem_dest == src1) begin
-                    hazard <= 1'b1;
+                    hazard = 1'b1;
                 end 
             end
         end
     end
+    
 endmodule

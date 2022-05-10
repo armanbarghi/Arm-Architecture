@@ -8,7 +8,7 @@ module ARM_Testbench();
         rst = 1'b1;
         clk = 1'b0;
         #20 rst = 1'b0;
-        #1000000000;
+        #10000;
         $stop;
     end
   

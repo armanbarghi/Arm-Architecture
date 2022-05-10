@@ -14,6 +14,7 @@ module ConditionCheck (
     assign v = status_reg[0];
 
     always @(cond, n, z, c, v) begin
+        cond_out = 1'b1;
         case (cond)
             4'b0000: cond_out = (z == 1'b1);
             4'b0001: cond_out = (z == 1'b0);
