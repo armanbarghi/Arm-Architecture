@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ARM
-Wed Apr 27 14:27:39 2022
+Wed May 11 13:50:41 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -149,7 +149,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.225 ;    ;    ; 5.225 ;
+; SW[0]      ; LEDG[0]     ; 5.541 ;    ;    ; 5.541 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -158,7 +158,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.225 ;    ;    ; 5.225 ;
+; SW[0]      ; LEDG[0]     ; 5.541 ;    ;    ; 5.541 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -209,7 +209,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.855 ;    ;    ; 2.855 ;
+; SW[0]      ; LEDG[0]     ; 3.006 ;    ;    ; 3.006 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -218,7 +218,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.855 ;    ;    ; 2.855 ;
+; SW[0]      ; LEDG[0]     ; 3.006 ;    ;    ; 3.006 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -239,7 +239,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.225 ;    ;    ; 5.225 ;
+; SW[0]      ; LEDG[0]     ; 5.541 ;    ;    ; 5.541 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -248,7 +248,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.855 ;    ;    ; 2.855 ;
+; SW[0]      ; LEDG[0]     ; 3.006 ;    ;    ; 3.006 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -276,9 +276,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 1     ; 1    ;
+; Unconstrained Clocks            ; 2     ; 2    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Input Port Paths  ; 164   ; 164  ;
 ; Unconstrained Output Ports      ; 1     ; 1    ;
 ; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
@@ -290,18 +290,55 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 27 14:27:36 2022
+    Info: Processing started: Wed May 11 13:50:38 2022
 Info: Command: quartus_sta ARM -c ARM
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 32 combinational loops as latches.
 Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity sld_jtag_hub
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ARM.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (332125): Found combinational loop of 34 nodes
+    Warning (332126): Node "CPU|hazard_unit|hazard~13|combout"
+    Warning (332126): Node "CPU|id_stage|mux9b|y[7]~4|datac"
+    Warning (332126): Node "CPU|id_stage|mux9b|y[7]~4|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~1|datac"
+    Warning (332126): Node "CPU|hazard_unit|hazard~1|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~13|datad"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[3]~2|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[3]~2|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~10|datad"
+    Warning (332126): Node "CPU|hazard_unit|hazard~10|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~12|datab"
+    Warning (332126): Node "CPU|hazard_unit|hazard~12|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~13|dataa"
+    Warning (332126): Node "CPU|hazard_unit|hazard~6|datad"
+    Warning (332126): Node "CPU|hazard_unit|hazard~6|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~7|dataa"
+    Warning (332126): Node "CPU|hazard_unit|hazard~7|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~13|datab"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[1]~0|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[1]~0|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~9|datad"
+    Warning (332126): Node "CPU|hazard_unit|hazard~9|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~12|datac"
+    Warning (332126): Node "CPU|hazard_unit|hazard~5|datad"
+    Warning (332126): Node "CPU|hazard_unit|hazard~5|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~7|datad"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[2]~3|datab"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[2]~3|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~10|datab"
+    Warning (332126): Node "CPU|hazard_unit|hazard~6|datab"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[0]~1|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[0]~1|combout"
+    Warning (332126): Node "CPU|hazard_unit|hazard~9|datab"
+    Warning (332126): Node "CPU|hazard_unit|hazard~5|datac"
 Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm was determined to be a clock but was found without an associated clock assignment.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
@@ -316,6 +353,7 @@ Info (332146): Worst-case minimum pulse width slack is 97.778
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm was determined to be a clock but was found without an associated clock assignment.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
@@ -327,9 +365,9 @@ Info (332146): Worst-case minimum pulse width slack is 97.778
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4633 megabytes
-    Info: Processing ended: Wed Apr 27 14:27:39 2022
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Wed May 11 13:50:41 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 

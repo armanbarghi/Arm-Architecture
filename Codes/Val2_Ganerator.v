@@ -32,7 +32,7 @@ module Val2_Generator (
 			endcase
 		end
 		else if(imm == 1'b1) begin
-			val2 <= immd[rotate_im+31-:32];
+			val2 <= immd>>rotate_im;
 		end
 	end
     
