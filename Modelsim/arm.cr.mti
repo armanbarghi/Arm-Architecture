@@ -12,19 +12,26 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	RegisterFile
 
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM_cpu
-
-Top level modules:
-	ARM_cpu
-
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ARM_Testbench
 
 Top level modules:
 	ARM_Testbench
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Val2_Generator
+
+Top level modules:
+	Val2_Generator
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM_cpu
+
+Top level modules:
+	ARM_cpu
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -100,6 +107,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	InstMemory
 
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Hazard_Detection_Unit
+
+Top level modules:
+	Hazard_Detection_Unit
+
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module IF_Stage_Reg
@@ -113,13 +127,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	MEM_Stage_Reg
-
-} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Hazard_Detection_Unit
-
-Top level modules:
-	Hazard_Detection_Unit
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

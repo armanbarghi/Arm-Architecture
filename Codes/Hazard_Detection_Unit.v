@@ -16,7 +16,8 @@ module Hazard_Detection_Unit (
                 if ((exe_dest == src1) || (exe_dest == src2)) begin
                     hazard = 1'b1;
                 end
-            else
+            end
+            else begin
                 if (exe_dest == src1) begin
                     hazard = 1'b1;
                 end 
@@ -27,7 +28,8 @@ module Hazard_Detection_Unit (
                 if ((mem_dest == src1) || (mem_dest == src2)) begin
                     hazard = 1'b1;
                 end
-            else
+            end
+            else begin
                 if (mem_dest == src1) begin
                     hazard = 1'b1;
                 end 

@@ -28,11 +28,11 @@ module Val2_Generator (
 				2'b00 : val2 <= (val_rm << shift_operand[11:7]);
 				2'b01 : val2 <= (val_rm >> shift_operand[11:7]);
 				2'b10 : val2 <= (val_rm >>> shift_operand[11:7]);
-				2'b11 : val2 <= (rotate_wire[shift_im+31-:32]);
+				2'b11 : val2 <= (rotate_wire >> shift_im);
 			endcase
 		end
 		else if(imm == 1'b1) begin
-			val2 <= immd>>rotate_im;
+			val2 <= (immd >> rotate_im);
 		end
 	end
     
