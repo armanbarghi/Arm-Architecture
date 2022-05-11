@@ -18,7 +18,7 @@ r1
 Z9 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v|
 Z10 o-work work -O0
 Z11 n@a@l@u
-Z12 !s108 1652174648.565000
+Z12 !s108 1652256423.214000
 Z13 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v|
 !i10b 1
 !s85 0
@@ -38,465 +38,485 @@ r1
 Z20 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v|
 R10
 Z21 n@a@r@m
-Z22 !s108 1652174648.612000
+Z22 !s108 1652256423.262000
 Z23 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vARM_cpu
-!i10b 1
-Z24 !s100 jP029F9HfGA2g63P9HLY=0
-Z25 IGK1K;XOmMzMc8Yj?Y5b7J2
+Z24 !s100 Uo?][F?OOU8kcVj9>CgBA3
+Z25 I_^Z4d<]Y]aEn`KOchfYM;2
 Z26 VNTVY:J;1D=<6LaCCbJ_Af3
 R4
-Z27 w1652173513
+Z27 w1652248701
 Z28 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v
 Z29 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v
 L0 1
 R8
 r1
-!s85 0
 31
-!s108 1652174649.323000
-!s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v|
 Z30 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v|
-!s101 -O0
 R10
 Z31 n@a@r@m_cpu
+!i10b 1
+!s85 0
+Z32 !s108 1652256424.162000
+Z33 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v|
+!s101 -O0
 vARM_TB
-Z32 !s100 P6AmG4L0]KM7VTH326Hk02
-Z33 I]XhXdSYJkKPCBRN0]iIFI2
-Z34 VW1O7gz;3oHcUET<1lb:JA0
+Z34 !s100 P6AmG4L0]KM7VTH326Hk02
+Z35 I]XhXdSYJkKPCBRN0]iIFI2
+Z36 VW1O7gz;3oHcUET<1lb:JA0
 R4
-Z35 w1652161858
-Z36 8D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v
-Z37 FD:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v
+Z37 w1652161858
+Z38 8D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v
+Z39 FD:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v
 L0 1
 R8
 r1
 31
-Z38 !s90 -reportprogress|300|-work|work|D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v|
+Z40 !s90 -reportprogress|300|-work|work|D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v|
 R10
-Z39 n@a@r@m_@t@b
-Z40 !s108 1652161884.733000
-Z41 !s107 D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v|
+Z41 n@a@r@m_@t@b
+Z42 !s108 1652161884.733000
+Z43 !s107 D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\Test_Bench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vARM_Testbench
-Z42 !s100 b<lH96I076g]T;ngG=[1e1
-Z43 I<LQ5]_0VgASRPE4A]^_aJ1
-Z44 Vh6AgfG??JXWa<IUFolSfO1
+Z44 !s100 b<lH96I076g]T;ngG=[1e1
+Z45 I<LQ5]_0VgASRPE4A]^_aJ1
+Z46 Vh6AgfG??JXWa<IUFolSfO1
 R4
-Z45 w1652174635
-Z46 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v
-Z47 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v
+Z47 w1652174635
+Z48 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v
+Z49 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v
 L0 2
 R8
 r1
 31
-Z48 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v|
+Z50 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v|
 R10
-Z49 n@a@r@m_@testbench
-Z50 !s108 1652174649.206000
-Z51 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v|
+Z51 n@a@r@m_@testbench
+Z52 !s108 1652256424.026000
+Z53 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Test_Bench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vc17
-Z52 !s100 CWK64VZ@JQVVZZ;=C83X62
-Z53 IojhD1jMD6ThCiMaYEge1C1
-Z54 VGnKoaIM=g0>ZMdTOSMe:k1
+Z54 !s100 CWK64VZ@JQVVZZ;=C83X62
+Z55 IojhD1jMD6ThCiMaYEge1C1
+Z56 VGnKoaIM=g0>ZMdTOSMe:k1
 R4
-Z55 w1651310018
-Z56 8D:/term8/TA/OO-TA/C17.v
-Z57 FD:/term8/TA/OO-TA/C17.v
+Z57 w1651310018
+Z58 8D:/term8/TA/OO-TA/C17.v
+Z59 FD:/term8/TA/OO-TA/C17.v
 L0 8
 R8
 r1
 31
-Z58 !s90 -reportprogress|300|-work|work|D:/term8/TA/OO-TA/C17.v|
+Z60 !s90 -reportprogress|300|-work|work|D:/term8/TA/OO-TA/C17.v|
 R10
-Z59 !s108 1652160080.890000
-Z60 !s107 D:/term8/TA/OO-TA/C17.v|
+Z61 !s108 1652160080.890000
+Z62 !s107 D:/term8/TA/OO-TA/C17.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vConditionCheck
-Z61 !s100 VJoeL0g:64oYkL[:f=`Qz2
-Z62 I>VZ?Vk<GfQj1IBGKS[?N40
-Z63 VG0EXHzk^cbH_AMRlQPDR42
+Z63 !s100 hLaM@MIl^fEgOZNiK^PX91
+Z64 IXo<>0:WX9U_f6Pn?nCaQa2
+Z65 VG0EXHzk^cbH_AMRlQPDR42
 R4
-Z64 w1652171906
-Z65 8D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\ConditionCheck.v
-Z66 FD:\term8\Computer Architecture Lab\Arm-Architecture\Codes\ConditionCheck.v
+Z66 w1652171906
+Z67 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v
+Z68 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v
 L0 1
 R8
 r1
 31
-Z67 !s90 -reportprogress|300|-work|work|D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\ConditionCheck.v|
+Z69 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v|
 R10
-Z68 n@condition@check
-Z69 !s108 1652174648.654000
-Z70 !s107 D:\term8\Computer Architecture Lab\Arm-Architecture\Codes\ConditionCheck.v|
+Z70 n@condition@check
+Z71 !s108 1652256423.309000
+Z72 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vControlUnit
-Z71 !s100 GTaOU37PnR:Ob:6@@B3=<0
-Z72 I<7DK`N:ISVazVHBN444E<3
-Z73 VO58Lzi;;[h>f;Y_UXMnKD2
+Z73 !s100 GTaOU37PnR:Ob:6@@B3=<0
+Z74 I<7DK`N:ISVazVHBN444E<3
+Z75 VO58Lzi;;[h>f;Y_UXMnKD2
 R4
-Z74 w1652163584
-Z75 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v
-Z76 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v
+Z76 w1652163584
+Z77 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v
+Z78 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v
 L0 1
 R8
 r1
 31
-Z77 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v|
+Z79 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v|
 R10
-Z78 n@control@unit
-Z79 !s108 1652174648.692000
-Z80 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v|
+Z80 n@control@unit
+Z81 !s108 1652256423.368000
+Z82 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Stage
-Z81 !s100 QNzflI0mRcVEQLoWNIi`[3
-Z82 IAUSUQ@2`YE`beQ`hm?^4d0
-Z83 V^YHUAZ94zb0U[PNUOS34F1
+Z83 !s100 QNzflI0mRcVEQLoWNIi`[3
+Z84 IAUSUQ@2`YE`beQ`hm?^4d0
+Z85 V^YHUAZ94zb0U[PNUOS34F1
 R4
 R17
-Z84 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v
-Z85 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v
+Z86 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v
+Z87 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v
 L0 1
 R8
 r1
 31
-Z86 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v|
+Z88 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v|
 R10
-Z87 n@e@x@e_@stage
-Z88 !s108 1652174648.726000
-Z89 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v|
+Z89 n@e@x@e_@stage
+Z90 !s108 1652256423.415000
+Z91 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Stage_Reg
-Z90 !s100 0fV2@oQ7G:HQ:4LaZKf]F2
-Z91 I;nE@O3;0Yl9_DiY6CYS6S1
-Z92 VU>EgFe_8IT<2?KkQUJnJP1
+Z92 !s100 0fV2@oQ7G:HQ:4LaZKf]F2
+Z93 I;nE@O3;0Yl9_DiY6CYS6S1
+Z94 VU>EgFe_8IT<2?KkQUJnJP1
 R4
-Z93 w1650442992
-Z94 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v
-Z95 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v
+Z95 w1650442992
+Z96 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v
+Z97 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v
 L0 1
 R8
 r1
 31
-Z96 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v|
+Z98 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v|
 R10
-Z97 n@e@x@e_@stage_@reg
-Z98 !s108 1652174648.763000
-Z99 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v|
+Z99 n@e@x@e_@stage_@reg
+Z100 !s108 1652256423.463000
+Z101 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vHazard_Detection_Unit
-Z100 !s100 QkIQk[T7CkbBn2]^2T^?10
-Z101 IMg4fTGXhM_`maijN<XVDo2
-Z102 Vzle91gV[o3d@ZJ>T`@>Ka1
+Z102 !s100 QkIQk[T7CkbBn2]^2T^?10
+Z103 IMg4fTGXhM_`maijN<XVDo2
+Z104 Vzle91gV[o3d@ZJ>T`@>Ka1
 R4
-Z103 w1652174227
-Z104 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v
-Z105 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v
+Z105 w1652174227
+Z106 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v
+Z107 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v
 L0 1
 R8
 r1
 31
-Z106 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v|
+Z108 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v|
 R10
-Z107 n@hazard_@detection_@unit
-Z108 !s108 1652174648.802000
-Z109 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v|
+Z109 n@hazard_@detection_@unit
+Z110 !s108 1652256423.511000
+Z111 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Stage
-Z110 !s100 Vo?23joobC98^fkN0czoX1
-Z111 IO4LJhOCZmZVWLXDjZzkWk0
-Z112 VNUzho6Icia7eB=3]AKTIg0
+Z112 !s100 Vo?23joobC98^fkN0czoX1
+Z113 IO4LJhOCZmZVWLXDjZzkWk0
+Z114 VNUzho6Icia7eB=3]AKTIg0
 R4
-Z113 w1652174243
-Z114 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v
-Z115 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v
+Z115 w1652174243
+Z116 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v
+Z117 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v
 L0 1
 R8
 r1
 31
-Z116 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v|
+Z118 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v|
 R10
-Z117 n@i@d_@stage
-Z118 !s108 1652174648.843000
-Z119 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v|
+Z119 n@i@d_@stage
+Z120 !s108 1652256423.561000
+Z121 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Stage_Reg
-Z120 !s100 O431fX2hISkN`JQC1K@>U3
-Z121 ICo[4g[4O=9g9:VU4HNc1D2
-Z122 VJb?;nf9jM?:X5e<OT7@DE1
+Z122 !s100 O431fX2hISkN`JQC1K@>U3
+Z123 ICo[4g[4O=9g9:VU4HNc1D2
+Z124 VJb?;nf9jM?:X5e<OT7@DE1
 R4
-Z123 w1651050259
-Z124 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v
-Z125 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v
+Z125 w1651050259
+Z126 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v
+Z127 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v
 L0 1
 R8
 r1
 31
-Z126 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v|
+Z128 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v|
 R10
-Z127 n@i@d_@stage_@reg
-Z128 !s108 1652174648.880000
-Z129 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v|
+Z129 n@i@d_@stage_@reg
+Z130 !s108 1652256423.608000
+Z131 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Stage
-Z130 !s100 `>5=lJUFYn3IgX?WnYZGe0
-Z131 IzAMRo8S3@0_g[H_bYgKeE0
-Z132 VCNhX:IY17]AEC8H2hL7TQ0
+Z132 !s100 `>5=lJUFYn3IgX?WnYZGe0
+Z133 IzAMRo8S3@0_g[H_bYgKeE0
+Z134 VCNhX:IY17]AEC8H2hL7TQ0
 R4
 R17
-Z133 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v
-Z134 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v
+Z135 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v
+Z136 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v
 L0 1
 R8
 r1
 31
-Z135 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v|
+Z137 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v|
 R10
-Z136 n@i@f_@stage
-Z137 !s108 1652174648.918000
-Z138 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v|
+Z138 n@i@f_@stage
+Z139 !s108 1652256423.658000
+Z140 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Stage_Reg
-Z139 !s100 2dfH3c^7S2kL_n?jW2[H[1
-Z140 I6g_ekkQ49nz<g51<67Rhg2
-Z141 V?<R3VBk[>A:7D_bH?JOH]1
+Z141 !s100 2dfH3c^7S2kL_n?jW2[H[1
+Z142 I6g_ekkQ49nz<g51<67Rhg2
+Z143 V?<R3VBk[>A:7D_bH?JOH]1
 R4
 R17
-Z142 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v
-Z143 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v
+Z144 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v
+Z145 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v
 L0 1
 R8
 r1
 31
-Z144 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v|
+Z146 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v|
 R10
-Z145 n@i@f_@stage_@reg
-Z146 !s108 1652174648.953000
-Z147 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v|
+Z147 n@i@f_@stage_@reg
+Z148 !s108 1652256423.702000
+Z149 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vInstMemory
-Z148 !s100 Mh8`DNbjj8RgQo>J[CABe0
-Z149 IW4;liM[G4gQfl?_d<c@W_2
-Z150 VAD?<[gIeDM9G=Xj:aVTX30
+Z150 IC3z?]o_jDd]eZoDc3DD<T0
+Z151 VAD?<[gIeDM9G=Xj:aVTX30
 R4
-Z151 w1652174587
-Z152 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v
-Z153 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v
+Z152 w1652250550
+Z153 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v
+Z154 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v
 L0 1
 R8
 r1
 31
-Z154 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v|
+Z155 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v|
 R10
-Z155 n@inst@memory
-Z156 !s108 1652174648.992000
-Z157 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v|
+Z156 n@inst@memory
+Z157 !s100 03Wofh2zoHdm:FhRWSK?83
+Z158 !s108 1652256423.750000
+Z159 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMEM_Stage_Reg
-Z158 !s100 NEVaRUHPQfToB2CAPBh3=0
-Z159 I5dEbj7>Bo48TFMegd_^@_3
-Z160 V?znfL2C=J;?TLSAl2UCfU0
+Z160 !s100 NEVaRUHPQfToB2CAPBh3=0
+Z161 I5dEbj7>Bo48TFMegd_^@_3
+Z162 V?znfL2C=J;?TLSAl2UCfU0
 R4
-Z161 w1650382173
-Z162 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v
-Z163 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v
+Z163 w1650382173
+Z164 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v
+Z165 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v
 L0 1
 R8
 r1
 31
-Z164 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v|
+Z166 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v|
 R10
-Z165 n@m@e@m_@stage_@reg
-Z166 !s108 1652174649.027000
-Z167 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v|
+Z167 n@m@e@m_@stage_@reg
+Z168 !s108 1652256423.795000
+Z169 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMemory
-Z168 !s100 l0]h=Gg`jThUGcz?CA9mC2
-Z169 IkA2j^lVbBmI]=[TjV6HgT1
-Z170 V^]cY`Q9>jgBYN_oHQ4]jE3
+Z170 !s100 l0]h=Gg`jThUGcz?CA9mC2
+Z171 IkA2j^lVbBmI]=[TjV6HgT1
+Z172 V^]cY`Q9>jgBYN_oHQ4]jE3
 R4
-Z171 w1650956251
-Z172 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v
-Z173 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v
+Z173 w1650956251
+Z174 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v
+Z175 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v
 L0 1
 R8
 r1
 31
-Z174 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v|
+Z176 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v|
 R10
-Z175 n@memory
-Z176 !s108 1652174649.060000
-Z177 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v|
+Z177 n@memory
+Z178 !s108 1652256423.840000
+Z179 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMux2to1
-Z178 !s100 HWLJo?AfaZ6W_?:ZJAj9_3
-Z179 ImW>L@70i_1^g81FTL0HXl3
-Z180 VNMBP<i<fd^d>0RhlVPX;k0
+Z180 !s100 HWLJo?AfaZ6W_?:ZJAj9_3
+Z181 ImW>L@70i_1^g81FTL0HXl3
+Z182 VNMBP<i<fd^d>0RhlVPX;k0
 R4
-R161
-Z181 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v
-Z182 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v
+R163
+Z183 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v
+Z184 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v
 L0 1
 R8
 r1
 31
-Z183 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v|
+Z185 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v|
 R10
-Z184 n@mux2to1
-Z185 !s108 1652174649.099000
-Z186 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v|
+Z186 n@mux2to1
+Z187 !s108 1652256423.882000
+Z188 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmytb
-Z187 I?kbcUW9d4k;a>:7zNHfj22
-Z188 V?TiVNeUIT]O6ZD_m14bUj1
+Z189 I?kbcUW9d4k;a>:7zNHfj22
+Z190 V?TiVNeUIT]O6ZD_m14bUj1
 R4
-Z189 w1651309766
-R56
-R57
+Z191 w1651309766
+R58
+R59
 L0 26
 R8
 r1
 31
-Z190 !s108 1651309773.378000
+Z192 !s108 1651309773.378000
+R62
 R60
-R58
 R10
-Z191 !s100 Y]Ab@hQ2Hio<>G:B[iWS<3
+Z193 !s100 Y]Ab@hQ2Hio<>G:B[iWS<3
 !i10b 1
 !s85 0
 !s101 -O0
 vRegister
-Z192 !s100 Xh>oe>o?0X:cn4h3TUkH83
-Z193 IjfVZfOIV;6aRhO97`0bJg3
-Z194 V6S?o21@CaSH]?KZVJI:WT0
+Z194 !s100 Xh>oe>o?0X:cn4h3TUkH83
+Z195 IjfVZfOIV;6aRhO97`0bJg3
+Z196 V6S?o21@CaSH]?KZVJI:WT0
 R4
 R17
-Z195 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v
-Z196 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v
+Z197 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v
+Z198 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v
 L0 1
 R8
 r1
 31
-Z197 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v|
+Z199 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v|
 R10
-Z198 n@register
-Z199 !s108 1652174649.137000
-Z200 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v|
+Z200 n@register
+Z201 !s108 1652256423.932000
+Z202 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vRegisterFile
-Z201 !s100 Ma@=j^4C`DS6884I<FN^02
-Z202 IQBf:zY;PVkm;P]>_eUdQh3
-Z203 V;674JLAzGGE`EjS[3mCiQ3
+Z203 !s100 Ma@=j^4C`DS6884I<FN^02
+Z204 IQBf:zY;PVkm;P]>_eUdQh3
+Z205 V;674JLAzGGE`EjS[3mCiQ3
 R4
-Z204 w1650443962
-Z205 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v
-Z206 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v
+Z206 w1650443962
+Z207 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v
+Z208 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v
 L0 1
 R8
 r1
 31
-Z207 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v|
+Z209 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v|
 R10
-Z208 n@register@file
-Z209 !s108 1652174649.170000
-Z210 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v|
+Z210 n@register@file
+Z211 !s108 1652256423.977000
+Z212 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vtest
-Z211 !s100 UNaM]gh]:AVHC@B>cT[d52
-Z212 I42o^4gkcKFKmO^0ISA5BS3
-Z213 VoSlVgO:RK5V<iQIMfK?WW2
+vStatus_Reg
+!i10b 1
+Z213 !s100 z6<dXBK35Q02Z>DMIjz2R2
+Z214 IWOnST<_I82Se@f;_hGn`B2
+Z215 V=1P7Hg1KD[DLSQW>716DB2
 R4
-Z214 w1650447201
-Z215 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v
-Z216 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v
+Z216 w1652248160
+Z217 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v
+Z218 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1652256424.211000
+!s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v|
+Z219 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v|
+!s101 -O0
+R10
+Z220 n@status_@reg
+vtest
+Z221 !s100 UNaM]gh]:AVHC@B>cT[d52
+Z222 I42o^4gkcKFKmO^0ISA5BS3
+Z223 VoSlVgO:RK5V<iQIMfK?WW2
+R4
+Z224 w1650447201
+Z225 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v
+Z226 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v
 L0 48
 R8
 r1
 31
-Z217 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v|
+Z227 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v|
 R10
-Z218 !s108 1651309773.214000
-Z219 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v|
+Z228 !s108 1651309773.214000
+Z229 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/test.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vVal2_Generator
-Z220 !s100 j0NGIN9N<10kGQRGj5;cY2
-Z221 Ie1dOO4o@^:n?g_P1ag2z41
-Z222 Vb38l:9`nNa`jNZZHkoZ3f2
+Z230 !s100 j0NGIN9N<10kGQRGj5;cY2
+Z231 Ie1dOO4o@^:n?g_P1ag2z41
+Z232 Vb38l:9`nNa`jNZZHkoZ3f2
 R4
 R17
-Z223 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v
-Z224 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v
+Z233 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v
+Z234 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v
 L0 1
 R8
 r1
 31
-Z225 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v|
+Z235 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v|
 R10
-Z226 n@val2_@generator
+Z236 n@val2_@generator
+Z237 !s108 1652256424.116000
+Z238 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v|
 !i10b 1
 !s85 0
-Z227 !s108 1652174649.281000
-Z228 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v|
 !s101 -O0
 vWB_Stage
-Z229 !s100 O^=BjC7868b5A8EUTmDWP2
-Z230 IC=i]fl?=l0R]Um=9M<MEQ1
-Z231 V8Hj1jo2S`dAK^`GNidXch1
+Z239 !s100 O^=BjC7868b5A8EUTmDWP2
+Z240 IC=i]fl?=l0R]Um=9M<MEQ1
+Z241 V8Hj1jo2S`dAK^`GNidXch1
 R4
-R161
-Z232 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v
-Z233 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v
+R163
+Z242 8D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v
+Z243 FD:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v
 L0 1
 R8
 r1
 31
-Z234 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v|
+Z244 !s90 -reportprogress|300|-work|work|D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v|
 R10
-Z235 n@w@b_@stage
-Z236 !s108 1652174649.244000
-Z237 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v|
+Z245 n@w@b_@stage
+Z246 !s108 1652256424.073000
+Z247 !s107 D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0

@@ -33,7 +33,7 @@ module ARM_cpu (
         .clk(clk),
         .rst(rst),
         .freeze(hazard),
-        .Branch_taken(1'b0),   // FIXME: connect to branchTaken
+        .Branch_taken(b_exe),
         .BranchAddr(branch_addr),
         .PC(pc_if),
         .Inst(instruction_if)
@@ -43,7 +43,7 @@ module ARM_cpu (
         .clk(clk),
         .rst(rst),
         .freeze(hazard),
-        .flush(1'b0),   // FIXME: connect to branchTaken
+        .flush(b_exe),
         .PC_in(pc_if),
         .Inst_in(instruction_if),
         .PC(pc_id),
@@ -92,7 +92,7 @@ module ARM_cpu (
     ID_Stage_Reg id_stage_reg (
         .clk(clk),
         .rst(rst),
-        .flush(1'b0),   // FIXME: connect to branchTaken
+        .flush(b_exe),
         .imm_in(imm_id),
         .mem_r_en_in(mem_r_en_id),
         .mem_w_en_in(mem_w_en_id),
@@ -157,14 +157,13 @@ module ARM_cpu (
         .dest(dest_mem)
     );
 
-    Register #(.N(4))
-        status_reg (
-            .clk(clk),
-            .rst(rst),
-            .ld(s_exe),    // FIXME: s_exe or ~s_exe?
-            .d_in(status_bits_in),
-            .d_out(status_bits_out)
-        );
+    Status_Reg st_reg(
+        .clk(clk),
+        .rst(rst),
+        .ld(s_exe),     // FIXME: s_exe or ~s_exe?
+        .d_in(status_bits_in),
+        .d_out(status_bits_out)
+    );
 
     Memory memory(
         .clk(clk),
