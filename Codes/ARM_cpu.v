@@ -1,7 +1,9 @@
 module ARM_cpu (
-    clk, rst
+    clk, rst,
+    mode
 );
     input clk, rst;
+    input mode;
     
     wire [31:0] branch_addr;
     wire [31:0] pc_if, instruction_if;
@@ -26,8 +28,13 @@ module ARM_cpu (
     wire [31:0] val_rm_mem;
     wire [31:0] mem_res_wb;
     wire [31:0] mem_res;
+    wire [3:0] fu_src1, fu_src2;
+    wire [1:0] sel_src1, sel_src2;
     wire mem_r_en_wb, wb_en_wb;
-    wire hazard;
+    wire hazard1, hazard2, hazard;
+    wire [31:0] fu_val_rm;
+
+    assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
 
     IF_Stage if_stage (
         .clk(clk),
@@ -76,7 +83,7 @@ module ARM_cpu (
         .val_rm(val_rm_id)
     );
 
-    Hazard_Detection_Unit hazard_unit (
+    Hazard_Detection_Unit hazard_unit1 (
         .clk(clk),
         .rst(rst),
         .two_src(two_src_id),
@@ -86,7 +93,18 @@ module ARM_cpu (
         .src2(src2),
         .exe_dest(dest_exe),
         .mem_dest(dest_mem),
-        .hazard(hazard)
+        .hazard(hazard1)
+    );
+    
+    Hazard_Detection_Unit2 hazard_unit2 (
+        clk(clk),
+        rst(rst),
+        two_src(two_src_id),
+        exe_mem_r_en(mem_r_en_exe),
+        src1(src1),
+        src2(src2),
+        exe_dest(dest_exe),
+        hazard(hazard2)
     );
 
     ID_Stage_Reg id_stage_reg (
@@ -101,6 +119,8 @@ module ARM_cpu (
         .s_in(s_id),
         .exe_cmd_in(exe_cmd_id),
         .dest_in(dest_id),
+        .src1_in(src1),
+        .src2_in(src2),
         .status_reg_in(status_bits_out),
         .shift_operand_in(shift_operand_id),
         .signed_imm_24_in(signed_imm_24_id),
@@ -115,6 +135,8 @@ module ARM_cpu (
         .s(s_exe),
         .exe_cmd(exe_cmd_exe),
         .dest(dest_exe),
+        .src1(fu_src1),
+        .src2(fu_src2),
         .status_reg(status_bits_exe),
         .shift_operand(shift_operand_exe),
         .signed_imm_24(signed_imm_24_exe),
@@ -135,8 +157,13 @@ module ARM_cpu (
         .shift_operand(shift_operand_exe),
         .signed_imm_24(signed_imm_24_exe),
         .SR(status_bits_exe),
+        .sel_src1(sel_src1 & {mode, mode}),
+        .sel_src2(sel_src2 & {mode, mode}),
+        .mem_alu_res(alu_res_mem),
+        .wb_value(wb_val),
         .alu_res(alu_res_exe),
         .br_addr(branch_addr),
+        .val_Rm_out(fu_val_rm),
         .status(status_bits_in)
     );
 
@@ -147,7 +174,7 @@ module ARM_cpu (
         .mem_r_en_in(mem_r_en_exe),
         .mem_w_en_in(mem_w_en_exe),
         .alu_res_in(alu_res_exe),
-        .val_rm_in(val_rm_exe),
+        .val_rm_in(fu_val_rm),
         .dest_in(dest_exe),
         .wb_en(wb_en_mem),
         .mem_r_en(mem_r_en_mem),
@@ -163,6 +190,19 @@ module ARM_cpu (
         .ld(s_exe),     // FIXME: s_exe or ~s_exe?
         .d_in(status_bits_in),
         .d_out(status_bits_out)
+    );
+
+    Forwarding_Unit forwarding_unit (
+        .clk(clk),
+        .rst(rst),
+        .mem_wb_en(wb_en_mem),
+        .wb_wb_en(wb_en_wb),
+        .src1(fu_src1),
+        .src2(fu_src2),
+        .mem_dest(dest_mem),
+        .wb_dest(wb_dest),
+        .sel_src1(sel_src1),
+        .sel_src2(sel_src2)
     );
 
     Memory memory(
@@ -198,4 +238,5 @@ module ARM_cpu (
         .mem_res(mem_res_wb),
         .wb_val(wb_val)
     );
+
 endmodule
