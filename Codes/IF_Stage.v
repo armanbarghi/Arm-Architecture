@@ -21,7 +21,7 @@ module IF_Stage (
 
     Mux2to1 #(.N(32))
         mux32b (
-            .i0(PC), 
+            .i0(PC_out + 32'd4), 
             .i1(BranchAddr), 
             .sel(Branch_taken), 
             .y(Mux_out)
@@ -32,6 +32,6 @@ module IF_Stage (
         .Inst(Inst)
     );
 
-    assign PC = PC_out + 32'd4;    
+    assign PC = PC_out;
 
 endmodule

@@ -1,9 +1,7 @@
 module ARM_cpu (
-    clk, rst,
-    mode
+    clk, rst, mode
 );
-    input clk, rst;
-    input mode;
+    input clk, rst, mode;
     
     wire [31:0] branch_addr;
     wire [31:0] pc_if, instruction_if;
@@ -97,14 +95,14 @@ module ARM_cpu (
     );
     
     Hazard_Detection_Unit2 hazard_unit2 (
-        clk(clk),
-        rst(rst),
-        two_src(two_src_id),
-        exe_mem_r_en(mem_r_en_exe),
-        src1(src1),
-        src2(src2),
-        exe_dest(dest_exe),
-        hazard(hazard2)
+        .clk(clk),
+        .rst(rst),
+        .two_src(two_src_id),
+        .exe_mem_r_en(mem_r_en_exe),
+        .src1(src1),
+        .src2(src2),
+        .exe_dest(dest_exe),
+        .hazard(hazard2)
     );
 
     ID_Stage_Reg id_stage_reg (
@@ -187,7 +185,7 @@ module ARM_cpu (
     Status_Reg st_reg(
         .clk(clk),
         .rst(rst),
-        .ld(s_exe),     // FIXME: s_exe or ~s_exe?
+        .ld(s_exe),
         .d_in(status_bits_in),
         .d_out(status_bits_out)
     );

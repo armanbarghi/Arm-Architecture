@@ -45,7 +45,7 @@ module EXE_Stage (
     Mux4to1 #(.N(32))
         mux_rn (
             .i0(val_Rn), 
-            .i1(alu_res_mem), 
+            .i1(mem_alu_res), 
             .i2(wb_value), 
             .i3(), 
             .sel(sel_src1), 
@@ -55,7 +55,7 @@ module EXE_Stage (
     Mux4to1 #(.N(32))
         mux_rm (
             .i0(val_Rm), 
-            .i1(alu_res_mem), 
+            .i1(mem_alu_res), 
             .i2(wb_value), 
             .i3(), 
             .sel(sel_src2), 
@@ -64,6 +64,6 @@ module EXE_Stage (
 
     assign br_addr = PC + (({{8{signed_imm_24[23]}}, signed_imm_24} + 32'd1) << 2); 
     assign control_input = mem_r_en | mem_w_en;
-    assign val_Rm_out = mux_rm_out
+    assign val_Rm_out = mux_rm_out;
 
 endmodule

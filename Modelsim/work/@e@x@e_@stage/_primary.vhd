@@ -13,8 +13,13 @@ entity EXE_Stage is
         shift_operand   : in     vl_logic_vector(11 downto 0);
         signed_imm_24   : in     vl_logic_vector(23 downto 0);
         SR              : in     vl_logic_vector(3 downto 0);
+        sel_src1        : in     vl_logic_vector(1 downto 0);
+        sel_src2        : in     vl_logic_vector(1 downto 0);
+        mem_alu_res     : in     vl_logic_vector(31 downto 0);
+        wb_value        : in     vl_logic_vector(31 downto 0);
         alu_res         : out    vl_logic_vector(31 downto 0);
         br_addr         : out    vl_logic_vector(31 downto 0);
+        val_Rm_out      : out    vl_logic_vector(31 downto 0);
         status          : out    vl_logic_vector(3 downto 0)
     );
 end EXE_Stage;

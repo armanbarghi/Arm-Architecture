@@ -13,14 +13,12 @@ module Hazard_Detection_Unit2 (
         hazard = 1'b0;
         if (exe_mem_r_en == 1'b1) begin
             if (two_src == 1'b1) begin
-                if ((exe_dest == src1) || (exe_dest == src2)) begin
+                if ((exe_dest == src1) || (exe_dest == src2))
                     hazard = 1'b1;
-                end
             end
             else begin
-                if (exe_dest == src1) begin
+                if (exe_dest == src1)
                     hazard = 1'b1;
-                end
             end
         end
     end

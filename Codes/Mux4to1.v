@@ -1,5 +1,5 @@
-module Mux2to1 #(parameter N = 32) (
-	i0, i1, i2, i3
+module Mux4to1 #(parameter N = 32) (
+	i0, i1, i2, i3,
 	sel, 
 	y
 );

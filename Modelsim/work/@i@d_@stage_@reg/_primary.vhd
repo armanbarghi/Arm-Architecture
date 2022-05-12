@@ -14,6 +14,8 @@ entity ID_Stage_Reg is
         exe_cmd_in      : in     vl_logic_vector(3 downto 0);
         dest_in         : in     vl_logic_vector(3 downto 0);
         status_reg_in   : in     vl_logic_vector(3 downto 0);
+        src1_in         : in     vl_logic_vector(3 downto 0);
+        src2_in         : in     vl_logic_vector(3 downto 0);
         shift_operand_in: in     vl_logic_vector(11 downto 0);
         signed_imm_24_in: in     vl_logic_vector(23 downto 0);
         pc_in           : in     vl_logic_vector(31 downto 0);
@@ -28,6 +30,8 @@ entity ID_Stage_Reg is
         exe_cmd         : out    vl_logic_vector(3 downto 0);
         dest            : out    vl_logic_vector(3 downto 0);
         status_reg      : out    vl_logic_vector(3 downto 0);
+        src1            : out    vl_logic_vector(3 downto 0);
+        src2            : out    vl_logic_vector(3 downto 0);
         shift_operand   : out    vl_logic_vector(11 downto 0);
         signed_imm_24   : out    vl_logic_vector(23 downto 0);
         pc              : out    vl_logic_vector(31 downto 0);

@@ -7,14 +7,13 @@ module Status_Reg(
     input [3:0] d_in;
     output reg [3:0] d_out;
   
-    always @(negedge clk, posedge rst)
-        begin
-            if (rst == 1'b1)
+    always @(negedge clk, posedge rst) begin
+        if (rst == 1'b1)
             d_out <= 4'b0;
-            else if(ld == 1'b1)
+        else if(ld == 1'b1)
             d_out <= d_in;
-            else
+        else
             d_out <= d_out;
-        end
+    end
   
 endmodule

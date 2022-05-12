@@ -21,7 +21,7 @@ module ALU (
                          (exe_cmd == 4'b0110) ? (in1 & in2) :    //AND, TST
                          (exe_cmd == 4'b0111) ? (in1 | in2) :    //ORR
                          (exe_cmd == 4'b1000) ? (in1 ^ in2) :    //EOR
-                          32'b0;    //B
+                          33'b0;    //B
 
     assign N = result[31];
     assign Z = (result == 32'b0) ? 1'b1 : 1'b0;
