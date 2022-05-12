@@ -54,7 +54,7 @@ module EXE_Stage (
     
     Mux4to1 #(.N(32))
         mux_rm (
-            .i0(val_Rn), 
+            .i0(val_Rm), 
             .i1(alu_res_mem), 
             .i2(wb_value), 
             .i3(), 

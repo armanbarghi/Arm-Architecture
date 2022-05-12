@@ -31,8 +31,10 @@ module ARM_cpu (
     wire [3:0] fu_src1, fu_src2;
     wire [1:0] sel_src1, sel_src2;
     wire mem_r_en_wb, wb_en_wb;
-    wire hazard;
+    wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
+
+    assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
 
     IF_Stage if_stage (
         .clk(clk),
@@ -81,7 +83,7 @@ module ARM_cpu (
         .val_rm(val_rm_id)
     );
 
-    Hazard_Detection_Unit hazard_unit (
+    Hazard_Detection_Unit hazard_unit1 (
         .clk(clk),
         .rst(rst),
         .two_src(two_src_id),
@@ -91,7 +93,18 @@ module ARM_cpu (
         .src2(src2),
         .exe_dest(dest_exe),
         .mem_dest(dest_mem),
-        .hazard(hazard)
+        .hazard(hazard1)
+    );
+    
+    Hazard_Detection_Unit2 hazard_unit2 (
+        clk(clk),
+        rst(rst),
+        two_src(two_src_id),
+        exe_mem_r_en(mem_r_en_exe),
+        src1(src1),
+        src2(src2),
+        exe_dest(dest_exe),
+        hazard(hazard2)
     );
 
     ID_Stage_Reg id_stage_reg (
@@ -144,8 +157,8 @@ module ARM_cpu (
         .shift_operand(shift_operand_exe),
         .signed_imm_24(signed_imm_24_exe),
         .SR(status_bits_exe),
-        .sel_src1(sel_src1),
-        .sel_src2(sel_src2),
+        .sel_src1(sel_src1 & {mode, mode}),
+        .sel_src2(sel_src2 & {mode, mode}),
         .mem_alu_res(alu_res_mem),
         .wb_value(wb_val),
         .alu_res(alu_res_exe),
