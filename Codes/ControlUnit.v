@@ -17,8 +17,7 @@ module ControlUnit (
 
     assign mem_w_en = (mode == 2'b01 & s == 1'b0) ? 1'b1 : 1'b0;
 
-    assign wb_en = (op_code == 4'b0) ? 1'b0:
-                   (mode == 2'b10) ? 1'b0:
+    assign wb_en = (mode == 2'b10) ? 1'b0:
                    (mode == 2'b01 & s == 1'b0) ? 1'b0:
                    (mode == 1'b00 & (op_code == 4'b1010 | op_code == 4'b1000)) ? 1'b0 : 1'b1;
     
