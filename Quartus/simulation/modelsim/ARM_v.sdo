@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "ARM")
-  (DATE "05/11/2022 14:43:15")
+  (DATE "05/18/2022 10:02:26")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
@@ -34,6 +34,15 @@
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
     (INSTANCE SW\[0\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (999:999:999) (999:999:999))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_asynch_io")
+    (INSTANCE SW\[1\]\~I.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (999:999:999) (999:999:999))
@@ -1953,7 +1962,7 @@
     (INSTANCE LEDG\[0\]\~I.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (1662:1662:1662) (1662:1662:1662))
+        (PORT datain (1402:1402:1402) (1402:1402:1402))
         (IOPATH datain padio (2808:2808:2808) (2808:2808:2808))
       )
     )
@@ -1963,6 +1972,7 @@
     (INSTANCE LEDG\[1\]\~I.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1652:1652:1652) (1652:1652:1652))
         (IOPATH datain padio (2808:2808:2808) (2808:2808:2808))
       )
     )

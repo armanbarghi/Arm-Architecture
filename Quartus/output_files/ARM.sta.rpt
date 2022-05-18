@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ARM
-Wed May 11 14:43:12 2022
+Wed May 18 10:02:24 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -68,21 +68,15 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 ----------
@@ -132,7 +126,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.469 ;    ;    ; 5.469 ;
+; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
+; SW[1]      ; LEDG[1]     ; 5.459 ;    ;    ; 5.459 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -141,7 +136,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.469 ;    ;    ; 5.469 ;
+; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
+; SW[1]      ; LEDG[1]     ; 5.459 ;    ;    ; 5.459 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -180,7 +176,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.972 ;    ;    ; 2.972 ;
+; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
+; SW[1]      ; LEDG[1]     ; 2.966 ;    ;    ; 2.966 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -189,7 +186,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.972 ;    ;    ; 2.972 ;
+; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
+; SW[1]      ; LEDG[1]     ; 2.966 ;    ;    ; 2.966 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -208,7 +206,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.469 ;    ;    ; 5.469 ;
+; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
+; SW[1]      ; LEDG[1]     ; 5.459 ;    ;    ; 5.459 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -217,7 +216,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.972 ;    ;    ; 2.972 ;
+; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
+; SW[1]      ; LEDG[1]     ; 2.966 ;    ;    ; 2.966 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -246,10 +246,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 1     ; 1    ;
-; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
 +---------------------------------+-------+------+
 
 
@@ -259,10 +259,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 11 14:43:09 2022
+    Info: Processing started: Wed May 18 10:02:22 2022
 Info: Command: quartus_sta ARM -c ARM
 Info: qsta_default_script.tcl version: #1
-Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ARM.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -292,9 +292,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4595 megabytes
-    Info: Processing ended: Wed May 11 14:43:12 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4553 megabytes
+    Info: Processing ended: Wed May 18 10:02:24 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

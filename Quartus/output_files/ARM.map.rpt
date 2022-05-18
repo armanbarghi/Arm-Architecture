@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ARM
-Wed May 11 14:32:45 2022
+Wed May 18 10:02:05 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,12 +18,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. Parameter Settings for User Entity Instance: ARM_cpu:CPU|IF_Stage:if_stage|Mux2to1:mux32b
  11. Parameter Settings for User Entity Instance: ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux4b
  12. Parameter Settings for User Entity Instance: ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux9b
- 13. Parameter Settings for User Entity Instance: ARM_cpu:CPU|WB_Stage:wb_stage|Mux2to1:mux32b
- 14. Port Connectivity Checks: "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file"
- 15. Port Connectivity Checks: "ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux9b"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
- 18. Analysis & Synthesis Suppressed Messages
+ 13. Parameter Settings for User Entity Instance: ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn
+ 14. Parameter Settings for User Entity Instance: ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rm
+ 15. Parameter Settings for User Entity Instance: ARM_cpu:CPU|WB_Stage:wb_stage|Mux2to1:mux32b
+ 16. Port Connectivity Checks: "ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rm"
+ 17. Port Connectivity Checks: "ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn"
+ 18. Port Connectivity Checks: "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file"
+ 19. Port Connectivity Checks: "ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux9b"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,7 +53,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 11 14:32:45 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed May 18 10:02:05 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ARM                                             ;
 ; Top-level Entity Name              ; ARM                                             ;
@@ -151,51 +155,48 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
-+---------------------------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                    ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
-+---------------------------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
-; ../Codes/Status_Reg.v                                               ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v            ;         ;
-; ../Codes/ARM_cpu.v                                                  ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v               ;         ;
-; ../Codes/WB_Stage.v                                                 ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v              ;         ;
-; ../Codes/Val2_Ganerator.v                                           ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v        ;         ;
-; ../Codes/RegisterFile.v                                             ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v          ;         ;
-; ../Codes/Register.v                                                 ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v              ;         ;
-; ../Codes/Mux2to1.v                                                  ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v               ;         ;
-; ../Codes/Memory.v                                                   ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v                ;         ;
-; ../Codes/MEM_Stage_Reg.v                                            ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v         ;         ;
-; ../Codes/InstMemory.v                                               ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v            ;         ;
-; ../Codes/IF_Stage_Reg.v                                             ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v          ;         ;
-; ../Codes/IF_Stage.v                                                 ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v              ;         ;
-; ../Codes/ID_Stage_Reg.v                                             ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v          ;         ;
-; ../Codes/ID_Stage.v                                                 ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v              ;         ;
-; ../Codes/Hazard_Detection_Unit.v                                    ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v ;         ;
-; ../Codes/EXE_Stage_Reg.v                                            ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v         ;         ;
-; ../Codes/EXE_Stage.v                                                ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v             ;         ;
-; ../Codes/ControlUnit.v                                              ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v           ;         ;
-; ../Codes/ConditionCheck.v                                           ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v        ;         ;
-; ../Codes/ARM.v                                                      ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v                   ;         ;
-; ../Codes/ALU.v                                                      ; yes             ; User Verilog HDL File  ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v                   ;         ;
-; /term8/computer architecture lab/arm-architecture/codes/datamem.txt ; yes             ; Auto-Found File        ; /term8/computer architecture lab/arm-architecture/codes/datamem.txt               ;         ;
-+---------------------------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
++-----------------------------------------------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                              ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                 ; Library ;
++-----------------------------------------------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; ../Codes/Mux4to1.v                                                                            ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux4to1.v                ;         ;
+; ../Codes/Hazard_Detection_Unit2.v                                                             ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit2.v ;         ;
+; ../Codes/Fowarding_Unit.v                                                                     ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Fowarding_Unit.v         ;         ;
+; ../Codes/Status_Reg.v                                                                         ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v             ;         ;
+; ../Codes/ARM_cpu.v                                                                            ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v                ;         ;
+; ../Codes/WB_Stage.v                                                                           ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v               ;         ;
+; ../Codes/Val2_Ganerator.v                                                                     ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v         ;         ;
+; ../Codes/RegisterFile.v                                                                       ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v           ;         ;
+; ../Codes/Register.v                                                                           ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v               ;         ;
+; ../Codes/Mux2to1.v                                                                            ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v                ;         ;
+; ../Codes/Memory.v                                                                             ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v                 ;         ;
+; ../Codes/MEM_Stage_Reg.v                                                                      ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v          ;         ;
+; ../Codes/InstMemory.v                                                                         ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v             ;         ;
+; ../Codes/IF_Stage_Reg.v                                                                       ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v           ;         ;
+; ../Codes/IF_Stage.v                                                                           ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v               ;         ;
+; ../Codes/ID_Stage_Reg.v                                                                       ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v           ;         ;
+; ../Codes/ID_Stage.v                                                                           ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v               ;         ;
+; ../Codes/Hazard_Detection_Unit.v                                                              ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v  ;         ;
+; ../Codes/EXE_Stage_Reg.v                                                                      ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v          ;         ;
+; ../Codes/EXE_Stage.v                                                                          ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v              ;         ;
+; ../Codes/ControlUnit.v                                                                        ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v            ;         ;
+; ../Codes/ConditionCheck.v                                                                     ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v         ;         ;
+; ../Codes/ARM.v                                                                                ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v                    ;         ;
+; ../Codes/ALU.v                                                                                ; yes             ; User Verilog HDL File  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v                    ;         ;
+; /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/datamem.txt ; yes             ; Auto-Found File        ; /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/datamem.txt                ;         ;
++-----------------------------------------------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -222,7 +223,7 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; SW[0] ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
+; Total fan-out                               ; 2     ;
 ; Average fan-out                             ; 0.00  ;
 +---------------------------------------------+-------+
 
@@ -292,6 +293,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rm ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ARM_cpu:CPU|WB_Stage:wb_stage|Mux2to1:mux32b ;
 +----------------+-------+------------------------------------------------------------------+
@@ -300,6 +321,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; N              ; 32    ; Signed Integer                                                   ;
 +----------------+-------+------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rm" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; i3   ; Input ; Info     ; Explicitly unconnected                           ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; i3   ; Input ; Info     ; Explicitly unconnected                           ;
++------+-------+----------+--------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -335,55 +374,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 11 14:32:42 2022
+    Info: Processing started: Wed May 18 10:02:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARM -c ARM
-Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/status_reg.v
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/mux4to1.v
+    Info (12023): Found entity 1: Mux4to1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/hazard_detection_unit2.v
+    Info (12023): Found entity 1: Hazard_Detection_Unit2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/fowarding_unit.v
+    Info (12023): Found entity 1: Forwarding_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/status_reg.v
     Info (12023): Found entity 1: Status_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/arm_cpu.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/arm_cpu.v
     Info (12023): Found entity 1: ARM_cpu
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/wb_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/wb_stage.v
     Info (12023): Found entity 1: WB_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/val2_ganerator.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/val2_ganerator.v
     Info (12023): Found entity 1: Val2_Generator
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/test_bench.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/test_bench.v
     Info (12023): Found entity 1: ARM_Testbench
-Warning (12019): Can't analyze file -- file ../Codes/test.v is missing
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/registerfile.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/registerfile.v
     Info (12023): Found entity 1: RegisterFile
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/register.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/register.v
     Info (12023): Found entity 1: Register
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/mux2to1.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/mux2to1.v
     Info (12023): Found entity 1: Mux2to1
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/memory.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/memory.v
     Info (12023): Found entity 1: Memory
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/mem_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/mem_stage_reg.v
     Info (12023): Found entity 1: MEM_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/instmemory.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/instmemory.v
     Info (12023): Found entity 1: InstMemory
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/if_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/if_stage_reg.v
     Info (12023): Found entity 1: IF_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/if_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/if_stage.v
     Info (12023): Found entity 1: IF_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/id_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/id_stage_reg.v
     Info (12023): Found entity 1: ID_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/id_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/id_stage.v
     Info (12023): Found entity 1: ID_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/hazard_detection_unit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/hazard_detection_unit.v
     Info (12023): Found entity 1: Hazard_Detection_Unit
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/exe_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/exe_stage_reg.v
     Info (12023): Found entity 1: EXE_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/exe_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/exe_stage.v
     Info (12023): Found entity 1: EXE_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/controlunit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/controlunit.v
     Info (12023): Found entity 1: ControlUnit
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/conditioncheck.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/conditioncheck.v
     Info (12023): Found entity 1: ConditionCheck
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/arm.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/arm.v
     Info (12023): Found entity 1: ARM
-Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/alu.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/alu.v
     Info (12023): Found entity 1: ALU
-Warning (10236): Verilog HDL Implicit Net warning at ID_Stage.v(42): created implicit net for "bubble"
 Info (12127): Elaborating entity "ARM" for the top level hierarchy
 Warning (10034): Output port "HEX0" at ARM.v(187) has no driver
 Warning (10034): Output port "HEX1" at ARM.v(188) has no driver
@@ -393,7 +436,7 @@ Warning (10034): Output port "HEX4" at ARM.v(191) has no driver
 Warning (10034): Output port "HEX5" at ARM.v(192) has no driver
 Warning (10034): Output port "HEX6" at ARM.v(193) has no driver
 Warning (10034): Output port "HEX7" at ARM.v(194) has no driver
-Warning (10034): Output port "LEDG[8..1]" at ARM.v(196) has no driver
+Warning (10034): Output port "LEDG[8..2]" at ARM.v(196) has no driver
 Warning (10034): Output port "LEDR" at ARM.v(197) has no driver
 Warning (10034): Output port "DRAM_ADDR" at ARM.v(206) has no driver
 Warning (10034): Output port "FL_ADDR" at ARM.v(219) has no driver
@@ -468,7 +511,8 @@ Warning (10270): Verilog HDL Case Statement warning at ConditionCheck.v(18): inc
 Info (12128): Elaborating entity "RegisterFile" for hierarchy "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file"
 Warning (10240): Verilog HDL Always Construct warning at RegisterFile.v(20): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
 Warning (10030): Net "writeBackEn" at RegisterFile.v(11) has no driver or initial value, using a default initial value '0'
-Info (12128): Elaborating entity "Hazard_Detection_Unit" for hierarchy "ARM_cpu:CPU|Hazard_Detection_Unit:hazard_unit"
+Info (12128): Elaborating entity "Hazard_Detection_Unit" for hierarchy "ARM_cpu:CPU|Hazard_Detection_Unit:hazard_unit1"
+Info (12128): Elaborating entity "Hazard_Detection_Unit2" for hierarchy "ARM_cpu:CPU|Hazard_Detection_Unit2:hazard_unit2"
 Info (12128): Elaborating entity "ID_Stage_Reg" for hierarchy "ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg"
 Info (12128): Elaborating entity "EXE_Stage" for hierarchy "ARM_cpu:CPU|EXE_Stage:exe_stage"
 Info (12128): Elaborating entity "ALU" for hierarchy "ARM_cpu:CPU|EXE_Stage:exe_stage|ALU:alu_unit"
@@ -508,8 +552,10 @@ Info (10041): Inferred latch for "val2[28]" at Val2_Ganerator.v(18)
 Info (10041): Inferred latch for "val2[29]" at Val2_Ganerator.v(18)
 Info (10041): Inferred latch for "val2[30]" at Val2_Ganerator.v(18)
 Info (10041): Inferred latch for "val2[31]" at Val2_Ganerator.v(18)
+Info (12128): Elaborating entity "Mux4to1" for hierarchy "ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn"
 Info (12128): Elaborating entity "EXE_Stage_Reg" for hierarchy "ARM_cpu:CPU|EXE_Stage_Reg:exe_stage_reg"
 Info (12128): Elaborating entity "Status_Reg" for hierarchy "ARM_cpu:CPU|Status_Reg:st_reg"
+Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "ARM_cpu:CPU|Forwarding_Unit:forwarding_unit"
 Info (12128): Elaborating entity "Memory" for hierarchy "ARM_cpu:CPU|Memory:memory"
 Warning (10850): Verilog HDL warning at Memory.v(15): number of words (0) in memory file does not match the number of elements in the address range [0:63]
 Info (12128): Elaborating entity "MEM_Stage_Reg" for hierarchy "ARM_cpu:CPU|MEM_Stage_Reg:memory_stage_reg"
@@ -728,7 +774,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[4]" is stuck at GND
     Warning (13410): Pin "HEX7[5]" is stuck at GND
     Warning (13410): Pin "HEX7[6]" is stuck at GND
-    Warning (13410): Pin "LEDG[1]" is stuck at GND
     Warning (13410): Pin "LEDG[2]" is stuck at GND
     Warning (13410): Pin "LEDG[3]" is stuck at GND
     Warning (13410): Pin "LEDG[4]" is stuck at GND
@@ -886,10 +931,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "AUD_DACDAT" is stuck at GND
     Warning (13410): Pin "AUD_XCK" is stuck at GND
     Warning (13410): Pin "TD_RESET" is stuck at GND
-Info (144001): Generated suppressed messages file D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg
+Info (144001): Generated suppressed messages file D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 46 input pin(s) that do not drive logic
+Warning (21074): Design contains 45 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK_27"
     Warning (15610): No output dependent on input pin "CLOCK_50"
     Warning (15610): No output dependent on input pin "EXT_CLOCK"
@@ -897,7 +942,6 @@ Warning (21074): Design contains 46 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "SW[1]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[4]"
@@ -940,16 +984,16 @@ Info (21057): Implemented 418 device resources after synthesis - the final resou
     Info (21058): Implemented 47 input pins
     Info (21059): Implemented 215 output pins
     Info (21060): Implemented 156 bidirectional pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 497 warnings
-    Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Wed May 11 14:32:45 2022
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 493 warnings
+    Info: Peak virtual memory: 4599 megabytes
+    Info: Processing ended: Wed May 18 10:02:05 2022
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg.
+The suppressed messages can be found in D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg.
 
 

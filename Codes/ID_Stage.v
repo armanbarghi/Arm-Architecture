@@ -30,6 +30,7 @@ module ID_Stage (
     wire cu_mem_r_en, cu_mem_w_en, cu_wb_en, cu_b, cu_s;
     wire [3:0] cu_exe_cmd;
     wire cond_out;
+    wire bubble;
 
     assign src1 = instruction[19:16];
     assign dest = instruction[15:12];
