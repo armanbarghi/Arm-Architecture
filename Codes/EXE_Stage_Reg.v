@@ -1,12 +1,13 @@
 module EXE_Stage_Reg (
-    clk, rst,
+    clk, rst, freeze,
     wb_en_in, mem_r_en_in, mem_w_en_in,
     alu_res_in, val_rm_in, dest_in,
     wb_en, mem_r_en, mem_w_en, alu_res,
     val_rm, dest
 );
 
-input clk, rst, wb_en_in, mem_r_en_in, mem_w_en_in;
+input clk, rst, freeze;
+input wb_en_in, mem_r_en_in, mem_w_en_in;
 input [31:0] alu_res_in, val_rm_in;
 input [3:0] dest_in;
 output reg wb_en, mem_r_en, mem_w_en;
@@ -21,6 +22,14 @@ always @(posedge clk, posedge rst) begin
             alu_res <= 32'b0;
             val_rm <= 32'b0;
             dest <= 4'b0;
+        end
+        else if (freeze == 1'b1) begin
+            mem_r_en <= mem_r_en;
+            mem_w_en <= mem_w_en;
+            wb_en <= wb_en;
+            alu_res <= alu_res;
+            val_rm <= val_rm;
+            dest <= dest;
         end
         else begin
             mem_r_en <= mem_r_en_in;

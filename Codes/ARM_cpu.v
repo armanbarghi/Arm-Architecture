@@ -23,7 +23,7 @@ module ARM_cpu (
     wire [31:0] val_rn_id, val_rm_id, val_rn_exe, val_rm_exe;
     wire [31:0] alu_res_exe, alu_res_mem, alu_res_wb;
     wire mem_r_en_mem, mem_w_en_mem, wb_en_mem;
-    wire [31:0] val_rm_mem;
+    wire [31:0] st_value;
     wire [31:0] mem_res_wb;
     wire [31:0] mem_res;
     wire [3:0] fu_src1, fu_src2;
@@ -31,13 +31,19 @@ module ARM_cpu (
     wire mem_r_en_wb, wb_en_wb;
     wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
+    wire mux_wb_en_mem;
+    wire sram_freeze, sram_ready;
+    wire sram_we_n;
+    wire [15:0] sram_dq;
+    wire [17:0] sram_addr;
 
     assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
+    assign sram_freeze = ~sram_ready;
 
     IF_Stage if_stage (
         .clk(clk),
         .rst(rst),
-        .freeze(hazard),
+        .freeze(hazard | sram_freeze),
         .Branch_taken(b_exe),
         .BranchAddr(branch_addr),
         .PC(pc_if),
@@ -47,7 +53,7 @@ module ARM_cpu (
     IF_Stage_Reg if_stage_reg (
         .clk(clk),
         .rst(rst),
-        .freeze(hazard),
+        .freeze(hazard | sram_freeze),
         .flush(b_exe),
         .PC_in(pc_if),
         .Inst_in(instruction_if),
@@ -109,6 +115,7 @@ module ARM_cpu (
         .clk(clk),
         .rst(rst),
         .flush(b_exe),
+        .freeze(sram_freeze),
         .imm_in(imm_id),
         .mem_r_en_in(mem_r_en_id),
         .mem_w_en_in(mem_w_en_id),
@@ -168,6 +175,7 @@ module ARM_cpu (
     EXE_Stage_Reg exe_stage_reg(
         .clk(clk),
         .rst(rst),
+        .freeze(sram_freeze),
         .wb_en_in(wb_en_exe),
         .mem_r_en_in(mem_r_en_exe),
         .mem_w_en_in(mem_w_en_exe),
@@ -178,7 +186,7 @@ module ARM_cpu (
         .mem_r_en(mem_r_en_mem),
         .mem_w_en(mem_w_en_mem),
         .alu_res(alu_res_mem),
-        .val_rm(val_rm_mem),
+        .val_rm(st_value),
         .dest(dest_mem)
     );
 
@@ -203,21 +211,42 @@ module ARM_cpu (
         .sel_src2(sel_src2)
     );
 
-    Memory memory(
+    Mux2to1 #(.N(1))
+        mux_wb_en (
+            .i0(wb_en_mem),
+            .i1(1'b0),   // FIXME: what is the order??
+            .sel(sram_freeze),
+            .y(mux_wb_en_mem)
+        );
+    
+    SRAM_Controller sram_controller (
         .clk(clk),
         .rst(rst),
-        .mem_read(mem_r_en_mem),
-        .mem_write(mem_w_en_mem),
-        .address(alu_res_mem-32'd1024),
-        .data(val_rm_mem),
-        .mem_result(mem_res)
+        .rd_en(mem_r_en_mem),
+        .wr_en(mem_w_en_mem),
+        .address(alu_res_mem-32'd1024), //FIXME: still need -1024??
+        .write_data(st_value),
+        .SRAM_DQ(sram_dq),
+        .ready(sram_ready),
+        .SRAM_WE_N(sram_we_n),
+        .SRAM_ADDR(sram_addr),
+        .read_data(mem_res)
     );
 
-    MEM_Stage_Reg memory_stage_reg(
+    SRAM sram (
         .clk(clk),
         .rst(rst),
+        .SRAM_WE_N(sram_we_n),
+        .SRAM_DQ(sram_dq),
+        .SRAM_ADDR(sram_addr)
+    );
+
+    MEM_Stage_Reg memory_stage_reg (
+        .clk(clk),
+        .rst(rst),
+        .freeze(sram_freeze),
         .mem_r_en_in(mem_r_en_mem),
-        .wb_en_in(wb_en_mem),
+        .wb_en_in(mux_wb_en_mem),
         .dest_in(dest_mem),
         .alu_res_in(alu_res_mem),
         .mem_val_in(mem_res),
@@ -228,7 +257,7 @@ module ARM_cpu (
         .mem_val_out(mem_res_wb)
     );
 
-    WB_Stage wb_stage(
+    WB_Stage wb_stage (
         .clk(clk),
         .rst(rst),
         .mem_r_en(mem_r_en_wb),

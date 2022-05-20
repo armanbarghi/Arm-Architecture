@@ -1,5 +1,5 @@
 module ID_Stage_Reg (
-    clk, rst, flush,
+    clk, rst, flush, freeze,
     imm_in, mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in,
     exe_cmd_in,
     dest_in, status_reg_in,
@@ -15,7 +15,7 @@ module ID_Stage_Reg (
     signed_imm_24,
     pc, val_rn, val_rm
 );
-    input clk, rst, flush;
+    input clk, rst, flush, freeze;
     input imm_in, mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in;
     input [3:0] exe_cmd_in;
     input [3:0] dest_in, status_reg_in;
@@ -67,6 +67,24 @@ module ID_Stage_Reg (
             pc <= 32'b0;
             val_rn <= 32'b0;
             val_rm <= 32'b0;
+        end
+        else if (freeze == 1'b1) begin
+            imm <= imm;
+            mem_r_en <= mem_r_en;
+            mem_w_en <= mem_w_en;
+            wb_en <= wb_en;
+            b <= b;
+            s <= s;
+            exe_cmd <= exe_cmd;
+            dest <= dest;
+            src1 <= src1;
+            src2 <= src2;
+            status_reg <= status_reg;
+            shift_operand <= shift_operand;
+            signed_imm_24 <= signed_imm_24;
+            pc <= pc;
+            val_rn <= val_rn;
+            val_rm <= val_rm;
         end
         else begin
             imm <= imm_in;
