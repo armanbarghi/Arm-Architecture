@@ -10,10 +10,6 @@ module Memory (
     output [31:0] mem_result;
     
     reg [31:0] mem[0:63];
-    initial
-		begin
-			$readmemb("../Codes/DataMem.txt", mem);
-		end
 	
     // Divide address into 4 to align the memory
 	assign mem_result = (mem_read == 1'b1) ? mem[address >> 2] : 32'b0;
@@ -23,4 +19,5 @@ module Memory (
             mem[address >> 2] <= data;
         end
     end
+
 endmodule

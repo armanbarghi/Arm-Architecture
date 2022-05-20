@@ -31,4 +31,5 @@ module MEM_Stage_Reg (
             mem_val_out <= mem_val_in;
         end
     end
+    
 endmodule

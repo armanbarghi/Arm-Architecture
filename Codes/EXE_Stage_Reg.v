@@ -31,6 +31,5 @@ always @(posedge clk, posedge rst) begin
             dest <= dest_in;
         end
     end
-    
 
 endmodule

@@ -16,4 +16,5 @@ module WB_Stage (
             .sel(mem_r_en),
             .y(wb_val)
         );
+
 endmodule
