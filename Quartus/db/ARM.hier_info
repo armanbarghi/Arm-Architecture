@@ -1,425 +1,4 @@
-|ARM
-CLOCK_27 => ~NO_FANOUT~
-CLOCK_50 => CLOCK_50.IN1
-EXT_CLOCK => ~NO_FANOUT~
-KEY[0] => ~NO_FANOUT~
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
-SW[0] => SW[0].IN1
-SW[1] => SW[1].IN1
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
-SW[10] => ~NO_FANOUT~
-SW[11] => ~NO_FANOUT~
-SW[12] => ~NO_FANOUT~
-SW[13] => ~NO_FANOUT~
-SW[14] => ~NO_FANOUT~
-SW[15] => ~NO_FANOUT~
-SW[16] => ~NO_FANOUT~
-SW[17] => ~NO_FANOUT~
-HEX0[0] <= <GND>
-HEX0[1] <= <GND>
-HEX0[2] <= <GND>
-HEX0[3] <= <GND>
-HEX0[4] <= <GND>
-HEX0[5] <= <GND>
-HEX0[6] <= <GND>
-HEX1[0] <= <GND>
-HEX1[1] <= <GND>
-HEX1[2] <= <GND>
-HEX1[3] <= <GND>
-HEX1[4] <= <GND>
-HEX1[5] <= <GND>
-HEX1[6] <= <GND>
-HEX2[0] <= <GND>
-HEX2[1] <= <GND>
-HEX2[2] <= <GND>
-HEX2[3] <= <GND>
-HEX2[4] <= <GND>
-HEX2[5] <= <GND>
-HEX2[6] <= <GND>
-HEX3[0] <= <GND>
-HEX3[1] <= <GND>
-HEX3[2] <= <GND>
-HEX3[3] <= <GND>
-HEX3[4] <= <GND>
-HEX3[5] <= <GND>
-HEX3[6] <= <GND>
-HEX4[0] <= <GND>
-HEX4[1] <= <GND>
-HEX4[2] <= <GND>
-HEX4[3] <= <GND>
-HEX4[4] <= <GND>
-HEX4[5] <= <GND>
-HEX4[6] <= <GND>
-HEX5[0] <= <GND>
-HEX5[1] <= <GND>
-HEX5[2] <= <GND>
-HEX5[3] <= <GND>
-HEX5[4] <= <GND>
-HEX5[5] <= <GND>
-HEX5[6] <= <GND>
-HEX6[0] <= <GND>
-HEX6[1] <= <GND>
-HEX6[2] <= <GND>
-HEX6[3] <= <GND>
-HEX6[4] <= <GND>
-HEX6[5] <= <GND>
-HEX6[6] <= <GND>
-HEX7[0] <= <GND>
-HEX7[1] <= <GND>
-HEX7[2] <= <GND>
-HEX7[3] <= <GND>
-HEX7[4] <= <GND>
-HEX7[5] <= <GND>
-HEX7[6] <= <GND>
-LEDG[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[2] <= <GND>
-LEDG[3] <= <GND>
-LEDG[4] <= <GND>
-LEDG[5] <= <GND>
-LEDG[6] <= <GND>
-LEDG[7] <= <GND>
-LEDG[8] <= <GND>
-LEDR[0] <= <GND>
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
-LEDR[10] <= <GND>
-LEDR[11] <= <GND>
-LEDR[12] <= <GND>
-LEDR[13] <= <GND>
-LEDR[14] <= <GND>
-LEDR[15] <= <GND>
-LEDR[16] <= <GND>
-LEDR[17] <= <GND>
-DRAM_DQ[0] <> <UNC>
-DRAM_DQ[1] <> <UNC>
-DRAM_DQ[2] <> <UNC>
-DRAM_DQ[3] <> <UNC>
-DRAM_DQ[4] <> <UNC>
-DRAM_DQ[5] <> <UNC>
-DRAM_DQ[6] <> <UNC>
-DRAM_DQ[7] <> <UNC>
-DRAM_DQ[8] <> <UNC>
-DRAM_DQ[9] <> <UNC>
-DRAM_DQ[10] <> <UNC>
-DRAM_DQ[11] <> <UNC>
-DRAM_DQ[12] <> <UNC>
-DRAM_DQ[13] <> <UNC>
-DRAM_DQ[14] <> <UNC>
-DRAM_DQ[15] <> <UNC>
-DRAM_ADDR[0] <= <GND>
-DRAM_ADDR[1] <= <GND>
-DRAM_ADDR[2] <= <GND>
-DRAM_ADDR[3] <= <GND>
-DRAM_ADDR[4] <= <GND>
-DRAM_ADDR[5] <= <GND>
-DRAM_ADDR[6] <= <GND>
-DRAM_ADDR[7] <= <GND>
-DRAM_ADDR[8] <= <GND>
-DRAM_ADDR[9] <= <GND>
-DRAM_ADDR[10] <= <GND>
-DRAM_ADDR[11] <= <GND>
-DRAM_LDQM <= <GND>
-DRAM_UDQM <= <GND>
-DRAM_WE_N <= <GND>
-DRAM_CAS_N <= <GND>
-DRAM_RAS_N <= <GND>
-DRAM_CS_N <= <GND>
-DRAM_BA_0 <= <GND>
-DRAM_BA_1 <= <GND>
-DRAM_CLK <= <GND>
-DRAM_CKE <= <GND>
-FL_DQ[0] <> <UNC>
-FL_DQ[1] <> <UNC>
-FL_DQ[2] <> <UNC>
-FL_DQ[3] <> <UNC>
-FL_DQ[4] <> <UNC>
-FL_DQ[5] <> <UNC>
-FL_DQ[6] <> <UNC>
-FL_DQ[7] <> <UNC>
-FL_ADDR[0] <= <GND>
-FL_ADDR[1] <= <GND>
-FL_ADDR[2] <= <GND>
-FL_ADDR[3] <= <GND>
-FL_ADDR[4] <= <GND>
-FL_ADDR[5] <= <GND>
-FL_ADDR[6] <= <GND>
-FL_ADDR[7] <= <GND>
-FL_ADDR[8] <= <GND>
-FL_ADDR[9] <= <GND>
-FL_ADDR[10] <= <GND>
-FL_ADDR[11] <= <GND>
-FL_ADDR[12] <= <GND>
-FL_ADDR[13] <= <GND>
-FL_ADDR[14] <= <GND>
-FL_ADDR[15] <= <GND>
-FL_ADDR[16] <= <GND>
-FL_ADDR[17] <= <GND>
-FL_ADDR[18] <= <GND>
-FL_ADDR[19] <= <GND>
-FL_ADDR[20] <= <GND>
-FL_ADDR[21] <= <GND>
-FL_WE_N <= <GND>
-FL_RST_N <= <GND>
-FL_OE_N <= <GND>
-FL_CE_N <= <GND>
-SRAM_DQ[0] <> <UNC>
-SRAM_DQ[1] <> <UNC>
-SRAM_DQ[2] <> <UNC>
-SRAM_DQ[3] <> <UNC>
-SRAM_DQ[4] <> <UNC>
-SRAM_DQ[5] <> <UNC>
-SRAM_DQ[6] <> <UNC>
-SRAM_DQ[7] <> <UNC>
-SRAM_DQ[8] <> <UNC>
-SRAM_DQ[9] <> <UNC>
-SRAM_DQ[10] <> <UNC>
-SRAM_DQ[11] <> <UNC>
-SRAM_DQ[12] <> <UNC>
-SRAM_DQ[13] <> <UNC>
-SRAM_DQ[14] <> <UNC>
-SRAM_DQ[15] <> <UNC>
-SRAM_ADDR[0] <= <GND>
-SRAM_ADDR[1] <= <GND>
-SRAM_ADDR[2] <= <GND>
-SRAM_ADDR[3] <= <GND>
-SRAM_ADDR[4] <= <GND>
-SRAM_ADDR[5] <= <GND>
-SRAM_ADDR[6] <= <GND>
-SRAM_ADDR[7] <= <GND>
-SRAM_ADDR[8] <= <GND>
-SRAM_ADDR[9] <= <GND>
-SRAM_ADDR[10] <= <GND>
-SRAM_ADDR[11] <= <GND>
-SRAM_ADDR[12] <= <GND>
-SRAM_ADDR[13] <= <GND>
-SRAM_ADDR[14] <= <GND>
-SRAM_ADDR[15] <= <GND>
-SRAM_ADDR[16] <= <GND>
-SRAM_ADDR[17] <= <GND>
-SRAM_UB_N <= <GND>
-SRAM_LB_N <= <GND>
-SRAM_WE_N <= <GND>
-SRAM_CE_N <= <GND>
-SRAM_OE_N <= <GND>
-OTG_DATA[0] <> <UNC>
-OTG_DATA[1] <> <UNC>
-OTG_DATA[2] <> <UNC>
-OTG_DATA[3] <> <UNC>
-OTG_DATA[4] <> <UNC>
-OTG_DATA[5] <> <UNC>
-OTG_DATA[6] <> <UNC>
-OTG_DATA[7] <> <UNC>
-OTG_DATA[8] <> <UNC>
-OTG_DATA[9] <> <UNC>
-OTG_DATA[10] <> <UNC>
-OTG_DATA[11] <> <UNC>
-OTG_DATA[12] <> <UNC>
-OTG_DATA[13] <> <UNC>
-OTG_DATA[14] <> <UNC>
-OTG_DATA[15] <> <UNC>
-OTG_ADDR[0] <= <GND>
-OTG_ADDR[1] <= <GND>
-OTG_CS_N <= <GND>
-OTG_RD_N <= <GND>
-OTG_WR_N <= <GND>
-OTG_RST_N <= <GND>
-OTG_FSPEED <= <GND>
-OTG_LSPEED <= <GND>
-OTG_INT0 => ~NO_FANOUT~
-OTG_INT1 => ~NO_FANOUT~
-OTG_DREQ0 => ~NO_FANOUT~
-OTG_DREQ1 => ~NO_FANOUT~
-OTG_DACK0_N <= <GND>
-OTG_DACK1_N <= <GND>
-LCD_ON <= <GND>
-LCD_BLON <= <GND>
-LCD_RW <= <GND>
-LCD_EN <= <GND>
-LCD_RS <= <GND>
-LCD_DATA[0] <> <UNC>
-LCD_DATA[1] <> <UNC>
-LCD_DATA[2] <> <UNC>
-LCD_DATA[3] <> <UNC>
-LCD_DATA[4] <> <UNC>
-LCD_DATA[5] <> <UNC>
-LCD_DATA[6] <> <UNC>
-LCD_DATA[7] <> <UNC>
-TDI => ~NO_FANOUT~
-TCK => ~NO_FANOUT~
-TCS => ~NO_FANOUT~
-TDO <= <GND>
-I2C_SDAT <> <UNC>
-I2C_SCLK <= <GND>
-PS2_DAT => ~NO_FANOUT~
-PS2_CLK => ~NO_FANOUT~
-VGA_CLK <= <GND>
-VGA_HS <= <GND>
-VGA_VS <= <GND>
-VGA_BLANK <= <GND>
-VGA_SYNC <= <GND>
-VGA_R[0] <= <GND>
-VGA_R[1] <= <GND>
-VGA_R[2] <= <GND>
-VGA_R[3] <= <GND>
-VGA_R[4] <= <GND>
-VGA_R[5] <= <GND>
-VGA_R[6] <= <GND>
-VGA_R[7] <= <GND>
-VGA_R[8] <= <GND>
-VGA_R[9] <= <GND>
-VGA_G[0] <= <GND>
-VGA_G[1] <= <GND>
-VGA_G[2] <= <GND>
-VGA_G[3] <= <GND>
-VGA_G[4] <= <GND>
-VGA_G[5] <= <GND>
-VGA_G[6] <= <GND>
-VGA_G[7] <= <GND>
-VGA_G[8] <= <GND>
-VGA_G[9] <= <GND>
-VGA_B[0] <= <GND>
-VGA_B[1] <= <GND>
-VGA_B[2] <= <GND>
-VGA_B[3] <= <GND>
-VGA_B[4] <= <GND>
-VGA_B[5] <= <GND>
-VGA_B[6] <= <GND>
-VGA_B[7] <= <GND>
-VGA_B[8] <= <GND>
-VGA_B[9] <= <GND>
-ENET_DATA[0] <> <UNC>
-ENET_DATA[1] <> <UNC>
-ENET_DATA[2] <> <UNC>
-ENET_DATA[3] <> <UNC>
-ENET_DATA[4] <> <UNC>
-ENET_DATA[5] <> <UNC>
-ENET_DATA[6] <> <UNC>
-ENET_DATA[7] <> <UNC>
-ENET_DATA[8] <> <UNC>
-ENET_DATA[9] <> <UNC>
-ENET_DATA[10] <> <UNC>
-ENET_DATA[11] <> <UNC>
-ENET_DATA[12] <> <UNC>
-ENET_DATA[13] <> <UNC>
-ENET_DATA[14] <> <UNC>
-ENET_DATA[15] <> <UNC>
-ENET_CMD <= <GND>
-ENET_CS_N <= <GND>
-ENET_WR_N <= <GND>
-ENET_RD_N <= <GND>
-ENET_RST_N <= <GND>
-ENET_INT => ~NO_FANOUT~
-ENET_CLK <= <GND>
-AUD_ADCLRCK <> <UNC>
-AUD_ADCDAT => ~NO_FANOUT~
-AUD_DACLRCK <> <UNC>
-AUD_DACDAT <= <GND>
-AUD_BCLK <> <UNC>
-AUD_XCK <= <GND>
-TD_DATA[0] => ~NO_FANOUT~
-TD_DATA[1] => ~NO_FANOUT~
-TD_DATA[2] => ~NO_FANOUT~
-TD_DATA[3] => ~NO_FANOUT~
-TD_DATA[4] => ~NO_FANOUT~
-TD_DATA[5] => ~NO_FANOUT~
-TD_DATA[6] => ~NO_FANOUT~
-TD_DATA[7] => ~NO_FANOUT~
-TD_HS => ~NO_FANOUT~
-TD_VS => ~NO_FANOUT~
-TD_RESET <= <GND>
-TD_CLK27 => ~NO_FANOUT~
-GPIO_0[0] <> <UNC>
-GPIO_0[1] <> <UNC>
-GPIO_0[2] <> <UNC>
-GPIO_0[3] <> <UNC>
-GPIO_0[4] <> <UNC>
-GPIO_0[5] <> <UNC>
-GPIO_0[6] <> <UNC>
-GPIO_0[7] <> <UNC>
-GPIO_0[8] <> <UNC>
-GPIO_0[9] <> <UNC>
-GPIO_0[10] <> <UNC>
-GPIO_0[11] <> <UNC>
-GPIO_0[12] <> <UNC>
-GPIO_0[13] <> <UNC>
-GPIO_0[14] <> <UNC>
-GPIO_0[15] <> <UNC>
-GPIO_0[16] <> <UNC>
-GPIO_0[17] <> <UNC>
-GPIO_0[18] <> <UNC>
-GPIO_0[19] <> <UNC>
-GPIO_0[20] <> <UNC>
-GPIO_0[21] <> <UNC>
-GPIO_0[22] <> <UNC>
-GPIO_0[23] <> <UNC>
-GPIO_0[24] <> <UNC>
-GPIO_0[25] <> <UNC>
-GPIO_0[26] <> <UNC>
-GPIO_0[27] <> <UNC>
-GPIO_0[28] <> <UNC>
-GPIO_0[29] <> <UNC>
-GPIO_0[30] <> <UNC>
-GPIO_0[31] <> <UNC>
-GPIO_0[32] <> <UNC>
-GPIO_0[33] <> <UNC>
-GPIO_0[34] <> <UNC>
-GPIO_0[35] <> <UNC>
-GPIO_1[0] <> <UNC>
-GPIO_1[1] <> <UNC>
-GPIO_1[2] <> <UNC>
-GPIO_1[3] <> <UNC>
-GPIO_1[4] <> <UNC>
-GPIO_1[5] <> <UNC>
-GPIO_1[6] <> <UNC>
-GPIO_1[7] <> <UNC>
-GPIO_1[8] <> <UNC>
-GPIO_1[9] <> <UNC>
-GPIO_1[10] <> <UNC>
-GPIO_1[11] <> <UNC>
-GPIO_1[12] <> <UNC>
-GPIO_1[13] <> <UNC>
-GPIO_1[14] <> <UNC>
-GPIO_1[15] <> <UNC>
-GPIO_1[16] <> <UNC>
-GPIO_1[17] <> <UNC>
-GPIO_1[18] <> <UNC>
-GPIO_1[19] <> <UNC>
-GPIO_1[20] <> <UNC>
-GPIO_1[21] <> <UNC>
-GPIO_1[22] <> <UNC>
-GPIO_1[23] <> <UNC>
-GPIO_1[24] <> <UNC>
-GPIO_1[25] <> <UNC>
-GPIO_1[26] <> <UNC>
-GPIO_1[27] <> <UNC>
-GPIO_1[28] <> <UNC>
-GPIO_1[29] <> <UNC>
-GPIO_1[30] <> <UNC>
-GPIO_1[31] <> <UNC>
-GPIO_1[32] <> <UNC>
-GPIO_1[33] <> <UNC>
-GPIO_1[34] <> <UNC>
-GPIO_1[35] <> <UNC>
-
-
-|ARM|ARM_cpu:CPU
+|ARM_cpu
 clk => clk.IN13
 rst => rst.IN12
 mode => hazard.IN1
@@ -428,9 +7,73 @@ mode => comb.IN1
 mode => comb.IN1
 mode => comb.IN1
 mode => hazard.IN1
+pc_if[0] <= pc_if[0].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[1] <= pc_if[1].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[2] <= pc_if[2].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[3] <= pc_if[3].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[4] <= pc_if[4].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[5] <= pc_if[5].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[6] <= pc_if[6].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[7] <= pc_if[7].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[8] <= pc_if[8].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[9] <= pc_if[9].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[10] <= pc_if[10].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[11] <= pc_if[11].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[12] <= pc_if[12].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[13] <= pc_if[13].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[14] <= pc_if[14].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[15] <= pc_if[15].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[16] <= pc_if[16].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[17] <= pc_if[17].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[18] <= pc_if[18].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[19] <= pc_if[19].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[20] <= pc_if[20].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[21] <= pc_if[21].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[22] <= pc_if[22].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[23] <= pc_if[23].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[24] <= pc_if[24].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[25] <= pc_if[25].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[26] <= pc_if[26].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[27] <= pc_if[27].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[28] <= pc_if[28].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[29] <= pc_if[29].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[30] <= pc_if[30].DB_MAX_OUTPUT_PORT_TYPE
+pc_if[31] <= pc_if[31].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[0] <= instruction_if[0].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[1] <= instruction_if[1].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[2] <= instruction_if[2].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[3] <= instruction_if[3].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[4] <= instruction_if[4].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[5] <= instruction_if[5].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[6] <= instruction_if[6].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[7] <= instruction_if[7].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[8] <= instruction_if[8].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[9] <= instruction_if[9].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[10] <= instruction_if[10].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[11] <= instruction_if[11].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[12] <= instruction_if[12].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[13] <= instruction_if[13].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[14] <= instruction_if[14].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[15] <= instruction_if[15].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[16] <= instruction_if[16].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[17] <= instruction_if[17].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[18] <= instruction_if[18].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[19] <= instruction_if[19].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[20] <= instruction_if[20].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[21] <= instruction_if[21].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[22] <= instruction_if[22].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[23] <= instruction_if[23].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[24] <= instruction_if[24].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[25] <= instruction_if[25].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[26] <= instruction_if[26].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[27] <= instruction_if[27].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[28] <= instruction_if[28].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[29] <= instruction_if[29].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[30] <= instruction_if[30].DB_MAX_OUTPUT_PORT_TYPE
+instruction_if[31] <= instruction_if[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|IF_Stage:if_stage
+|ARM_cpu|IF_Stage:if_stage
 clk => clk.IN1
 rst => rst.IN1
 freeze => _.IN1
@@ -533,7 +176,7 @@ Inst[30] <= InstMemory:InstMem.Inst
 Inst[31] <= InstMemory:InstMem.Inst
 
 
-|ARM|ARM_cpu:CPU|IF_Stage:if_stage|Register:PC_reg
+|ARM_cpu|IF_Stage:if_stage|Register:PC_reg
 clk => d_out[0]~reg0.CLK
 clk => d_out[1]~reg0.CLK
 clk => d_out[2]~reg0.CLK
@@ -696,7 +339,7 @@ d_out[30] <= d_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d_out[31] <= d_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|IF_Stage:if_stage|Mux2to1:mux32b
+|ARM_cpu|IF_Stage:if_stage|Mux2to1:mux32b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
@@ -827,7 +470,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|IF_Stage:if_stage|InstMemory:InstMem
+|ARM_cpu|IF_Stage:if_stage|InstMemory:InstMem
 AddrIn[0] => ~NO_FANOUT~
 AddrIn[1] => ~NO_FANOUT~
 AddrIn[2] => mem.RADDR
@@ -894,7 +537,7 @@ Inst[30] <= mem.DATAOUT30
 Inst[31] <= mem.DATAOUT31
 
 
-|ARM|ARM_cpu:CPU|IF_Stage_Reg:if_stage_reg
+|ARM_cpu|IF_Stage_Reg:if_stage_reg
 clk => Inst[0]~reg0.CLK
 clk => Inst[1]~reg0.CLK
 clk => Inst[2]~reg0.CLK
@@ -1281,7 +924,7 @@ Inst[30] <= Inst[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Inst[31] <= Inst[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|ID_Stage:id_stage
+|ARM_cpu|ID_Stage:id_stage
 clk => clk.IN3
 rst => rst.IN3
 wb_wb_en => wb_wb_en.IN1
@@ -1504,7 +1147,7 @@ val_rm[30] <= RegisterFile:reg_file.reg2
 val_rm[31] <= RegisterFile:reg_file.reg2
 
 
-|ARM|ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux4b
+|ARM_cpu|ID_Stage:id_stage|Mux2to1:mux4b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
@@ -1523,7 +1166,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux9b
+|ARM_cpu|ID_Stage:id_stage|Mux2to1:mux9b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
@@ -1562,38 +1205,34 @@ y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[8] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|ID_Stage:id_stage|ControlUnit:control_unit
+|ARM_cpu|ID_Stage:id_stage|ControlUnit:control_unit
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 s => s_out.DATAA
 s => mem_r_en.IN1
 s => mem_w_en.IN1
 mode[0] => Equal0.IN0
+mode[0] => Equal1.IN1
 mode[0] => Equal2.IN1
-mode[0] => Equal3.IN1
 mode[1] => Equal0.IN1
+mode[1] => Equal1.IN0
 mode[1] => Equal2.IN0
-mode[1] => Equal3.IN0
 op_code[0] => Decoder0.IN3
-op_code[0] => Equal1.IN3
+op_code[0] => Equal3.IN3
 op_code[0] => Equal4.IN3
-op_code[0] => Equal5.IN3
 op_code[1] => Decoder0.IN2
-op_code[1] => Equal1.IN2
-op_code[1] => Equal4.IN1
-op_code[1] => Equal5.IN2
+op_code[1] => Equal3.IN1
+op_code[1] => Equal4.IN2
 op_code[2] => Decoder0.IN1
-op_code[2] => Equal1.IN1
-op_code[2] => Equal4.IN2
-op_code[2] => Equal5.IN1
+op_code[2] => Equal3.IN2
+op_code[2] => Equal4.IN1
 op_code[3] => Decoder0.IN0
-op_code[3] => Equal1.IN0
+op_code[3] => Equal3.IN0
 op_code[3] => Equal4.IN0
-op_code[3] => Equal5.IN0
 mem_r_en <= mem_r_en.DB_MAX_OUTPUT_PORT_TYPE
 mem_w_en <= mem_w_en.DB_MAX_OUTPUT_PORT_TYPE
 wb_en <= wb_en.DB_MAX_OUTPUT_PORT_TYPE
-b <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+b <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 s_out <= s_out.DB_MAX_OUTPUT_PORT_TYPE
 exe_cmd[0] <= exe_cmd.DB_MAX_OUTPUT_PORT_TYPE
 exe_cmd[1] <= exe_cmd.DB_MAX_OUTPUT_PORT_TYPE
@@ -1601,7 +1240,7 @@ exe_cmd[2] <= exe_cmd.DB_MAX_OUTPUT_PORT_TYPE
 exe_cmd[3] <= exe_cmd.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|ID_Stage:id_stage|ConditionCheck:condition_check
+|ARM_cpu|ID_Stage:id_stage|ConditionCheck:condition_check
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 cond[0] => Mux0.IN15
@@ -1627,7 +1266,7 @@ status_reg[3] => Mux0.IN3
 cond_out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file
+|ARM_cpu|ID_Stage:id_stage|RegisterFile:reg_file
 clk => register_file[15][0].CLK
 clk => register_file[15][1].CLK
 clk => register_file[15][2].CLK
@@ -2979,7 +2618,7 @@ reg2[30] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
 reg2[31] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|Hazard_Detection_Unit:hazard_unit1
+|ARM_cpu|Hazard_Detection_Unit:hazard_unit1
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 two_src => hazard.OUTPUTSELECT
@@ -3021,7 +2660,7 @@ mem_dest[3] => Equal3.IN4
 hazard <= hazard.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|Hazard_Detection_Unit2:hazard_unit2
+|ARM_cpu|Hazard_Detection_Unit2:hazard_unit2
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 two_src => hazard.OUTPUTSELECT
@@ -3045,7 +2684,7 @@ exe_dest[3] => Equal1.IN4
 hazard <= hazard.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg
+|ARM_cpu|ID_Stage_Reg:id_stage_reg
 clk => val_rm[0]~reg0.CLK
 clk => val_rm[1]~reg0.CLK
 clk => val_rm[2]~reg0.CLK
@@ -3838,7 +3477,7 @@ val_rm[30] <= val_rm[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 val_rm[31] <= val_rm[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage
+|ARM_cpu|EXE_Stage:exe_stage
 clk => ~NO_FANOUT~
 exe_cmd[0] => exe_cmd[0].IN1
 exe_cmd[1] => exe_cmd[1].IN1
@@ -4161,435 +3800,435 @@ status[2] <= ALU:alu_unit.status_bits
 status[3] <= ALU:alu_unit.status_bits
 
 
-|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|ALU:alu_unit
-in1[0] => Add0.IN32
-in1[0] => Add2.IN64
+|ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit
+in1[0] => Add2.IN32
+in1[0] => Add3.IN64
 in1[0] => concat.IN0
 in1[0] => concat.IN0
 in1[0] => concat.IN0
-in1[1] => Add0.IN31
-in1[1] => Add2.IN63
+in1[1] => Add2.IN31
+in1[1] => Add3.IN63
 in1[1] => concat.IN0
 in1[1] => concat.IN0
 in1[1] => concat.IN0
-in1[2] => Add0.IN30
-in1[2] => Add2.IN62
+in1[2] => Add2.IN30
+in1[2] => Add3.IN62
 in1[2] => concat.IN0
 in1[2] => concat.IN0
 in1[2] => concat.IN0
-in1[3] => Add0.IN29
-in1[3] => Add2.IN61
+in1[3] => Add2.IN29
+in1[3] => Add3.IN61
 in1[3] => concat.IN0
 in1[3] => concat.IN0
 in1[3] => concat.IN0
-in1[4] => Add0.IN28
-in1[4] => Add2.IN60
+in1[4] => Add2.IN28
+in1[4] => Add3.IN60
 in1[4] => concat.IN0
 in1[4] => concat.IN0
 in1[4] => concat.IN0
-in1[5] => Add0.IN27
-in1[5] => Add2.IN59
+in1[5] => Add2.IN27
+in1[5] => Add3.IN59
 in1[5] => concat.IN0
 in1[5] => concat.IN0
 in1[5] => concat.IN0
-in1[6] => Add0.IN26
-in1[6] => Add2.IN58
+in1[6] => Add2.IN26
+in1[6] => Add3.IN58
 in1[6] => concat.IN0
 in1[6] => concat.IN0
 in1[6] => concat.IN0
-in1[7] => Add0.IN25
-in1[7] => Add2.IN57
+in1[7] => Add2.IN25
+in1[7] => Add3.IN57
 in1[7] => concat.IN0
 in1[7] => concat.IN0
 in1[7] => concat.IN0
-in1[8] => Add0.IN24
-in1[8] => Add2.IN56
+in1[8] => Add2.IN24
+in1[8] => Add3.IN56
 in1[8] => concat.IN0
 in1[8] => concat.IN0
 in1[8] => concat.IN0
-in1[9] => Add0.IN23
-in1[9] => Add2.IN55
+in1[9] => Add2.IN23
+in1[9] => Add3.IN55
 in1[9] => concat.IN0
 in1[9] => concat.IN0
 in1[9] => concat.IN0
-in1[10] => Add0.IN22
-in1[10] => Add2.IN54
+in1[10] => Add2.IN22
+in1[10] => Add3.IN54
 in1[10] => concat.IN0
 in1[10] => concat.IN0
 in1[10] => concat.IN0
-in1[11] => Add0.IN21
-in1[11] => Add2.IN53
+in1[11] => Add2.IN21
+in1[11] => Add3.IN53
 in1[11] => concat.IN0
 in1[11] => concat.IN0
 in1[11] => concat.IN0
-in1[12] => Add0.IN20
-in1[12] => Add2.IN52
+in1[12] => Add2.IN20
+in1[12] => Add3.IN52
 in1[12] => concat.IN0
 in1[12] => concat.IN0
 in1[12] => concat.IN0
-in1[13] => Add0.IN19
-in1[13] => Add2.IN51
+in1[13] => Add2.IN19
+in1[13] => Add3.IN51
 in1[13] => concat.IN0
 in1[13] => concat.IN0
 in1[13] => concat.IN0
-in1[14] => Add0.IN18
-in1[14] => Add2.IN50
+in1[14] => Add2.IN18
+in1[14] => Add3.IN50
 in1[14] => concat.IN0
 in1[14] => concat.IN0
 in1[14] => concat.IN0
-in1[15] => Add0.IN17
-in1[15] => Add2.IN49
+in1[15] => Add2.IN17
+in1[15] => Add3.IN49
 in1[15] => concat.IN0
 in1[15] => concat.IN0
 in1[15] => concat.IN0
-in1[16] => Add0.IN16
-in1[16] => Add2.IN48
+in1[16] => Add2.IN16
+in1[16] => Add3.IN48
 in1[16] => concat.IN0
 in1[16] => concat.IN0
 in1[16] => concat.IN0
-in1[17] => Add0.IN15
-in1[17] => Add2.IN47
+in1[17] => Add2.IN15
+in1[17] => Add3.IN47
 in1[17] => concat.IN0
 in1[17] => concat.IN0
 in1[17] => concat.IN0
-in1[18] => Add0.IN14
-in1[18] => Add2.IN46
+in1[18] => Add2.IN14
+in1[18] => Add3.IN46
 in1[18] => concat.IN0
 in1[18] => concat.IN0
 in1[18] => concat.IN0
-in1[19] => Add0.IN13
-in1[19] => Add2.IN45
+in1[19] => Add2.IN13
+in1[19] => Add3.IN45
 in1[19] => concat.IN0
 in1[19] => concat.IN0
 in1[19] => concat.IN0
-in1[20] => Add0.IN12
-in1[20] => Add2.IN44
+in1[20] => Add2.IN12
+in1[20] => Add3.IN44
 in1[20] => concat.IN0
 in1[20] => concat.IN0
 in1[20] => concat.IN0
-in1[21] => Add0.IN11
-in1[21] => Add2.IN43
+in1[21] => Add2.IN11
+in1[21] => Add3.IN43
 in1[21] => concat.IN0
 in1[21] => concat.IN0
 in1[21] => concat.IN0
-in1[22] => Add0.IN10
-in1[22] => Add2.IN42
+in1[22] => Add2.IN10
+in1[22] => Add3.IN42
 in1[22] => concat.IN0
 in1[22] => concat.IN0
 in1[22] => concat.IN0
-in1[23] => Add0.IN9
-in1[23] => Add2.IN41
+in1[23] => Add2.IN9
+in1[23] => Add3.IN41
 in1[23] => concat.IN0
 in1[23] => concat.IN0
 in1[23] => concat.IN0
-in1[24] => Add0.IN8
-in1[24] => Add2.IN40
+in1[24] => Add2.IN8
+in1[24] => Add3.IN40
 in1[24] => concat.IN0
 in1[24] => concat.IN0
 in1[24] => concat.IN0
-in1[25] => Add0.IN7
-in1[25] => Add2.IN39
+in1[25] => Add2.IN7
+in1[25] => Add3.IN39
 in1[25] => concat.IN0
 in1[25] => concat.IN0
 in1[25] => concat.IN0
-in1[26] => Add0.IN6
-in1[26] => Add2.IN38
+in1[26] => Add2.IN6
+in1[26] => Add3.IN38
 in1[26] => concat.IN0
 in1[26] => concat.IN0
 in1[26] => concat.IN0
-in1[27] => Add0.IN5
-in1[27] => Add2.IN37
+in1[27] => Add2.IN5
+in1[27] => Add3.IN37
 in1[27] => concat.IN0
 in1[27] => concat.IN0
 in1[27] => concat.IN0
-in1[28] => Add0.IN4
-in1[28] => Add2.IN36
+in1[28] => Add2.IN4
+in1[28] => Add3.IN36
 in1[28] => concat.IN0
 in1[28] => concat.IN0
 in1[28] => concat.IN0
-in1[29] => Add0.IN3
-in1[29] => Add2.IN35
+in1[29] => Add2.IN3
+in1[29] => Add3.IN35
 in1[29] => concat.IN0
 in1[29] => concat.IN0
 in1[29] => concat.IN0
-in1[30] => Add0.IN2
-in1[30] => Add2.IN34
+in1[30] => Add2.IN2
+in1[30] => Add3.IN34
 in1[30] => concat.IN0
 in1[30] => concat.IN0
 in1[30] => concat.IN0
-in1[31] => Add0.IN1
-in1[31] => Add2.IN33
+in1[31] => Add2.IN1
+in1[31] => Add3.IN33
 in1[31] => concat.IN0
 in1[31] => concat.IN0
 in1[31] => concat.IN0
 in1[31] => V.IN0
 in1[31] => V.IN0
 in1[31] => V.IN0
-in2[0] => Add0.IN64
+in2[0] => Add2.IN64
 in2[0] => concat.IN1
 in2[0] => concat.IN1
 in2[0] => concat.IN1
 in2[0] => concat.DATAB
-in2[0] => Add2.IN32
+in2[0] => Add3.IN31
 in2[0] => concat.DATAB
-in2[1] => Add0.IN63
+in2[1] => Add2.IN63
 in2[1] => concat.IN1
 in2[1] => concat.IN1
 in2[1] => concat.IN1
 in2[1] => concat.DATAB
-in2[1] => Add2.IN31
+in2[1] => Add3.IN30
 in2[1] => concat.DATAB
-in2[2] => Add0.IN62
+in2[2] => Add2.IN62
 in2[2] => concat.IN1
 in2[2] => concat.IN1
 in2[2] => concat.IN1
 in2[2] => concat.DATAB
-in2[2] => Add2.IN30
+in2[2] => Add3.IN29
 in2[2] => concat.DATAB
-in2[3] => Add0.IN61
+in2[3] => Add2.IN61
 in2[3] => concat.IN1
 in2[3] => concat.IN1
 in2[3] => concat.IN1
 in2[3] => concat.DATAB
-in2[3] => Add2.IN29
+in2[3] => Add3.IN28
 in2[3] => concat.DATAB
-in2[4] => Add0.IN60
+in2[4] => Add2.IN60
 in2[4] => concat.IN1
 in2[4] => concat.IN1
 in2[4] => concat.IN1
 in2[4] => concat.DATAB
-in2[4] => Add2.IN28
+in2[4] => Add3.IN27
 in2[4] => concat.DATAB
-in2[5] => Add0.IN59
+in2[5] => Add2.IN59
 in2[5] => concat.IN1
 in2[5] => concat.IN1
 in2[5] => concat.IN1
 in2[5] => concat.DATAB
-in2[5] => Add2.IN27
+in2[5] => Add3.IN26
 in2[5] => concat.DATAB
-in2[6] => Add0.IN58
+in2[6] => Add2.IN58
 in2[6] => concat.IN1
 in2[6] => concat.IN1
 in2[6] => concat.IN1
 in2[6] => concat.DATAB
-in2[6] => Add2.IN26
+in2[6] => Add3.IN25
 in2[6] => concat.DATAB
-in2[7] => Add0.IN57
+in2[7] => Add2.IN57
 in2[7] => concat.IN1
 in2[7] => concat.IN1
 in2[7] => concat.IN1
 in2[7] => concat.DATAB
-in2[7] => Add2.IN25
+in2[7] => Add3.IN24
 in2[7] => concat.DATAB
-in2[8] => Add0.IN56
+in2[8] => Add2.IN56
 in2[8] => concat.IN1
 in2[8] => concat.IN1
 in2[8] => concat.IN1
 in2[8] => concat.DATAB
-in2[8] => Add2.IN24
+in2[8] => Add3.IN23
 in2[8] => concat.DATAB
-in2[9] => Add0.IN55
+in2[9] => Add2.IN55
 in2[9] => concat.IN1
 in2[9] => concat.IN1
 in2[9] => concat.IN1
 in2[9] => concat.DATAB
-in2[9] => Add2.IN23
+in2[9] => Add3.IN22
 in2[9] => concat.DATAB
-in2[10] => Add0.IN54
+in2[10] => Add2.IN54
 in2[10] => concat.IN1
 in2[10] => concat.IN1
 in2[10] => concat.IN1
 in2[10] => concat.DATAB
-in2[10] => Add2.IN22
+in2[10] => Add3.IN21
 in2[10] => concat.DATAB
-in2[11] => Add0.IN53
+in2[11] => Add2.IN53
 in2[11] => concat.IN1
 in2[11] => concat.IN1
 in2[11] => concat.IN1
 in2[11] => concat.DATAB
-in2[11] => Add2.IN21
+in2[11] => Add3.IN20
 in2[11] => concat.DATAB
-in2[12] => Add0.IN52
+in2[12] => Add2.IN52
 in2[12] => concat.IN1
 in2[12] => concat.IN1
 in2[12] => concat.IN1
 in2[12] => concat.DATAB
-in2[12] => Add2.IN20
+in2[12] => Add3.IN19
 in2[12] => concat.DATAB
-in2[13] => Add0.IN51
+in2[13] => Add2.IN51
 in2[13] => concat.IN1
 in2[13] => concat.IN1
 in2[13] => concat.IN1
 in2[13] => concat.DATAB
-in2[13] => Add2.IN19
+in2[13] => Add3.IN18
 in2[13] => concat.DATAB
-in2[14] => Add0.IN50
+in2[14] => Add2.IN50
 in2[14] => concat.IN1
 in2[14] => concat.IN1
 in2[14] => concat.IN1
 in2[14] => concat.DATAB
-in2[14] => Add2.IN18
+in2[14] => Add3.IN17
 in2[14] => concat.DATAB
-in2[15] => Add0.IN49
+in2[15] => Add2.IN49
 in2[15] => concat.IN1
 in2[15] => concat.IN1
 in2[15] => concat.IN1
 in2[15] => concat.DATAB
-in2[15] => Add2.IN17
+in2[15] => Add3.IN16
 in2[15] => concat.DATAB
-in2[16] => Add0.IN48
+in2[16] => Add2.IN48
 in2[16] => concat.IN1
 in2[16] => concat.IN1
 in2[16] => concat.IN1
 in2[16] => concat.DATAB
-in2[16] => Add2.IN16
+in2[16] => Add3.IN15
 in2[16] => concat.DATAB
-in2[17] => Add0.IN47
+in2[17] => Add2.IN47
 in2[17] => concat.IN1
 in2[17] => concat.IN1
 in2[17] => concat.IN1
 in2[17] => concat.DATAB
-in2[17] => Add2.IN15
+in2[17] => Add3.IN14
 in2[17] => concat.DATAB
-in2[18] => Add0.IN46
+in2[18] => Add2.IN46
 in2[18] => concat.IN1
 in2[18] => concat.IN1
 in2[18] => concat.IN1
 in2[18] => concat.DATAB
-in2[18] => Add2.IN14
+in2[18] => Add3.IN13
 in2[18] => concat.DATAB
-in2[19] => Add0.IN45
+in2[19] => Add2.IN45
 in2[19] => concat.IN1
 in2[19] => concat.IN1
 in2[19] => concat.IN1
 in2[19] => concat.DATAB
-in2[19] => Add2.IN13
+in2[19] => Add3.IN12
 in2[19] => concat.DATAB
-in2[20] => Add0.IN44
+in2[20] => Add2.IN44
 in2[20] => concat.IN1
 in2[20] => concat.IN1
 in2[20] => concat.IN1
 in2[20] => concat.DATAB
-in2[20] => Add2.IN12
+in2[20] => Add3.IN11
 in2[20] => concat.DATAB
-in2[21] => Add0.IN43
+in2[21] => Add2.IN43
 in2[21] => concat.IN1
 in2[21] => concat.IN1
 in2[21] => concat.IN1
 in2[21] => concat.DATAB
-in2[21] => Add2.IN11
+in2[21] => Add3.IN10
 in2[21] => concat.DATAB
-in2[22] => Add0.IN42
+in2[22] => Add2.IN42
 in2[22] => concat.IN1
 in2[22] => concat.IN1
 in2[22] => concat.IN1
 in2[22] => concat.DATAB
-in2[22] => Add2.IN10
+in2[22] => Add3.IN9
 in2[22] => concat.DATAB
-in2[23] => Add0.IN41
+in2[23] => Add2.IN41
 in2[23] => concat.IN1
 in2[23] => concat.IN1
 in2[23] => concat.IN1
 in2[23] => concat.DATAB
-in2[23] => Add2.IN9
+in2[23] => Add3.IN8
 in2[23] => concat.DATAB
-in2[24] => Add0.IN40
+in2[24] => Add2.IN40
 in2[24] => concat.IN1
 in2[24] => concat.IN1
 in2[24] => concat.IN1
 in2[24] => concat.DATAB
-in2[24] => Add2.IN8
+in2[24] => Add3.IN7
 in2[24] => concat.DATAB
-in2[25] => Add0.IN39
+in2[25] => Add2.IN39
 in2[25] => concat.IN1
 in2[25] => concat.IN1
 in2[25] => concat.IN1
 in2[25] => concat.DATAB
-in2[25] => Add2.IN7
+in2[25] => Add3.IN6
 in2[25] => concat.DATAB
-in2[26] => Add0.IN38
+in2[26] => Add2.IN38
 in2[26] => concat.IN1
 in2[26] => concat.IN1
 in2[26] => concat.IN1
 in2[26] => concat.DATAB
-in2[26] => Add2.IN6
+in2[26] => Add3.IN5
 in2[26] => concat.DATAB
-in2[27] => Add0.IN37
+in2[27] => Add2.IN37
 in2[27] => concat.IN1
 in2[27] => concat.IN1
 in2[27] => concat.IN1
 in2[27] => concat.DATAB
-in2[27] => Add2.IN5
+in2[27] => Add3.IN4
 in2[27] => concat.DATAB
-in2[28] => Add0.IN36
+in2[28] => Add2.IN36
 in2[28] => concat.IN1
 in2[28] => concat.IN1
 in2[28] => concat.IN1
 in2[28] => concat.DATAB
-in2[28] => Add2.IN4
+in2[28] => Add3.IN3
 in2[28] => concat.DATAB
-in2[29] => Add0.IN35
+in2[29] => Add2.IN35
 in2[29] => concat.IN1
 in2[29] => concat.IN1
 in2[29] => concat.IN1
 in2[29] => concat.DATAB
-in2[29] => Add2.IN3
+in2[29] => Add3.IN2
 in2[29] => concat.DATAB
-in2[30] => Add0.IN34
+in2[30] => Add2.IN34
 in2[30] => concat.IN1
 in2[30] => concat.IN1
 in2[30] => concat.IN1
 in2[30] => concat.DATAB
-in2[30] => Add2.IN2
+in2[30] => Add3.IN1
 in2[30] => concat.DATAB
-in2[31] => Add0.IN33
+in2[31] => Add2.IN33
 in2[31] => concat.IN1
 in2[31] => concat.IN1
 in2[31] => concat.IN1
 in2[31] => concat.DATAB
 in2[31] => V.IN1
-in2[31] => Add2.IN1
 in2[31] => concat.DATAB
+in2[31] => Add3.IN32
 in2[31] => V.IN1
 in2[31] => V.IN1
+carry_in => Add0.IN66
 carry_in => Add1.IN66
-carry_in => Add3.IN66
-exe_cmd[0] => Equal0.IN0
+exe_cmd[0] => Equal0.IN1
 exe_cmd[0] => Equal1.IN1
 exe_cmd[0] => Equal2.IN3
-exe_cmd[0] => Equal3.IN1
+exe_cmd[0] => Equal3.IN3
 exe_cmd[0] => Equal4.IN3
-exe_cmd[0] => Equal5.IN1
+exe_cmd[0] => Equal5.IN2
 exe_cmd[0] => Equal6.IN3
-exe_cmd[0] => Equal7.IN2
-exe_cmd[0] => Equal8.IN3
+exe_cmd[0] => Equal7.IN1
+exe_cmd[0] => Equal8.IN0
 exe_cmd[1] => Equal0.IN3
-exe_cmd[1] => Equal1.IN3
+exe_cmd[1] => Equal1.IN0
 exe_cmd[1] => Equal2.IN0
-exe_cmd[1] => Equal3.IN0
-exe_cmd[1] => Equal4.IN2
-exe_cmd[1] => Equal5.IN3
-exe_cmd[1] => Equal6.IN1
-exe_cmd[1] => Equal7.IN1
-exe_cmd[1] => Equal8.IN2
-exe_cmd[2] => Equal0.IN2
-exe_cmd[2] => Equal1.IN2
+exe_cmd[1] => Equal3.IN2
+exe_cmd[1] => Equal4.IN1
+exe_cmd[1] => Equal5.IN1
+exe_cmd[1] => Equal6.IN2
+exe_cmd[1] => Equal7.IN3
+exe_cmd[1] => Equal8.IN3
+exe_cmd[2] => Equal0.IN0
+exe_cmd[2] => Equal1.IN3
 exe_cmd[2] => Equal2.IN2
-exe_cmd[2] => Equal3.IN3
+exe_cmd[2] => Equal3.IN0
 exe_cmd[2] => Equal4.IN0
 exe_cmd[2] => Equal5.IN0
-exe_cmd[2] => Equal6.IN0
-exe_cmd[2] => Equal7.IN0
-exe_cmd[2] => Equal8.IN1
-exe_cmd[3] => Equal0.IN1
-exe_cmd[3] => Equal1.IN0
+exe_cmd[2] => Equal6.IN1
+exe_cmd[2] => Equal7.IN2
+exe_cmd[2] => Equal8.IN2
+exe_cmd[3] => Equal0.IN2
+exe_cmd[3] => Equal1.IN2
 exe_cmd[3] => Equal2.IN1
-exe_cmd[3] => Equal3.IN2
-exe_cmd[3] => Equal4.IN1
-exe_cmd[3] => Equal5.IN2
-exe_cmd[3] => Equal6.IN2
-exe_cmd[3] => Equal7.IN3
-exe_cmd[3] => Equal8.IN0
+exe_cmd[3] => Equal3.IN1
+exe_cmd[3] => Equal4.IN2
+exe_cmd[3] => Equal5.IN3
+exe_cmd[3] => Equal6.IN0
+exe_cmd[3] => Equal7.IN0
+exe_cmd[3] => Equal8.IN1
 status_bits[0] <= V.DB_MAX_OUTPUT_PORT_TYPE
 status_bits[1] <= concat.DB_MAX_OUTPUT_PORT_TYPE
 status_bits[2] <= Equal9.DB_MAX_OUTPUT_PORT_TYPE
@@ -4628,7 +4267,7 @@ result[30] <= concat.DB_MAX_OUTPUT_PORT_TYPE
 result[31] <= concat.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|Val2_Generator:val2_gen
+|ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen
 shift_operand[0] => ShiftRight2.IN68
 shift_operand[0] => ShiftRight2.IN69
 shift_operand[0] => val2[0].DATAB
@@ -5006,7 +4645,7 @@ val2[30] <= val2[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
 val2[31] <= val2[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn
+|ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn
 i0[0] => y.DATAB
 i0[1] => y.DATAB
 i0[2] => y.DATAB
@@ -5175,7 +4814,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rm
+|ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm
 i0[0] => y.DATAB
 i0[1] => y.DATAB
 i0[2] => y.DATAB
@@ -5344,7 +4983,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|EXE_Stage_Reg:exe_stage_reg
+|ARM_cpu|EXE_Stage_Reg:exe_stage_reg
 clk => dest[0]~reg0.CLK
 clk => dest[1]~reg0.CLK
 clk => dest[2]~reg0.CLK
@@ -5631,7 +5270,7 @@ dest[2] <= dest[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dest[3] <= dest[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|Status_Reg:st_reg
+|ARM_cpu|Status_Reg:st_reg
 clk => d_out[0]~reg0.CLK
 clk => d_out[1]~reg0.CLK
 clk => d_out[2]~reg0.CLK
@@ -5654,7 +5293,7 @@ d_out[2] <= d_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d_out[3] <= d_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|Forwarding_Unit:forwarding_unit
+|ARM_cpu|Forwarding_Unit:forwarding_unit
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 mem_wb_en => sel_src1.OUTPUTSELECT
@@ -5701,7 +5340,7 @@ sel_src2[0] <= sel_src2.DB_MAX_OUTPUT_PORT_TYPE
 sel_src2[1] <= sel_src2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|Memory:memory
+|ARM_cpu|Memory:memory
 clk => mem.we_a.CLK
 clk => mem.waddr_a[5].CLK
 clk => mem.waddr_a[4].CLK
@@ -5919,7 +5558,7 @@ mem_result[30] <= mem_result.DB_MAX_OUTPUT_PORT_TYPE
 mem_result[31] <= mem_result.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|MEM_Stage_Reg:memory_stage_reg
+|ARM_cpu|MEM_Stage_Reg:memory_stage_reg
 clk => mem_val_out[0]~reg0.CLK
 clk => mem_val_out[1]~reg0.CLK
 clk => mem_val_out[2]~reg0.CLK
@@ -6202,7 +5841,7 @@ mem_val_out[30] <= mem_val_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mem_val_out[31] <= mem_val_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM|ARM_cpu:CPU|WB_Stage:wb_stage
+|ARM_cpu|WB_Stage:wb_stage
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 mem_r_en => mem_r_en.IN1
@@ -6304,7 +5943,7 @@ wb_val[30] <= Mux2to1:mux32b.y
 wb_val[31] <= Mux2to1:mux32b.y
 
 
-|ARM|ARM_cpu:CPU|WB_Stage:wb_stage|Mux2to1:mux32b
+|ARM_cpu|WB_Stage:wb_stage|Mux2to1:mux32b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA

@@ -1,5 +1,5 @@
 Flow report for ARM
-Wed May 18 10:02:26 2022
+Wed May 25 10:53:09 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed May 18 10:02:26 2022           ;
+; Flow Status                        ; Successful - Wed May 25 10:53:09 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ARM                                             ;
-; Top-level Entity Name              ; ARM                                             ;
+; Top-level Entity Name              ; ARM_cpu                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 0 / 33,216 ( 0 % )                              ;
-;     Total combinational functions  ; 0 / 33,216 ( 0 % )                              ;
-;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 418 / 475 ( 88 % )                              ;
+; Total logic elements               ; 1,588 / 33,216 ( 5 % )                          ;
+;     Total combinational functions  ; 1,507 / 33,216 ( 5 % )                          ;
+;     Dedicated logic registers      ; 377 / 33,216 ( 1 % )                            ;
+; Total registers                    ; 377                                             ;
+; Total pins                         ; 67 / 475 ( 14 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
+; Total memory bits                  ; 2,048 / 483,840 ( < 1 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/18/2022 10:02:03 ;
+; Start date & time ; 05/25/2022 10:48:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ARM                 ;
 +-------------------+---------------------+
@@ -75,17 +75,18 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                                              ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 92384132420538.165285192212596                                                                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 92384132420538.165345948714532                                                                     ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                        ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                          ; <None>        ; --          ; --             ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                 ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                                                                                           ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                              ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                             ; --            ; --          ; Top            ;
+; PARTITION_COLOR                     ; 16764057                                                                                           ; --            ; ARM_cpu     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                              ; --            ; ARM_cpu     ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                             ; --            ; ARM_cpu     ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                       ; --            ; --          ; --             ;
 ; SLD_FILE                            ; D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/stptest_auto_stripped.stp ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; ARM_cpu                                                                                            ; ARM           ; --          ; --             ;
 ; USE_SIGNALTAP_FILE                  ; output_files/stptest.stp                                                                           ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 
@@ -95,12 +96,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4589 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 4885 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4575 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4553 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4509 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis      ; 00:04:34     ; 1.0                     ; 4923 MB             ; 00:04:30                           ;
+; Fitter                    ; 00:00:16     ; 3.7                     ; 5558 MB             ; 00:00:33                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4587 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4652 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4546 MB             ; 00:00:02                           ;
+; Total                     ; 00:04:57     ; --                      ; --                  ; 00:05:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

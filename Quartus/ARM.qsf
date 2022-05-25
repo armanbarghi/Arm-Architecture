@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY ARM
+set_global_assignment -name TOP_LEVEL_ENTITY ARM_cpu
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:18:06  APRIL 27, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -474,9 +474,6 @@ set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stptest.stp
 set_global_assignment -name SLD_FILE "D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/stptest_auto_stripped.stp"
@@ -503,8 +500,9 @@ set_global_assignment -name VERILOG_FILE ../Codes/EXE_Stage_Reg.v
 set_global_assignment -name VERILOG_FILE ../Codes/EXE_Stage.v
 set_global_assignment -name VERILOG_FILE ../Codes/ControlUnit.v
 set_global_assignment -name VERILOG_FILE ../Codes/ConditionCheck.v
-set_global_assignment -name VERILOG_FILE ../Codes/ARM.v
 set_global_assignment -name VERILOG_FILE ../Codes/ALU.v
-set_global_assignment -name SIGNALTAP_FILE output_files/stp2.stp
-set_global_assignment -name SIGNALTAP_FILE output_files/stptest.stp
+set_global_assignment -name SDC_FILE ARM.sdc
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

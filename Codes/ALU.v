@@ -22,7 +22,17 @@ module ALU (
                          (exe_cmd == 4'b1001) ? (~in2) : //MVN
                          (exe_cmd == 4'b0001) ? (in2) :  //MOV
                           33'b0;    //B
-    
+                          
+    // assign x1 = (in1 - in2 - {31'b0, ~carry_in});
+    // assign x2 = (in1 + in2 + carry_in);
+    // assign x3 = (in1 + in2);
+    // assign x4 = (in1 - in2);
+    // assign x5 = (in1 & in2);
+    // assign x6 = (in1 | in2);
+    // assign x7 = (in1 ^ in2);
+    // assign x8 = (~in2);
+    // assign x9 = (in2);
+
     // FIXME: write it with always
     // or assign every calculation into some variables and use a 8to1 mux
 
