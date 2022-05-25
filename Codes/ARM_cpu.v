@@ -1,10 +1,11 @@
 module ARM_cpu (
-    clk, rst, mode
+    clk, rst, mode,
+    pc_if, instruction_if
 );
     input clk, rst, mode;
+    output [31:0] pc_if, instruction_if;
     
     wire [31:0] branch_addr;
-    wire [31:0] pc_if, instruction_if;
     wire [31:0] pc_id, instruction_id;
     wire [31:0] pc_exe;
     wire [3:0] status_bits_in, status_bits_out;

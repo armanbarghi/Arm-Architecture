@@ -12,16 +12,19 @@ module ALU (
     output [31:0] result;
 
     wire N, Z, C, V;
-    assign {C, result} = (exe_cmd == 4'b0001) ? (in2) :  //MOV
-                         (exe_cmd == 4'b1001) ? (~in2) : //MVN
-                         (exe_cmd == 4'b0010) ? (in1 + in2) :    //ADD, LDR, STR
+    assign {C, result} = (exe_cmd == 4'b0101) ? (in1 - in2 - {31'b0, ~carry_in}) :    //SBC
                          (exe_cmd == 4'b0011) ? (in1 + in2 + carry_in) : //ADC
+                         (exe_cmd == 4'b0010) ? (in1 + in2) :    //ADD, LDR, STR
                          (exe_cmd == 4'b0100) ? (in1 - in2) :    //SUB, CMP
-                         (exe_cmd == 4'b0101) ? (in1 - in2 - {31'b0, ~carry_in}) :    //SBC
                          (exe_cmd == 4'b0110) ? (in1 & in2) :    //AND, TST
                          (exe_cmd == 4'b0111) ? (in1 | in2) :    //ORR
                          (exe_cmd == 4'b1000) ? (in1 ^ in2) :    //EOR
+                         (exe_cmd == 4'b1001) ? (~in2) : //MVN
+                         (exe_cmd == 4'b0001) ? (in2) :  //MOV
                           33'b0;    //B
+    
+    // FIXME: write it with always
+    // or assign every calculation into some variables and use a 8to1 mux
 
     assign N = result[31];
     assign Z = (result == 32'b0) ? 1'b1 : 1'b0;

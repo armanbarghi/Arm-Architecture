@@ -1,8 +1,12 @@
 `timescale 1ps/1ps
-module ARM_Testbench();
+module Q_ARM_Testbench();
     reg clk, rst, mode;
+    reg pc_if;
 
-    ARM_cpu ARM_PROCESSOR(clk, rst, mode,,);
+    ARM_cpu arm (
+        clk, rst, mode,
+        pc_if, instruction_if
+    );
 
     initial begin
         rst = 1'b1;

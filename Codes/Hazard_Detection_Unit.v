@@ -7,7 +7,7 @@ module Hazard_Detection_Unit (
     input clk, rst;
     input two_src, exe_wb_en, mem_wb_en;
     input [3:0] src1, src2, exe_dest, mem_dest;
-    output reg hazard;
+    output hazard;
 
     always @(two_src, exe_wb_en, mem_wb_en, src1, src2, exe_dest, mem_dest) begin
         hazard = 1'b0;
