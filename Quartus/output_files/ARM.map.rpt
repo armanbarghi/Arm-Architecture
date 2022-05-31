@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ARM
-Wed May 25 10:52:41 2022
+Tue May 31 02:09:47 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -19,25 +19,24 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  11. Registers Removed During Synthesis
  12. Removed Registers Triggering Further Register Optimizations
  13. General Register Statistics
- 14. Registers Added for RAM Pass-Through Logic
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for Memory:memory|altsyncram:mem_rtl_0|altsyncram_g8c1:auto_generated
- 17. Parameter Settings for User Entity Instance: IF_Stage:if_stage|Register:PC_reg
- 18. Parameter Settings for User Entity Instance: IF_Stage:if_stage|Mux2to1:mux32b
- 19. Parameter Settings for User Entity Instance: ID_Stage:id_stage|Mux2to1:mux4b
- 20. Parameter Settings for User Entity Instance: ID_Stage:id_stage|Mux2to1:mux9b
- 21. Parameter Settings for User Entity Instance: EXE_Stage:exe_stage|Mux4to1:mux_rn
- 22. Parameter Settings for User Entity Instance: EXE_Stage:exe_stage|Mux4to1:mux_rm
- 23. Parameter Settings for User Entity Instance: WB_Stage:wb_stage|Mux2to1:mux32b
- 24. Parameter Settings for Inferred Entity Instance: Memory:memory|altsyncram:mem_rtl_0
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "EXE_Stage:exe_stage|Mux4to1:mux_rm"
- 27. Port Connectivity Checks: "EXE_Stage:exe_stage|Mux4to1:mux_rn"
- 28. Port Connectivity Checks: "ID_Stage:id_stage|RegisterFile:reg_file"
+ 14. Inverted Register Statistics
+ 15. Registers Added for RAM Pass-Through Logic
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for Memory:memory|altsyncram:mem_rtl_0|altsyncram_g8c1:auto_generated
+ 18. Parameter Settings for User Entity Instance: IF_Stage:if_stage|Register:PC_reg
+ 19. Parameter Settings for User Entity Instance: IF_Stage:if_stage|Mux2to1:mux32b
+ 20. Parameter Settings for User Entity Instance: ID_Stage:id_stage|Mux2to1:mux4b
+ 21. Parameter Settings for User Entity Instance: ID_Stage:id_stage|Mux2to1:mux9b
+ 22. Parameter Settings for User Entity Instance: EXE_Stage:exe_stage|Mux4to1:mux_rn
+ 23. Parameter Settings for User Entity Instance: EXE_Stage:exe_stage|Mux4to1:mux_rm
+ 24. Parameter Settings for User Entity Instance: WB_Stage:wb_stage|Mux2to1:mux32b
+ 25. Parameter Settings for Inferred Entity Instance: Memory:memory|altsyncram:mem_rtl_0
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "EXE_Stage:exe_stage|Mux4to1:mux_rm"
+ 28. Port Connectivity Checks: "EXE_Stage:exe_stage|Mux4to1:mux_rn"
  29. Port Connectivity Checks: "ID_Stage:id_stage|Mux2to1:mux9b"
  30. Elapsed Time Per Partition
  31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,15 +62,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 25 10:52:41 2022           ;
+; Analysis & Synthesis Status        ; Successful - Tue May 31 02:09:47 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ARM                                             ;
 ; Top-level Entity Name              ; ARM_cpu                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,624                                           ;
-;     Total combinational functions  ; 1,506                                           ;
-;     Dedicated logic registers      ; 377                                             ;
-; Total registers                    ; 377                                             ;
+; Total logic elements               ; 2,881                                           ;
+;     Total combinational functions  ; 2,311                                           ;
+;     Dedicated logic registers      ; 943                                             ;
+; Total registers                    ; 943                                             ;
 ; Total pins                         ; 67                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,048                                           ;
@@ -170,57 +169,57 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+-----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                 ; Library ;
-+-----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; ../Codes/Mux4to1.v                ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux4to1.v                ;         ;
-; ../Codes/Hazard_Detection_Unit2.v ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit2.v ;         ;
-; ../Codes/Fowarding_Unit.v         ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Fowarding_Unit.v         ;         ;
-; ../Codes/Status_Reg.v             ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v             ;         ;
-; ../Codes/ARM_cpu.v                ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v                ;         ;
-; ../Codes/WB_Stage.v               ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/WB_Stage.v               ;         ;
-; ../Codes/Val2_Ganerator.v         ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v         ;         ;
-; ../Codes/RegisterFile.v           ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v           ;         ;
-; ../Codes/Register.v               ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v               ;         ;
-; ../Codes/Mux2to1.v                ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v                ;         ;
-; ../Codes/Memory.v                 ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Memory.v                 ;         ;
-; ../Codes/MEM_Stage_Reg.v          ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v          ;         ;
-; ../Codes/InstMemory.v             ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/InstMemory.v             ;         ;
-; ../Codes/IF_Stage_Reg.v           ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v           ;         ;
-; ../Codes/IF_Stage.v               ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage.v               ;         ;
-; ../Codes/ID_Stage_Reg.v           ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage_Reg.v           ;         ;
-; ../Codes/ID_Stage.v               ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v               ;         ;
-; ../Codes/Hazard_Detection_Unit.v  ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v  ;         ;
-; ../Codes/EXE_Stage_Reg.v          ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v          ;         ;
-; ../Codes/EXE_Stage.v              ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v              ;         ;
-; ../Codes/ControlUnit.v            ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ControlUnit.v            ;         ;
-; ../Codes/ConditionCheck.v         ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ConditionCheck.v         ;         ;
-; ../Codes/ALU.v                    ; yes             ; User Verilog HDL File        ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v                    ;         ;
-; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
-; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
-; lpm_mux.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;         ;
-; lpm_decode.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;         ;
-; aglobal130.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                             ;         ;
-; a_rdenreg.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;         ;
-; altrom.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                 ;         ;
-; altram.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                 ;         ;
-; altdpram.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                               ;         ;
-; db/altsyncram_g8c1.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Quartus/db/altsyncram_g8c1.tdf ;         ;
-+-----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; ../Codes/Mux4to1.v                ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Mux4to1.v                ;         ;
+; ../Codes/Hazard_Detection_Unit2.v ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Hazard_Detection_Unit2.v ;         ;
+; ../Codes/Fowarding_Unit.v         ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Fowarding_Unit.v         ;         ;
+; ../Codes/Status_Reg.v             ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Status_Reg.v             ;         ;
+; ../Codes/ARM_cpu.v                ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/ARM_cpu.v                ;         ;
+; ../Codes/WB_Stage.v               ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/WB_Stage.v               ;         ;
+; ../Codes/Val2_Ganerator.v         ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Val2_Ganerator.v         ;         ;
+; ../Codes/RegisterFile.v           ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/RegisterFile.v           ;         ;
+; ../Codes/Register.v               ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Register.v               ;         ;
+; ../Codes/Mux2to1.v                ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Mux2to1.v                ;         ;
+; ../Codes/Memory.v                 ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Memory.v                 ;         ;
+; ../Codes/MEM_Stage_Reg.v          ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/MEM_Stage_Reg.v          ;         ;
+; ../Codes/InstMemory.v             ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/InstMemory.v             ;         ;
+; ../Codes/IF_Stage_Reg.v           ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/IF_Stage_Reg.v           ;         ;
+; ../Codes/IF_Stage.v               ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/IF_Stage.v               ;         ;
+; ../Codes/ID_Stage_Reg.v           ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/ID_Stage_Reg.v           ;         ;
+; ../Codes/ID_Stage.v               ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/ID_Stage.v               ;         ;
+; ../Codes/Hazard_Detection_Unit.v  ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/Hazard_Detection_Unit.v  ;         ;
+; ../Codes/EXE_Stage_Reg.v          ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/EXE_Stage_Reg.v          ;         ;
+; ../Codes/EXE_Stage.v              ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/EXE_Stage.v              ;         ;
+; ../Codes/ControlUnit.v            ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/ControlUnit.v            ;         ;
+; ../Codes/ConditionCheck.v         ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/ConditionCheck.v         ;         ;
+; ../Codes/ALU.v                    ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Codes/ALU.v                    ;         ;
+; altsyncram.tdf                    ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
+; stratix_ram_block.inc             ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
+; lpm_mux.inc                       ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
+; lpm_decode.inc                    ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
+; aglobal130.inc                    ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                        ;         ;
+; a_rdenreg.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
+; altrom.inc                        ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                            ;         ;
+; altram.inc                        ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                            ;         ;
+; altdpram.inc                      ; yes             ; Megafunction                 ; e:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
+; db/altsyncram_g8c1.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Quartus/db/altsyncram_g8c1.tdf ;         ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -228,29 +227,29 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,624 ;
+; Estimated Total logic elements              ; 2,881 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1506  ;
+; Total combinational functions               ; 2311  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 747   ;
-;     -- 3 input functions                    ; 471   ;
-;     -- <=2 input functions                  ; 288   ;
+;     -- 4 input functions                    ; 1475  ;
+;     -- 3 input functions                    ; 575   ;
+;     -- <=2 input functions                  ; 261   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1341  ;
-;     -- arithmetic mode                      ; 165   ;
+;     -- normal mode                          ; 2212  ;
+;     -- arithmetic mode                      ; 99    ;
 ;                                             ;       ;
-; Total registers                             ; 377   ;
-;     -- Dedicated logic registers            ; 377   ;
+; Total registers                             ; 943   ;
+;     -- Dedicated logic registers            ; 943   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 67    ;
 ; Total memory bits                           ; 2048  ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 409   ;
-; Total fan-out                               ; 6802  ;
-; Average fan-out                             ; 3.43  ;
+; Maximum fan-out                             ; 975   ;
+; Total fan-out                               ; 12183 ;
+; Average fan-out                             ; 3.63  ;
 +---------------------------------------------+-------+
 
 
@@ -259,22 +258,21 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
-; |ARM_cpu                                  ; 1506 (8)          ; 377 (0)      ; 2048        ; 0            ; 0       ; 0         ; 67   ; 0            ; |ARM_cpu                                                                   ; work         ;
-;    |EXE_Stage:exe_stage|                  ; 1135 (70)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage                                               ; work         ;
-;       |ALU:alu_unit|                      ; 412 (412)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit                                  ; work         ;
-;       |Mux4to1:mux_rm|                    ; 77 (77)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm                                ; work         ;
-;       |Mux4to1:mux_rn|                    ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn                                ; work         ;
-;       |Val2_Generator:val2_gen|           ; 528 (528)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen                       ; work         ;
+; |ARM_cpu                                  ; 2311 (8)          ; 943 (0)      ; 2048        ; 0            ; 0       ; 0         ; 67   ; 0            ; |ARM_cpu                                                                   ; work         ;
+;    |EXE_Stage:exe_stage|                  ; 1225 (70)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage                                               ; work         ;
+;       |ALU:alu_unit|                      ; 460 (460)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit                                  ; work         ;
+;       |Mux4to1:mux_rm|                    ; 103 (103)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm                                ; work         ;
+;       |Mux4to1:mux_rn|                    ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn                                ; work         ;
+;       |Val2_Generator:val2_gen|           ; 522 (522)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen                       ; work         ;
 ;    |EXE_Stage_Reg:exe_stage_reg|          ; 0 (0)             ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage_Reg:exe_stage_reg                                       ; work         ;
-;    |Forwarding_Unit:forwarding_unit|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Forwarding_Unit:forwarding_unit                                   ; work         ;
 ;    |Hazard_Detection_Unit:hazard_unit1|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Hazard_Detection_Unit:hazard_unit1                                ; work         ;
-;    |ID_Stage:id_stage|                    ; 33 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage                                                 ; work         ;
-;       |ConditionCheck:condition_check|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ConditionCheck:condition_check                  ; work         ;
+;    |ID_Stage:id_stage|                    ; 83 (1)            ; 512 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage                                                 ; work         ;
+;       |ConditionCheck:condition_check|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ConditionCheck:condition_check                  ; work         ;
 ;       |ControlUnit:control_unit|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ControlUnit:control_unit                        ; work         ;
 ;       |Mux2to1:mux4b|                     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux4b                                   ; work         ;
-;       |Mux2to1:mux9b|                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux9b                                   ; work         ;
-;       |RegisterFile:reg_file|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|RegisterFile:reg_file                           ; work         ;
-;    |ID_Stage_Reg:id_stage_reg|            ; 62 (62)           ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage_Reg:id_stage_reg                                         ; work         ;
+;       |Mux2to1:mux9b|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux9b                                   ; work         ;
+;       |RegisterFile:reg_file|             ; 60 (60)           ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|RegisterFile:reg_file                           ; work         ;
+;    |ID_Stage_Reg:id_stage_reg|            ; 701 (701)         ; 126 (126)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage_Reg:id_stage_reg                                         ; work         ;
 ;    |IF_Stage:if_stage|                    ; 158 (0)           ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage                                                 ; work         ;
 ;       |InstMemory:InstMem|                ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage|InstMemory:InstMem                              ; work         ;
 ;       |Register:PC_reg|                   ; 30 (30)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage|Register:PC_reg                                 ; work         ;
@@ -283,7 +281,9 @@ applicable agreement for further details.
 ;    |Memory:memory|                        ; 6 (6)             ; 72 (72)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Memory:memory                                                     ; work         ;
 ;       |altsyncram:mem_rtl_0|              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Memory:memory|altsyncram:mem_rtl_0                                ; work         ;
 ;          |altsyncram_g8c1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Memory:memory|altsyncram:mem_rtl_0|altsyncram_g8c1:auto_generated ; work         ;
-;    |Status_Reg:st_reg|                    ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Status_Reg:st_reg                                                 ; work         ;
+;    |Status_Reg:st_reg|                    ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Status_Reg:st_reg                                                 ; work         ;
+;    |WB_Stage:wb_stage|                    ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|WB_Stage:wb_stage                                                 ; work         ;
+;       |Mux2to1:mux32b|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|WB_Stage:wb_stage|Mux2to1:mux32b                                  ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -302,14 +302,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------+------------------------------------------------------+------------------------+
 ; Latch Name                                           ; Latch Enable Signal                                  ; Free of Timing Hazards ;
 +------------------------------------------------------+------------------------------------------------------+------------------------+
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[2]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[1]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[0]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[3]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[4]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[5]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[6]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[7]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[30] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[29] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
@@ -334,6 +326,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[10] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[9]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[8]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[7]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[6]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[5]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[4]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[3]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[2]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[1]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
+; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[0]  ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; Number of user-specified and inferred latches = 32   ;                                                      ;                        ;
 +------------------------------------------------------+------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -350,566 +350,52 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                       ;
-+---------------------------------------------------------------+--------------------------------------------------------------------------+
-; Register name                                                 ; Reason for Removal                                                       ;
-+---------------------------------------------------------------+--------------------------------------------------------------------------+
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][31] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][29] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][28] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][27] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][25] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][24] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][23] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][22] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][21] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][20] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][19] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][17] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][16] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][15] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][13] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][12] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][11] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][9]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][8]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][7]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][6]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][5]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][4]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][3]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][26] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][1]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][18] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][30] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][14] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][10] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][2]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][29] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][25] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][21] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][17] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][13] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][9]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][5]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][1]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][29] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][25] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][21] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][17] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][13] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][9]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][5]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][6]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][1]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][29] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][25] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][21] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][17] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][13] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][9]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][28] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][5]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][24] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][22] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][18] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][24] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][14] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][16] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][8]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][4]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][26] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][19] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][19] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][19] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][19] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][19] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][6]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][19]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][27] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][11] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][27] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][11] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][27] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][11] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][27] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][27]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][11] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][27] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][11] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][10] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][30] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][0]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][31] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][23] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][15] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][7]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][16] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][31] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][23] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][15] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][7]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][31] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][23] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][4]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][2]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][30] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][28] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][26] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][24] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][22] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][20] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][8]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][18] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][16] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][14] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][12] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][10] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][8]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][6]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][4]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][14] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][0]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][30] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][15] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][7]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][31] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][23] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][15] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][23]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][7]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][11]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][31] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][23] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][15] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][7]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][26] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][7]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][20] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][12] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][31]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][22] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][29] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][25] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][21] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][17] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][9]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][13] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][9]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][5]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][5]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][20] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][29] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][25] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][21] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][13]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][17] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][25]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][13] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][9]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][21]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][5]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][4]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][15]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][18] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][30] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][28] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][26] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][14]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][24] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][22] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][12]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][20] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][18] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][10]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][16] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][14] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][12] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][20]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][10] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][6]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][8]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][6]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][4]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][4]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][28] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][2]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][18]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][0]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][10] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][30] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][28] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][8]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][26] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][24] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][17]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][22] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][20] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][12] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][18] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][16] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][14] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][12] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][16]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][10] ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][22]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][8]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][28]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][6]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][1]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][2]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][3]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][1]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][3]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][1]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][3]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][1]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][0]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][3]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][2]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][0]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][3]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][2]   ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][2]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][0]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][3]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][30]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][24]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][29]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][26]  ; Merged with ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31] ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[7..23]                ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[7]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[6]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[6]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[5]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[4]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[4]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[3]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[3]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[2]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[2]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[1]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[1]                   ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[0]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[0]                   ;
-; ID_Stage_Reg:id_stage_reg|pc[1]                               ; Merged with ID_Stage_Reg:id_stage_reg|pc[0]                              ;
-; ID_Stage_Reg:id_stage_reg|val_rn[4..9,11..31]                 ; Merged with ID_Stage_Reg:id_stage_reg|val_rn[10]                         ;
-; ID_Stage_Reg:id_stage_reg|val_rm[4..9,11..31]                 ; Merged with ID_Stage_Reg:id_stage_reg|val_rm[10]                         ;
-; IF_Stage_Reg:if_stage_reg|PC[1]                               ; Merged with IF_Stage_Reg:if_stage_reg|PC[0]                              ;
-; IF_Stage:if_stage|Register:PC_reg|d_out[1]                    ; Merged with IF_Stage:if_stage|Register:PC_reg|d_out[0]                   ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0]  ; Stuck at GND due to stuck port data_in                                   ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[0][31]  ; Stuck at GND due to stuck port data_in                                   ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]   ; Stuck at VCC due to stuck port data_in                                   ;
-; ID_Stage_Reg:id_stage_reg|val_rn[10]                          ; Stuck at GND due to stuck port data_in                                   ;
-; ID_Stage_Reg:id_stage_reg|val_rm[10]                          ; Stuck at GND due to stuck port data_in                                   ;
-; IF_Stage_Reg:if_stage_reg|PC[0]                               ; Stuck at GND due to stuck port data_in                                   ;
-; ID_Stage_Reg:id_stage_reg|pc[0]                               ; Stuck at GND due to stuck port data_in                                   ;
-; IF_Stage:if_stage|Register:PC_reg|d_out[0]                    ; Stuck at GND due to stuck port data_in                                   ;
-; Memory:memory|mem_rtl_0_bypass[2]                             ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[2]                       ;
-; Memory:memory|mem_rtl_0_bypass[4]                             ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[3]                       ;
-; Memory:memory|mem_rtl_0_bypass[6]                             ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[4]                       ;
-; Memory:memory|mem_rtl_0_bypass[8]                             ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[5]                       ;
-; Memory:memory|mem_rtl_0_bypass[10]                            ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[6]                       ;
-; Memory:memory|mem_rtl_0_bypass[12]                            ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[7]                       ;
-; IF_Stage_Reg:if_stage_reg|Inst[10]                            ; Merged with IF_Stage_Reg:if_stage_reg|Inst[27]                           ;
-; IF_Stage_Reg:if_stage_reg|Inst[7]                             ; Merged with IF_Stage_Reg:if_stage_reg|Inst[5]                            ;
-; IF_Stage_Reg:if_stage_reg|Inst[11]                            ; Merged with IF_Stage_Reg:if_stage_reg|Inst[9]                            ;
-; ID_Stage_Reg:id_stage_reg|shift_operand[7]                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]                   ;
-; ID_Stage_Reg:id_stage_reg|shift_operand[11]                   ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[9]                   ;
-; Total Number of Removed Registers = 609                       ;                                                                          ;
-+---------------------------------------------------------------+--------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++------------------------------------------------+---------------------------------------------------------+
+; Register name                                  ; Reason for Removal                                      ;
++------------------------------------------------+---------------------------------------------------------+
+; Status_Reg:st_reg|d_out[1]                     ; Stuck at GND due to stuck port data_in                  ;
+; ID_Stage_Reg:id_stage_reg|status_reg[1]        ; Stuck at GND due to stuck port data_in                  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[7..23] ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[7]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[6]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[6]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[5]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[4]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[4]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[3]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[3]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[2]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[2]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[1]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[1]  ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[0]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[0]  ;
+; ID_Stage_Reg:id_stage_reg|pc[1]                ; Merged with ID_Stage_Reg:id_stage_reg|pc[0]             ;
+; IF_Stage_Reg:if_stage_reg|PC[1]                ; Merged with IF_Stage_Reg:if_stage_reg|PC[0]             ;
+; IF_Stage:if_stage|Register:PC_reg|d_out[1]     ; Merged with IF_Stage:if_stage|Register:PC_reg|d_out[0]  ;
+; IF_Stage_Reg:if_stage_reg|PC[0]                ; Stuck at GND due to stuck port data_in                  ;
+; ID_Stage_Reg:id_stage_reg|pc[0]                ; Stuck at GND due to stuck port data_in                  ;
+; IF_Stage:if_stage|Register:PC_reg|d_out[0]     ; Stuck at GND due to stuck port data_in                  ;
+; Memory:memory|mem_rtl_0_bypass[2]              ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[2]      ;
+; Memory:memory|mem_rtl_0_bypass[4]              ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[3]      ;
+; Memory:memory|mem_rtl_0_bypass[6]              ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[4]      ;
+; Memory:memory|mem_rtl_0_bypass[8]              ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[5]      ;
+; Memory:memory|mem_rtl_0_bypass[10]             ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[6]      ;
+; Memory:memory|mem_rtl_0_bypass[12]             ; Merged with EXE_Stage_Reg:exe_stage_reg|alu_res[7]      ;
+; IF_Stage_Reg:if_stage_reg|Inst[10]             ; Merged with IF_Stage_Reg:if_stage_reg|Inst[27]          ;
+; IF_Stage_Reg:if_stage_reg|Inst[7]              ; Merged with IF_Stage_Reg:if_stage_reg|Inst[5]           ;
+; IF_Stage_Reg:if_stage_reg|Inst[9]              ; Merged with IF_Stage_Reg:if_stage_reg|Inst[11]          ;
+; ID_Stage_Reg:id_stage_reg|shift_operand[7]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]  ;
+; ID_Stage_Reg:id_stage_reg|shift_operand[9]     ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[11] ;
+; Total Number of Removed Registers = 43         ;                                                         ;
++------------------------------------------------+---------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                            ;
-+--------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register                                      ;
-+--------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[15][0] ; Stuck at GND              ; ID_Stage_Reg:id_stage_reg|val_rn[10], ID_Stage_Reg:id_stage_reg|val_rm[10]  ;
-;                                                              ; due to stuck port data_in ;                                                                             ;
-; IF_Stage_Reg:if_stage_reg|PC[0]                              ; Stuck at GND              ; ID_Stage_Reg:id_stage_reg|pc[0], IF_Stage:if_stage|Register:PC_reg|d_out[0] ;
-;                                                              ; due to stuck port data_in ;                                                                             ;
-+--------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                              ;
++---------------------------------+---------------------------+--------------------------------------------+
+; Register name                   ; Reason for Removal        ; Registers Removed due to This Register     ;
++---------------------------------+---------------------------+--------------------------------------------+
+; Status_Reg:st_reg|d_out[1]      ; Stuck at GND              ; ID_Stage_Reg:id_stage_reg|status_reg[1],   ;
+;                                 ; due to stuck port data_in ; IF_Stage:if_stage|Register:PC_reg|d_out[0] ;
+; IF_Stage_Reg:if_stage_reg|PC[0] ; Stuck at GND              ; ID_Stage_Reg:id_stage_reg|pc[0]            ;
+;                                 ; due to stuck port data_in ;                                            ;
++---------------------------------+---------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -917,14 +403,51 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 377   ;
-; Number of registers using Synchronous Clear  ; 42    ;
+; Total registers                              ; 943   ;
+; Number of registers using Synchronous Clear  ; 98    ;
 ; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 306   ;
+; Number of registers using Asynchronous Clear ; 840   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 125   ;
+; Number of registers using Clock Enable       ; 636   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Inverted Register Statistics                                           ;
++--------------------------------------------------------------+---------+
+; Inverted Register                                            ; Fan out ;
++--------------------------------------------------------------+---------+
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][3]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][3]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][2] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][2] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][2] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][1] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][1]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][1]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][1] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][1]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][1] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][1]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][0] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][0] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][0]  ; 2       ;
+; Total number of inverted registers = 28                      ;         ;
++--------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -985,20 +508,21 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 3:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |ARM_cpu|IF_Stage_Reg:if_stage_reg|PC[0]                      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|b                          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |ARM_cpu|MEM_Stage_Reg:memory_stage_reg|mem_val_out[21]       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|exe_cmd[1]                 ;
-; 16:1               ; 29 bits   ; 290 LEs       ; 174 LEs              ; 116 LEs                ; No         ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|result[29]          ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 14 LEs               ; 6 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|result[1]           ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn|y[14]             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn|y[0]              ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm|y[8]              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm|y[1]              ;
-; 9:1                ; 14 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[15] ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[22] ;
+; 3:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |ARM_cpu|IF_Stage_Reg:if_stage_reg|Inst[8]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|mem_r_en                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |ARM_cpu|MEM_Stage_Reg:memory_stage_reg|mem_val_out[22]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|exe_cmd[3]                 ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|val_rn[24]                 ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|val_rm[7]                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn|y[25]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm|y[21]             ;
+; 9:1                ; 14 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[1]  ;
+; 12:1               ; 31 bits   ; 248 LEs       ; 186 LEs              ; 62 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|Mux6                ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[23] ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[24] ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[28] ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|Add2                ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|Add2                ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[29] ;
 ; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
@@ -1181,15 +705,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ID_Stage:id_stage|RegisterFile:reg_file"                                                   ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; writeBackEn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------+
 ; Port Connectivity Checks: "ID_Stage:id_stage|Mux2to1:mux9b" ;
 +------+-------+----------+-----------------------------------+
@@ -1204,7 +719,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:20     ;
+; Top            ; 00:00:57     ;
 +----------------+--------------+
 
 
@@ -1214,55 +729,55 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 25 10:48:06 2022
+    Info: Processing started: Tue May 31 02:06:01 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARM -c ARM
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/mux4to1.v
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/mux4to1.v
     Info (12023): Found entity 1: Mux4to1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/hazard_detection_unit2.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/hazard_detection_unit2.v
     Info (12023): Found entity 1: Hazard_Detection_Unit2
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/fowarding_unit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/fowarding_unit.v
     Info (12023): Found entity 1: Forwarding_Unit
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/status_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/status_reg.v
     Info (12023): Found entity 1: Status_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/arm_cpu.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/arm_cpu.v
     Info (12023): Found entity 1: ARM_cpu
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/wb_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/wb_stage.v
     Info (12023): Found entity 1: WB_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/val2_ganerator.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/val2_ganerator.v
     Info (12023): Found entity 1: Val2_Generator
 Warning (12019): Can't analyze file -- file ../Codes/Test_Bench.v is missing
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/registerfile.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/registerfile.v
     Info (12023): Found entity 1: RegisterFile
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/register.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/register.v
     Info (12023): Found entity 1: Register
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/mux2to1.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/mux2to1.v
     Info (12023): Found entity 1: Mux2to1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/memory.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/memory.v
     Info (12023): Found entity 1: Memory
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/mem_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/mem_stage_reg.v
     Info (12023): Found entity 1: MEM_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/instmemory.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/instmemory.v
     Info (12023): Found entity 1: InstMemory
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/if_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/if_stage_reg.v
     Info (12023): Found entity 1: IF_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/if_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/if_stage.v
     Info (12023): Found entity 1: IF_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/id_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/id_stage_reg.v
     Info (12023): Found entity 1: ID_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/id_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/id_stage.v
     Info (12023): Found entity 1: ID_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/hazard_detection_unit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/hazard_detection_unit.v
     Info (12023): Found entity 1: Hazard_Detection_Unit
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/exe_stage_reg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/exe_stage_reg.v
     Info (12023): Found entity 1: EXE_Stage_Reg
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/exe_stage.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/exe_stage.v
     Info (12023): Found entity 1: EXE_Stage
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/controlunit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/controlunit.v
     Info (12023): Found entity 1: ControlUnit
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/conditioncheck.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/conditioncheck.v
     Info (12023): Found entity 1: ConditionCheck
-Info (12021): Found 1 design units, including 1 entities, in source file /users/arman/documents/uni/term8/computer architecture lab/arm-architecture/codes/alu.v
+Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/work/arm-architecture/codes/alu.v
     Info (12023): Found entity 1: ALU
 Info (12127): Elaborating entity "ARM_cpu" for the top level hierarchy
 Info (12128): Elaborating entity "IF_Stage" for hierarchy "IF_Stage:if_stage"
@@ -1278,51 +793,62 @@ Info (12128): Elaborating entity "Mux2to1" for hierarchy "ID_Stage:id_stage|Mux2
 Info (12128): Elaborating entity "Mux2to1" for hierarchy "ID_Stage:id_stage|Mux2to1:mux9b"
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ID_Stage:id_stage|ControlUnit:control_unit"
 Info (12128): Elaborating entity "ConditionCheck" for hierarchy "ID_Stage:id_stage|ConditionCheck:condition_check"
-Warning (10270): Verilog HDL Case Statement warning at ConditionCheck.v(18): incomplete case statement has no default case item
 Info (12128): Elaborating entity "RegisterFile" for hierarchy "ID_Stage:id_stage|RegisterFile:reg_file"
 Warning (10240): Verilog HDL Always Construct warning at RegisterFile.v(20): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
-Warning (10030): Net "writeBackEn" at RegisterFile.v(11) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "Hazard_Detection_Unit" for hierarchy "Hazard_Detection_Unit:hazard_unit1"
 Info (12128): Elaborating entity "Hazard_Detection_Unit2" for hierarchy "Hazard_Detection_Unit2:hazard_unit2"
 Info (12128): Elaborating entity "ID_Stage_Reg" for hierarchy "ID_Stage_Reg:id_stage_reg"
 Info (12128): Elaborating entity "EXE_Stage" for hierarchy "EXE_Stage:exe_stage"
 Info (12128): Elaborating entity "ALU" for hierarchy "EXE_Stage:exe_stage|ALU:alu_unit"
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(20): variable "x1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(21): variable "x2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(22): variable "x3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(23): variable "x4" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(24): variable "x5" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(25): variable "x6" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(26): variable "x7" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(27): variable "x8" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(28): variable "x9" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (12128): Elaborating entity "Val2_Generator" for hierarchy "EXE_Stage:exe_stage|Val2_Generator:val2_gen"
-Warning (10230): Verilog HDL assignment warning at Val2_Ganerator.v(31): truncated value with size 64 to match size of target (32)
-Warning (10230): Verilog HDL assignment warning at Val2_Ganerator.v(35): truncated value with size 64 to match size of target (32)
-Warning (10240): Verilog HDL Always Construct warning at Val2_Ganerator.v(18): inferring latch(es) for variable "val2", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "val2[0]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[1]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[2]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[3]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[4]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[5]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[6]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[7]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[8]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[9]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[10]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[11]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[12]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[13]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[14]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[15]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[16]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[17]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[18]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[19]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[20]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[21]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[22]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[23]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[24]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[25]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[26]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[27]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[28]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[29]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[30]" at Val2_Ganerator.v(18)
-Info (10041): Inferred latch for "val2[31]" at Val2_Ganerator.v(18)
+Warning (10235): Verilog HDL Always Construct warning at Val2_Ganerator.v(32): variable "rotate_wire" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Val2_Ganerator.v(32): variable "shift_im" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Val2_Ganerator.v(32): truncated value with size 64 to match size of target (32)
+Warning (10235): Verilog HDL Always Construct warning at Val2_Ganerator.v(36): variable "immd" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Val2_Ganerator.v(36): variable "rotate_im" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Val2_Ganerator.v(36): truncated value with size 64 to match size of target (32)
+Warning (10240): Verilog HDL Always Construct warning at Val2_Ganerator.v(23): inferring latch(es) for variable "val2", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "val2[0]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[1]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[2]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[3]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[4]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[5]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[6]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[7]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[8]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[9]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[10]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[11]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[12]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[13]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[14]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[15]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[16]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[17]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[18]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[19]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[20]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[21]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[22]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[23]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[24]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[25]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[26]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[27]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[28]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[29]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[30]" at Val2_Ganerator.v(23)
+Info (10041): Inferred latch for "val2[31]" at Val2_Ganerator.v(23)
 Info (12128): Elaborating entity "Mux4to1" for hierarchy "EXE_Stage:exe_stage|Mux4to1:mux_rn"
 Info (12128): Elaborating entity "EXE_Stage_Reg" for hierarchy "EXE_Stage_Reg:exe_stage_reg"
 Info (12128): Elaborating entity "Status_Reg" for hierarchy "Status_Reg:st_reg"
@@ -1331,7 +857,7 @@ Info (12128): Elaborating entity "Memory" for hierarchy "Memory:memory"
 Info (12128): Elaborating entity "MEM_Stage_Reg" for hierarchy "MEM_Stage_Reg:memory_stage_reg"
 Info (12128): Elaborating entity "WB_Stage" for hierarchy "WB_Stage:wb_stage"
 Warning (276020): Inferred RAM node "Memory:memory|mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Quartus/db/ARM.ram0_InstMemory_9a284327.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/term8/Computer Architecture Lab/WORK/Arm-Architecture/Quartus/db/ARM.ram0_InstMemory_9a284327.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Memory:memory|mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1366,22 +892,6 @@ Info (12133): Instantiated megafunction "Memory:memory|altsyncram:mem_rtl_0" wit
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g8c1.tdf
     Info (12023): Found entity 1: altsyncram_g8c1
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ID_Stage_Reg:id_stage_reg|shift_operand[4]
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[30] has unsafe behavior
@@ -1430,27 +940,38 @@ Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[9] has u
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[8] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pc_if[0]" is stuck at GND
     Warning (13410): Pin "pc_if[1]" is stuck at GND
-Info (144001): Generated suppressed messages file D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1787 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3076 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 1688 logic cells
+    Info (21061): Implemented 2977 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 79 warnings
-    Info: Peak virtual memory: 4923 megabytes
-    Info: Processing ended: Wed May 25 10:52:41 2022
-    Info: Elapsed time: 00:04:35
-    Info: Total CPU time (on all processors): 00:04:31
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg.
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4928 megabytes
+    Info: Processing ended: Tue May 31 02:09:47 2022
+    Info: Elapsed time: 00:03:46
+    Info: Total CPU time (on all processors): 00:03:44
 
 
