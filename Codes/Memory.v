@@ -36,5 +36,4 @@ module Memory (
     assign mem5 = mem[5];
     assign mem6 = mem[6];
  
-
 endmodule

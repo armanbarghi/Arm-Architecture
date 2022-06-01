@@ -40,9 +40,6 @@ module ALU (
     assign x8 = (~in2);
     assign x9 = (in2);
 
-    // FIXME: write it with always
-    // or assign every calculation into some variables and use a 8to1 mux
-
     assign N = result[31];
     assign Z = (result == 32'b0) ? 1'b1 : 1'b0;
     assign V = (  (exe_cmd == 4'b0010 | exe_cmd == 4'b0011)  &  ( ((~in1[31])&(~in2[31])&result[31]) | (in1[31]&in2[31]&(~result[31])) )  ) ? 1'b1:
