@@ -1,8 +1,8 @@
 `timescale 1ps/1ps
 module ARM_Testbench();
-    reg clk, rst, mode;
-
-    ARM_cpu ARM_PROCESSOR(clk, rst, mode,,);
+        reg clk, rst, mode;
+        wire [31:0]mem0, mem1, mem2, mem3, mem4, mem5, mem6;
+    ARM_cpu ARM_PROCESSOR(clk, rst, mode,,,mem0, mem1, mem2, mem3, mem4, mem5, mem6);
 
     initial begin
         rst = 1'b1;

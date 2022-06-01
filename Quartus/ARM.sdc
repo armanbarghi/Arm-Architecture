@@ -23,7 +23,7 @@
 
 # Clock constraints
 
-create_clock -name "clk" -period 20.000ns [get_ports {clk}] -waveform {0.000 10.000}
+create_clock -name "clk" -period 30.000ns [get_ports {clk}] -waveform {0.000 15.000}
 
 
 # Automatically constrain PLL and other generated clocks
