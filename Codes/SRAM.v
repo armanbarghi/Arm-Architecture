@@ -1,4 +1,4 @@
-`timescale 1ps/1ps
+`timescale 1ns/1ns
 module SRAM (
     clk, rst,
     SRAM_WE_N,
@@ -18,7 +18,7 @@ module SRAM (
     always @(SRAM_WE_N, SRAM_ADDR) begin
         if (SRAM_WE_N) begin
             $display("Start of SRAM read / time=%0t", $time);
-            #30 SRAM_DQ_REG = mem[SRAM_ADDR];
+            #60 SRAM_DQ_REG = mem[SRAM_ADDR];
             $display("End of SRAM read / time=%0t", $time);
             $display("mem[SRAM_ADDR]=0b%0d", mem[SRAM_ADDR]);
         end
