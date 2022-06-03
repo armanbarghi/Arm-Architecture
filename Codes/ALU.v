@@ -9,19 +9,36 @@ module ALU (
     input carry_in;
     input [3:0] exe_cmd;
     output [3:0] status_bits;
-    output [31:0] result;
+    output reg [31:0] result;
 
-    wire N, Z, C, V;
-    assign {C, result} = (exe_cmd == 4'b0001) ? (in2) :  //MOV
-                         (exe_cmd == 4'b1001) ? (~in2) : //MVN
-                         (exe_cmd == 4'b0010) ? (in1 + in2) :    //ADD, LDR, STR
-                         (exe_cmd == 4'b0011) ? (in1 + in2 + carry_in) : //ADC
-                         (exe_cmd == 4'b0100) ? (in1 - in2) :    //SUB, CMP
-                         (exe_cmd == 4'b0101) ? (in1 - in2 - {31'b0, ~carry_in}) :    //SBC
-                         (exe_cmd == 4'b0110) ? (in1 & in2) :    //AND, TST
-                         (exe_cmd == 4'b0111) ? (in1 | in2) :    //ORR
-                         (exe_cmd == 4'b1000) ? (in1 ^ in2) :    //EOR
-                          33'b0;    //B
+    wire N, Z, V;
+    reg C;
+    wire [31:0] x1,x2,x3,x4,x5,x6,x7,x8,x9;
+
+    always @(exe_cmd, in1, in2, carry_in) begin
+        case(exe_cmd)
+            4'b0101: {C, result} = x1;    //SBC
+            4'b0011: {C, result} = x2;     //ADC
+            4'b0010: {C, result} = x3;     //ADD, LDR, STR
+            4'b0100: {C, result} = x4;      //SUB, CMP
+            4'b0110: {C, result} = x5;      //AND, TST
+            4'b0111: {C, result} = x6;      //ORR
+            4'b1000: {C, result} = x7;      //EOR
+            4'b1001: {C, result} = x8;      //MVN
+            4'b0001: {C, result} = x9;      //MOV
+            default: {C, result} = 32'b0;
+    endcase
+    end
+                          
+    assign x1 = (in1 - in2 - {31'b0, ~carry_in});
+    assign x2 = (in1 + in2 + carry_in);
+    assign x3 = (in1 + in2);
+    assign x4 = (in1 - in2);
+    assign x5 = (in1 & in2);
+    assign x6 = (in1 | in2);
+    assign x7 = (in1 ^ in2);
+    assign x8 = (~in2);
+    assign x9 = (in2);
 
     assign N = result[31];
     assign Z = (result == 32'b0) ? 1'b1 : 1'b0;

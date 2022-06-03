@@ -10,10 +10,12 @@ module Status_Reg(
     always @(negedge clk, posedge rst) begin
         if (rst == 1'b1)
             d_out <= 4'b0;
-        else if(ld == 1'b1)
-            d_out <= d_in;
-        else
-            d_out <= d_out;
+        else begin
+            if(ld == 1'b1)
+                d_out <= d_in;
+            else
+                d_out <= d_out;
+        end
     end
-  
+
 endmodule

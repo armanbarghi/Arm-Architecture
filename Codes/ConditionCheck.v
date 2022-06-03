@@ -31,6 +31,7 @@ module ConditionCheck (
             4'b1100: cond_out = (z == 1'b0 && n == v);
             4'b1101: cond_out = (z == 1'b1 && n != v);
             4'b1110: cond_out = 1'b1;
+				default: cond_out = 1'b1;
         endcase
     end
 

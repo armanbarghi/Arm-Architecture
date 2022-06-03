@@ -1,7 +1,7 @@
 module ARM_cpu (
-    clk, rst, mode
+    clock, rst, mode
 );
-    input clk, rst, mode;
+    input clock, rst, mode;
     
     wire [31:0] branch_addr;
     wire [31:0] pc_if, instruction_if;
@@ -37,7 +37,16 @@ module ARM_cpu (
     wire [15:0] sram_dq;
     wire [17:0] sram_addr;
 
+    reg clk;
+    always@(posedge clock, posedge rst)begin
+        if(rst == 1'b1)
+            clk <= 1'b0;
+        else
+		    clk <= ~clk;
+	end
+
     assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
+
     assign sram_freeze = ~sram_ready;
 
     IF_Stage if_stage (

@@ -44,5 +44,4 @@ module ControlUnit (
             exe_cmd = 4'b0000;
     end
 
-
 endmodule
