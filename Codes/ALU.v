@@ -13,23 +13,23 @@ module ALU (
 
     wire N, Z, V;
     reg C;
-    wire [31:0] x1,x2,x3,x4,x5,x6,x7,x8,x9;
+    wire [32:0] x1,x2,x3,x4,x5,x6,x7,x8,x9;
 
     always @(exe_cmd, in1, in2, carry_in) begin
         case(exe_cmd)
             4'b0101: {C, result} = x1;    //SBC
-            4'b0011: {C, result} = x2;     //ADC
-            4'b0010: {C, result} = x3;     //ADD, LDR, STR
-            4'b0100: {C, result} = x4;      //SUB, CMP
-            4'b0110: {C, result} = x5;      //AND, TST
-            4'b0111: {C, result} = x6;      //ORR
-            4'b1000: {C, result} = x7;      //EOR
-            4'b1001: {C, result} = x8;      //MVN
-            4'b0001: {C, result} = x9;      //MOV
+            4'b0011: {C, result} = x2;    //ADC
+            4'b0010: {C, result} = x3;    //ADD, LDR, STR
+            4'b0100: {C, result} = x4;    //SUB, CMP
+            4'b0110: {C, result} = x5;    //AND, TST
+            4'b0111: {C, result} = x6;    //ORR
+            4'b1000: {C, result} = x7;    //EOR
+            4'b1001: {C, result} = x8;    //MVN
+            4'b0001: {C, result} = x9;    //MOV
             default: {C, result} = 32'b0;
-    endcase
+        endcase
     end
-                          
+
     assign x1 = (in1 - in2 - {31'b0, ~carry_in});
     assign x2 = (in1 + in2 + carry_in);
     assign x3 = (in1 + in2);

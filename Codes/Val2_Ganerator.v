@@ -12,7 +12,6 @@ module Val2_Generator (
 	
 	wire [63:0] rotate_wire;
 	wire [63:0] immd;
-	wire [4:0] shift_im;
 	wire [4:0] rotate_im;
 	
 	assign immd = {{24{shift_operand[7]}} , shift_operand[7:0] , {24{shift_operand[7]}} , shift_operand[7:0]};
