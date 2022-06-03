@@ -5,6 +5,7 @@ entity ID_Stage_Reg is
         clk             : in     vl_logic;
         rst             : in     vl_logic;
         flush           : in     vl_logic;
+        freeze          : in     vl_logic;
         imm_in          : in     vl_logic;
         mem_r_en_in     : in     vl_logic;
         mem_w_en_in     : in     vl_logic;

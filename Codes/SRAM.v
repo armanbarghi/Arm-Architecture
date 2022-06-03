@@ -17,10 +17,10 @@ module SRAM (
 
     always @(SRAM_WE_N, SRAM_ADDR) begin
         if (SRAM_WE_N) begin
-            $display("Start of SRAM read / time=%0t", $time);
-            #60 SRAM_DQ_REG = mem[SRAM_ADDR];
-            $display("End of SRAM read / time=%0t", $time);
-            $display("mem[SRAM_ADDR]=0b%0d", mem[SRAM_ADDR]);
+            // $display("Start of SRAM read / time=%0t", $time);
+            #20 SRAM_DQ_REG = mem[SRAM_ADDR];
+            // $display("End of SRAM read / time=%0t", $time);
+            // $display("mem[SRAM_ADDR]=0b%0d", mem[SRAM_ADDR]);
         end
         else
             SRAM_DQ_REG <= {(16){1'bz}};

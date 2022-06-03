@@ -24,6 +24,16 @@ entity ID_Stage is
         shift_operand   : out    vl_logic_vector(11 downto 0);
         signed_imm_24   : out    vl_logic_vector(23 downto 0);
         val_rn          : out    vl_logic_vector(31 downto 0);
-        val_rm          : out    vl_logic_vector(31 downto 0)
+        val_rm          : out    vl_logic_vector(31 downto 0);
+        rf0             : out    vl_logic_vector(31 downto 0);
+        rf1             : out    vl_logic_vector(31 downto 0);
+        rf2             : out    vl_logic_vector(31 downto 0);
+        rf3             : out    vl_logic_vector(31 downto 0);
+        rf4             : out    vl_logic_vector(31 downto 0);
+        rf5             : out    vl_logic_vector(31 downto 0);
+        rf6             : out    vl_logic_vector(31 downto 0);
+        rf7             : out    vl_logic_vector(31 downto 0);
+        rf10            : out    vl_logic_vector(31 downto 0);
+        rf11            : out    vl_logic_vector(31 downto 0)
     );
 end ID_Stage;

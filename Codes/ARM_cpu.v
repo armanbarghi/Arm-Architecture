@@ -1,10 +1,17 @@
 module ARM_cpu (
-    clock, rst, mode
+    clock, rst, mode,
+    pc_if, instruction_if,
+    rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11,
+    sram_freeze, sram_ready,
+    sram_we_n,
+    sram_dq,
+    sram_addr
 );
     input clock, rst, mode;
-    
+    output [31:0] pc_if, instruction_if;
+    output [31:0] rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11;
+
     wire [31:0] branch_addr;
-    wire [31:0] pc_if, instruction_if;
     wire [31:0] pc_id, instruction_id;
     wire [31:0] pc_exe;
     wire [3:0] status_bits_in, status_bits_out;
@@ -32,10 +39,10 @@ module ARM_cpu (
     wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
     wire mux_wb_en_mem;
-    wire sram_freeze, sram_ready;
-    wire sram_we_n;
-    wire [15:0] sram_dq;
-    wire [17:0] sram_addr;
+    output sram_freeze, sram_ready;
+    output sram_we_n;
+    output [15:0] sram_dq;
+    output [17:0] sram_addr;
 
     reg clk;
     always@(posedge clock, posedge rst)begin
@@ -93,7 +100,17 @@ module ARM_cpu (
         .shift_operand(shift_operand_id),
         .signed_imm_24(signed_imm_24_id),
         .val_rn(val_rn_id),
-        .val_rm(val_rm_id)
+        .val_rm(val_rm_id),
+        .rf0(rf0),
+        .rf1(rf1),
+        .rf2(rf2),
+        .rf3(rf3),
+        .rf4(rf4),
+        .rf5(rf5),
+        .rf6(rf6),
+        .rf7(rf7),
+        .rf10(rf10),
+        .rf11(rf11)
     );
 
     Hazard_Detection_Unit hazard_unit1 (
@@ -223,17 +240,17 @@ module ARM_cpu (
     Mux2to1 #(.N(1))
         mux_wb_en (
             .i0(wb_en_mem),
-            .i1(1'b0),   // FIXME: what is the order??
+            .i1(1'b0),
             .sel(sram_freeze),
             .y(mux_wb_en_mem)
         );
-    
+
     SRAM_Controller sram_controller (
         .clk(clk),
         .rst(rst),
         .rd_en(mem_r_en_mem),
         .wr_en(mem_w_en_mem),
-        .address(alu_res_mem-32'd1024), //FIXME: still need -1024??
+        .address(alu_res_mem-32'd1024),
         .write_data(st_value),
         .SRAM_DQ(sram_dq),
         .ready(sram_ready),

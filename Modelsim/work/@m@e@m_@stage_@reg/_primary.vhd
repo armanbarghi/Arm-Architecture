@@ -4,6 +4,7 @@ entity MEM_Stage_Reg is
     port(
         clk             : in     vl_logic;
         rst             : in     vl_logic;
+        freeze          : in     vl_logic;
         mem_r_en_in     : in     vl_logic;
         wb_en_in        : in     vl_logic;
         dest_in         : in     vl_logic_vector(3 downto 0);
