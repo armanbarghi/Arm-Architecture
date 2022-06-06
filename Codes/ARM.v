@@ -307,9 +307,29 @@ reg clock;
 		.rst(SW[0]),
 		.mode(SW[1]),
 		.pc_if(),
-		.instruction_if()
+		.instruction_if(),
+		.rf0(),
+		.rf1(),
+		.rf2(),
+		.rf3(),
+		.rf4(),
+		.rf5(),
+		.rf6(),
+		.rf7(),
+		.rf10(),
+		.rf11(),
+		.sram_freeze(),
+		.sram_ready(),
+		.sram_we_n(SRAM_WE_N),
+		.sram_dq(SRAM_DQ),
+		.sram_addr(SRAM_ADDR)
 	);
-	
+
+	assign SRAM_UB_N = 1'b0;				//	SRAM High-byte Data Mask 
+	assign SRAM_LB_N = 1'b0;				//	SRAM Low-byte Data Mask 
+	assign SRAM_CE_N = 1'b0;				//	SRAM Chip Enable
+	assign SRAM_OE_N = 1'b0;				//	SRAM Output Enable
+
 	assign LEDG[0] = SW[0];
 	assign LEDG[1] = SW[1];
 

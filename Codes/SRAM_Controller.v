@@ -32,10 +32,10 @@ module SRAM_Controller (
             state = state + 1'b1;
     end
 
-    always @(state, rd_en, wr_en) begin
-        if ((state == 3'b010) & rd_en)
+    always @(state, rd_en, wr_en, SRAM_DQ) begin
+        if ((state == 3'b001) & rd_en)
             low_data <= SRAM_DQ;
-        else if ((state == 3'b011) & rd_en)
+        else if ((state == 3'b010) & rd_en)
             high_data <= SRAM_DQ;
         
         if (wr_en | rd_en) begin

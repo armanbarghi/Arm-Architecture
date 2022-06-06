@@ -10,6 +10,10 @@ module ARM_cpu (
     input clock, rst, mode;
     output [31:0] pc_if, instruction_if;
     output [31:0] rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11;
+    output sram_freeze, sram_ready;
+    output sram_we_n;
+    inout [15:0] sram_dq;
+    output [17:0] sram_addr;
 
     wire [31:0] branch_addr;
     wire [31:0] pc_id, instruction_id;
@@ -39,10 +43,6 @@ module ARM_cpu (
     wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
     wire mux_wb_en_mem;
-    output sram_freeze, sram_ready;
-    output sram_we_n;
-    output [15:0] sram_dq;
-    output [17:0] sram_addr;
 
     reg clk;
     always@(posedge clock, posedge rst)begin
@@ -257,14 +257,6 @@ module ARM_cpu (
         .SRAM_WE_N(sram_we_n),
         .SRAM_ADDR(sram_addr),
         .read_data(mem_res)
-    );
-
-    SRAM sram (
-        .clk(clk),
-        .rst(rst),
-        .SRAM_WE_N(sram_we_n),
-        .SRAM_DQ(sram_dq),
-        .SRAM_ADDR(sram_addr)
     );
 
     MEM_Stage_Reg memory_stage_reg (
