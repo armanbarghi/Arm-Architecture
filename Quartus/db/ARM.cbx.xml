@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ARM">
-		<CBX_INST_ENTRY INSTANCE_NAME="|ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_8ri.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

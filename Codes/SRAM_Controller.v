@@ -16,7 +16,7 @@ module SRAM_Controller (
     output ready;
     output SRAM_WE_N;           // SRAM Write Enable
     output reg [17:0] SRAM_ADDR;    // SRAM Address bus 18 Bits
-    output [31:0] read_data;
+    output [63:0] read_data;
 
     reg [2:0] state;
     reg [15:0] high_data, low_data;
@@ -39,9 +39,9 @@ module SRAM_Controller (
             high_data <= SRAM_DQ;
         
         if (wr_en | rd_en) begin
-            if (state <= 3'b001)
+            if (state == 3'b001)
                 SRAM_ADDR = (address[17:0] >> 1);
-            else
+            else if(state == 3'b010)
                 SRAM_ADDR = (address[17:0] >> 1) + 1'b1;
         end
     end
@@ -56,8 +56,8 @@ module SRAM_Controller (
                      ((state == 3'b010) & wr_en) ? write_data[31:16]:
                      16'bz;
 
-    assign read_data = {high_data, low_data};
+    assign read_data = {high_data, low_data, ,};
 
-    assign ready = (wr_en | rd_en) ? (state == 3'b101): 1'b1;
+    assign ready = (state == 3'b101);
 
 endmodule
