@@ -1,4 +1,11 @@
-{D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v}
+{D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Cache.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Cache.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Cache
+
+Top level modules:
+	Cache
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module RegisterFile
 
@@ -12,12 +19,47 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Register
 
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/SRAM_Controller.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/SRAM_Controller.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SRAM_Controller
+
+Top level modules:
+	SRAM_Controller
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Cache_Controller.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Cache_Controller.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Cache_Controller
+
+Top level modules:
+	Cache_Controller
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM_Testbench
+
+Top level modules:
+	ARM_Testbench
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM_cpu
+
+Top level modules:
+	ARM_cpu
+
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Val2_Generator
 
 Top level modules:
 	Val2_Generator
+
+} {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM
+
+Top level modules:
+	ARM
 
 } {} {}} {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v} {1 {vlog -work work {D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

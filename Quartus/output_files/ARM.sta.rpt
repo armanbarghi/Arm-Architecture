@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ARM
-Wed Jun 08 12:07:03 2022
+Wed Jun 08 12:29:01 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -149,7 +149,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
+; SW[0]      ; LEDG[0]     ; 5.274 ;    ;    ; 5.274 ;
 ; SW[1]      ; LEDG[1]     ; 5.472 ;    ;    ; 5.472 ;
 +------------+-------------+-------+----+----+-------+
 
@@ -159,7 +159,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
+; SW[0]      ; LEDG[0]     ; 5.274 ;    ;    ; 5.274 ;
 ; SW[1]      ; LEDG[1]     ; 5.472 ;    ;    ; 5.472 ;
 +------------+-------------+-------+----+----+-------+
 
@@ -211,7 +211,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
+; SW[0]      ; LEDG[0]     ; 2.878 ;    ;    ; 2.878 ;
 ; SW[1]      ; LEDG[1]     ; 2.973 ;    ;    ; 2.973 ;
 +------------+-------------+-------+----+----+-------+
 
@@ -221,7 +221,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
+; SW[0]      ; LEDG[0]     ; 2.878 ;    ;    ; 2.878 ;
 ; SW[1]      ; LEDG[1]     ; 2.973 ;    ;    ; 2.973 ;
 +------------+-------------+-------+----+----+-------+
 
@@ -243,7 +243,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
+; SW[0]      ; LEDG[0]     ; 5.274 ;    ;    ; 5.274 ;
 ; SW[1]      ; LEDG[1]     ; 5.472 ;    ;    ; 5.472 ;
 +------------+-------------+-------+----+----+-------+
 
@@ -253,7 +253,7 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
+; SW[0]      ; LEDG[0]     ; 2.878 ;    ;    ; 2.878 ;
 ; SW[1]      ; LEDG[1]     ; 2.973 ;    ;    ; 2.973 ;
 +------------+-------------+-------+----+----+-------+
 
@@ -284,7 +284,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0     ;
 ; Unconstrained Clocks            ; 4     ; 4     ;
 ; Unconstrained Input Ports       ; 18    ; 18    ;
-; Unconstrained Input Port Paths  ; 2751  ; 2751  ;
+; Unconstrained Input Port Paths  ; 2687  ; 2687  ;
 ; Unconstrained Output Ports      ; 37    ; 37    ;
 ; Unconstrained Output Port Paths ; 27284 ; 27284 ;
 +---------------------------------+-------+-------+
@@ -296,7 +296,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 08 12:06:59 2022
+    Info: Processing started: Wed Jun 08 12:28:56 2022
 Info: Command: quartus_sta ARM -c ARM
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
@@ -312,46 +312,46 @@ Warning (332125): Found combinational loop of 39 nodes
     Warning (332126): Node "CPU|id_stage|bubble|combout"
     Warning (332126): Node "CPU|id_stage|mux9b|y[7]~0|datac"
     Warning (332126): Node "CPU|id_stage|mux9b|y[7]~0|combout"
-    Warning (332126): Node "CPU|id_stage|two_src|dataa"
-    Warning (332126): Node "CPU|id_stage|two_src|combout"
-    Warning (332126): Node "CPU|hazard~5|datac"
-    Warning (332126): Node "CPU|hazard~5|combout"
-    Warning (332126): Node "CPU|hazard~6|datad"
-    Warning (332126): Node "CPU|hazard~6|combout"
-    Warning (332126): Node "CPU|hazard~7|dataa"
-    Warning (332126): Node "CPU|hazard~7|combout"
-    Warning (332126): Node "CPU|id_stage|bubble|datac"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~2|dataa"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~2|combout"
-    Warning (332126): Node "CPU|hazard~7|datab"
-    Warning (332126): Node "CPU|id_stage|mux4b|y[2]~3|datab"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[2]~3|datad"
     Warning (332126): Node "CPU|id_stage|mux4b|y[2]~3|combout"
-    Warning (332126): Node "CPU|hazard~4|datad"
+    Warning (332126): Node "CPU|hazard~4|datac"
     Warning (332126): Node "CPU|hazard~4|combout"
-    Warning (332126): Node "CPU|hazard~5|dataa"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~1|dataa"
+    Warning (332126): Node "CPU|hazard~5|datab"
+    Warning (332126): Node "CPU|hazard~5|combout"
+    Warning (332126): Node "CPU|hazard~6|dataa"
+    Warning (332126): Node "CPU|hazard~6|combout"
+    Warning (332126): Node "CPU|hazard~7|datab"
+    Warning (332126): Node "CPU|hazard~7|combout"
+    Warning (332126): Node "CPU|id_stage|bubble|datad"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~1|datab"
     Warning (332126): Node "CPU|hazard_unit1|hazard~1|combout"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datac"
-    Warning (332126): Node "CPU|id_stage|mux4b|y[3]~2|datac"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datab"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|combout"
+    Warning (332126): Node "CPU|hazard~7|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[3]~2|datad"
     Warning (332126): Node "CPU|id_stage|mux4b|y[3]~2|combout"
     Warning (332126): Node "CPU|hazard~4|datab"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~1|datab"
-    Warning (332126): Node "CPU|id_stage|mux4b|y[0]~1|dataa"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~1|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[0]~1|datad"
     Warning (332126): Node "CPU|id_stage|mux4b|y[0]~1|combout"
-    Warning (332126): Node "CPU|hazard~3|datac"
+    Warning (332126): Node "CPU|hazard~3|dataa"
     Warning (332126): Node "CPU|hazard~3|combout"
-    Warning (332126): Node "CPU|hazard~5|datab"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~0|datac"
+    Warning (332126): Node "CPU|hazard~5|datac"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~0|dataa"
     Warning (332126): Node "CPU|hazard_unit1|hazard~0|combout"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datab"
-    Warning (332126): Node "CPU|id_stage|mux4b|y[1]~0|dataa"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[1]~0|datad"
     Warning (332126): Node "CPU|id_stage|mux4b|y[1]~0|combout"
-    Warning (332126): Node "CPU|hazard~3|datad"
-    Warning (332126): Node "CPU|hazard_unit1|hazard~0|datad"
+    Warning (332126): Node "CPU|hazard~3|datab"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~0|datac"
+    Warning (332126): Node "CPU|id_stage|two_src|datab"
+    Warning (332126): Node "CPU|id_stage|two_src|combout"
+    Warning (332126): Node "CPU|hazard~5|datad"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datad"
 Warning (332060): Node: ARM_cpu:CPU|clk was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
-Warning (332060): Node: ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0] was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0] was determined to be a clock but was found without an associated clock assignment.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
@@ -367,8 +367,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info: Analyzing Fast Model
 Warning (332060): Node: ARM_cpu:CPU|clk was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
-Warning (332060): Node: ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0] was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0] was determined to be a clock but was found without an associated clock assignment.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
@@ -381,9 +381,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Wed Jun 08 12:07:03 2022
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Wed Jun 08 12:29:01 2022
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 
