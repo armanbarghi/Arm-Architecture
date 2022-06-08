@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY ARM_cpu
+set_global_assignment -name TOP_LEVEL_ENTITY ARM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:18:06  APRIL 27, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -475,13 +475,7 @@ set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name ENABLE_SIGNALTAP ON
-set_global_assignment -name USE_SIGNALTAP_FILE output_files/stptest.stp
-set_global_assignment -name SLD_FILE "D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/stptest_auto_stripped.stp"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE ../Codes/Cache_Controller.v
-set_global_assignment -name VERILOG_FILE ../Codes/Cache.v
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/dg.stp
 set_global_assignment -name VERILOG_FILE ../Codes/WB_Stage.v
 set_global_assignment -name VERILOG_FILE ../Codes/Val2_Ganerator.v
 set_global_assignment -name VERILOG_FILE ../Codes/Status_Reg.v
@@ -504,6 +498,390 @@ set_global_assignment -name VERILOG_FILE ../Codes/EXE_Stage_Reg.v
 set_global_assignment -name VERILOG_FILE ../Codes/EXE_Stage.v
 set_global_assignment -name VERILOG_FILE ../Codes/ControlUnit.v
 set_global_assignment -name VERILOG_FILE ../Codes/ConditionCheck.v
+set_global_assignment -name VERILOG_FILE ../Codes/Cache_Controller.v
+set_global_assignment -name VERILOG_FILE ../Codes/Cache.v
+set_global_assignment -name VERILOG_FILE ../Codes/ARM_Testbench.v
 set_global_assignment -name VERILOG_FILE ../Codes/ARM_cpu.v
+set_global_assignment -name VERILOG_FILE ../Codes/ARM.v
 set_global_assignment -name VERILOG_FILE ../Codes/ALU.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SIGNALTAP_FILE output_files/dg.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to CLOCK_50 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=2048" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_GAP_RECORD=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_MODE=COMBINATIONAL" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=2048" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION=0" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[0] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[1] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[2] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[3] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[4] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[5] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[6] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[7] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[8] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[9] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[10] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[11] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[12] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[13] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[14] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[15] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[16] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[17] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[18] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[19] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[20] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[21] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[22] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[23] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[24] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[25] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[26] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[27] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[28] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[29] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[30] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[31] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[32] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[33] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[34] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[35] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[36] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[37] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[38] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[39] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[40] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[41] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[42] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[43] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[44] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[45] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[46] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[47] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[48] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[49] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[50] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[51] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[52] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[53] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[54] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[55] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[56] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[57] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[58] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[59] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[60] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[61] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[62] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[63] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data.data_a[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|MEM_R_EN" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|MEM_W_EN" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|MEM_R_EN" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|MEM_W_EN" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[64] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|MEM_R_EN" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[65] -to "ARM_cpu:CPU|Cache_Controller:cache_ctrl|MEM_W_EN" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[96] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[97] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[98] -to SRAM_DQ[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[99] -to SRAM_DQ[10] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[100] -to SRAM_DQ[11] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[101] -to SRAM_DQ[12] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[102] -to SRAM_DQ[13] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[103] -to SRAM_DQ[14] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[104] -to SRAM_DQ[15] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[105] -to SRAM_DQ[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[106] -to SRAM_DQ[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[107] -to SRAM_DQ[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[108] -to SRAM_DQ[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[109] -to SRAM_DQ[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[110] -to SRAM_DQ[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[111] -to SRAM_DQ[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[112] -to SRAM_DQ[8] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[113] -to SRAM_DQ[9] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[114] -to SW[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to SRAM_DQ[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to SRAM_DQ[10] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to SRAM_DQ[11] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to SRAM_DQ[12] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to SRAM_DQ[13] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to SRAM_DQ[14] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to SRAM_DQ[15] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to SRAM_DQ[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to SRAM_DQ[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to SRAM_DQ[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to SRAM_DQ[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to SRAM_DQ[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to SRAM_DQ[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to SRAM_DQ[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to SRAM_DQ[8] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to SRAM_DQ[9] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to SW[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[66] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[67] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[68] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[69] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[70] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[71] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[72] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[73] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[74] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[75] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[76] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[77] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[78] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[79] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[80] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[81] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[82] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[83] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[84] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[85] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[86] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[87] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[88] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[89] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[90] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[91] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[92] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[93] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[94] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[95] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[96] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[97] -to "ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[98] -to SRAM_DQ[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[99] -to SRAM_DQ[10] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[100] -to SRAM_DQ[11] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[101] -to SRAM_DQ[12] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[102] -to SRAM_DQ[13] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[103] -to SRAM_DQ[14] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[104] -to SRAM_DQ[15] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[105] -to SRAM_DQ[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[106] -to SRAM_DQ[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[107] -to SRAM_DQ[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[108] -to SRAM_DQ[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[109] -to SRAM_DQ[5] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[110] -to SRAM_DQ[6] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[111] -to SRAM_DQ[7] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[112] -to SRAM_DQ[8] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[113] -to SRAM_DQ[9] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_storage_qualifier_in[114] -to SW[0] -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=115" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=115" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=115" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=716" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=346" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=22812" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=38885" -section_id auto_signaltap_0
+set_global_assignment -name SLD_FILE "D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/dg_auto_stripped.stp"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

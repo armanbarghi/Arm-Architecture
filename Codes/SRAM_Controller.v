@@ -26,7 +26,7 @@ module SRAM_Controller (
     always @(posedge clk, posedge rst) begin
         if (rst == 1'b1)
             state <= 3'b000;
-        else if (state == 3'b101)
+        else if (state == 3'b110)
             state <= 3'b000;
         else if (wr_en | rd_en)
             state = state + 1'b1;
@@ -74,7 +74,7 @@ module SRAM_Controller (
     assign read_data = {high_data1, low_data1, high_data0, low_data0};
 
 
-    assign ready = (state == 3'b101);
+    assign ready = (state == 3'b110);
 
 
 endmodule

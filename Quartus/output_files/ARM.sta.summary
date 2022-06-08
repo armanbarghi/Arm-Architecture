@@ -2,84 +2,12 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'clk'
-Slack : -22.426
-TNS   : -29424.574
-
-Type  : Slow Model Setup 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -10.050
-TNS   : -306.658
-
-Type  : Slow Model Setup 'clock'
-Slack : 3.013
+Type  : Slow Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 97.778
 TNS   : 0.000
 
-Type  : Slow Model Hold 'clk'
-Slack : -3.062
-TNS   : -12.703
-
-Type  : Slow Model Hold 'clock'
-Slack : -2.743
-TNS   : -2.743
-
-Type  : Slow Model Hold 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -1.941
-TNS   : -41.029
-
-Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -1.627
-TNS   : -3559.614
-
-Type  : Slow Model Minimum Pulse Width 'clock'
-Slack : -1.222
-TNS   : -2.222
-
-Type  : Slow Model Minimum Pulse Width 'Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Setup 'clk'
-Slack : -9.771
-TNS   : -12131.928
-
-Type  : Fast Model Setup 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -4.207
-TNS   : -128.041
-
-Type  : Fast Model Setup 'clock'
-Slack : 1.901
-TNS   : 0.000
-
-Type  : Fast Model Hold 'clk'
-Slack : -1.785
-TNS   : -15.912
-
-Type  : Fast Model Hold 'clock'
-Slack : -1.521
-TNS   : -1.521
-
-Type  : Fast Model Hold 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -1.218
-TNS   : -29.617
-
-Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -1.627
-TNS   : -3559.614
-
-Type  : Fast Model Minimum Pulse Width 'clock'
-Slack : -1.222
-TNS   : -2.222
-
-Type  : Fast Model Minimum Pulse Width 'Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : 0.500
+Type  : Fast Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 97.778
 TNS   : 0.000
 
 ------------------------------------------------------------

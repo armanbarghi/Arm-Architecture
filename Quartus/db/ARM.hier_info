@@ -1,4 +1,425 @@
-|ARM_cpu
+|ARM
+CLOCK_27 => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
+EXT_CLOCK => ~NO_FANOUT~
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+HEX0[0] <= <GND>
+HEX0[1] <= <GND>
+HEX0[2] <= <GND>
+HEX0[3] <= <GND>
+HEX0[4] <= <GND>
+HEX0[5] <= <GND>
+HEX0[6] <= <GND>
+HEX1[0] <= <GND>
+HEX1[1] <= <GND>
+HEX1[2] <= <GND>
+HEX1[3] <= <GND>
+HEX1[4] <= <GND>
+HEX1[5] <= <GND>
+HEX1[6] <= <GND>
+HEX2[0] <= <GND>
+HEX2[1] <= <GND>
+HEX2[2] <= <GND>
+HEX2[3] <= <GND>
+HEX2[4] <= <GND>
+HEX2[5] <= <GND>
+HEX2[6] <= <GND>
+HEX3[0] <= <GND>
+HEX3[1] <= <GND>
+HEX3[2] <= <GND>
+HEX3[3] <= <GND>
+HEX3[4] <= <GND>
+HEX3[5] <= <GND>
+HEX3[6] <= <GND>
+HEX4[0] <= <GND>
+HEX4[1] <= <GND>
+HEX4[2] <= <GND>
+HEX4[3] <= <GND>
+HEX4[4] <= <GND>
+HEX4[5] <= <GND>
+HEX4[6] <= <GND>
+HEX5[0] <= <GND>
+HEX5[1] <= <GND>
+HEX5[2] <= <GND>
+HEX5[3] <= <GND>
+HEX5[4] <= <GND>
+HEX5[5] <= <GND>
+HEX5[6] <= <GND>
+HEX6[0] <= <GND>
+HEX6[1] <= <GND>
+HEX6[2] <= <GND>
+HEX6[3] <= <GND>
+HEX6[4] <= <GND>
+HEX6[5] <= <GND>
+HEX6[6] <= <GND>
+HEX7[0] <= <GND>
+HEX7[1] <= <GND>
+HEX7[2] <= <GND>
+HEX7[3] <= <GND>
+HEX7[4] <= <GND>
+HEX7[5] <= <GND>
+HEX7[6] <= <GND>
+LEDG[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= <GND>
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+LEDG[8] <= <GND>
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= <GND>
+DRAM_DQ[0] <> <UNC>
+DRAM_DQ[1] <> <UNC>
+DRAM_DQ[2] <> <UNC>
+DRAM_DQ[3] <> <UNC>
+DRAM_DQ[4] <> <UNC>
+DRAM_DQ[5] <> <UNC>
+DRAM_DQ[6] <> <UNC>
+DRAM_DQ[7] <> <UNC>
+DRAM_DQ[8] <> <UNC>
+DRAM_DQ[9] <> <UNC>
+DRAM_DQ[10] <> <UNC>
+DRAM_DQ[11] <> <UNC>
+DRAM_DQ[12] <> <UNC>
+DRAM_DQ[13] <> <UNC>
+DRAM_DQ[14] <> <UNC>
+DRAM_DQ[15] <> <UNC>
+DRAM_ADDR[0] <= <GND>
+DRAM_ADDR[1] <= <GND>
+DRAM_ADDR[2] <= <GND>
+DRAM_ADDR[3] <= <GND>
+DRAM_ADDR[4] <= <GND>
+DRAM_ADDR[5] <= <GND>
+DRAM_ADDR[6] <= <GND>
+DRAM_ADDR[7] <= <GND>
+DRAM_ADDR[8] <= <GND>
+DRAM_ADDR[9] <= <GND>
+DRAM_ADDR[10] <= <GND>
+DRAM_ADDR[11] <= <GND>
+DRAM_LDQM <= <GND>
+DRAM_UDQM <= <GND>
+DRAM_WE_N <= <GND>
+DRAM_CAS_N <= <GND>
+DRAM_RAS_N <= <GND>
+DRAM_CS_N <= <GND>
+DRAM_BA_0 <= <GND>
+DRAM_BA_1 <= <GND>
+DRAM_CLK <= <GND>
+DRAM_CKE <= <GND>
+FL_DQ[0] <> <UNC>
+FL_DQ[1] <> <UNC>
+FL_DQ[2] <> <UNC>
+FL_DQ[3] <> <UNC>
+FL_DQ[4] <> <UNC>
+FL_DQ[5] <> <UNC>
+FL_DQ[6] <> <UNC>
+FL_DQ[7] <> <UNC>
+FL_ADDR[0] <= <GND>
+FL_ADDR[1] <= <GND>
+FL_ADDR[2] <= <GND>
+FL_ADDR[3] <= <GND>
+FL_ADDR[4] <= <GND>
+FL_ADDR[5] <= <GND>
+FL_ADDR[6] <= <GND>
+FL_ADDR[7] <= <GND>
+FL_ADDR[8] <= <GND>
+FL_ADDR[9] <= <GND>
+FL_ADDR[10] <= <GND>
+FL_ADDR[11] <= <GND>
+FL_ADDR[12] <= <GND>
+FL_ADDR[13] <= <GND>
+FL_ADDR[14] <= <GND>
+FL_ADDR[15] <= <GND>
+FL_ADDR[16] <= <GND>
+FL_ADDR[17] <= <GND>
+FL_ADDR[18] <= <GND>
+FL_ADDR[19] <= <GND>
+FL_ADDR[20] <= <GND>
+FL_ADDR[21] <= <GND>
+FL_WE_N <= <GND>
+FL_RST_N <= <GND>
+FL_OE_N <= <GND>
+FL_CE_N <= <GND>
+SRAM_DQ[0] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[1] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[2] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[3] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[4] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[5] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[6] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[7] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[8] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[9] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[10] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[11] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[12] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[13] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[14] <> ARM_cpu:CPU.sram_dq
+SRAM_DQ[15] <> ARM_cpu:CPU.sram_dq
+SRAM_ADDR[0] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[1] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[2] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[3] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[4] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[5] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[6] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[7] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[8] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[9] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[10] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[11] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[12] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[13] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[14] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[15] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[16] <= ARM_cpu:CPU.sram_addr
+SRAM_ADDR[17] <= ARM_cpu:CPU.sram_addr
+SRAM_UB_N <= <GND>
+SRAM_LB_N <= <GND>
+SRAM_WE_N <= ARM_cpu:CPU.sram_we_n
+SRAM_CE_N <= <GND>
+SRAM_OE_N <= <GND>
+OTG_DATA[0] <> <UNC>
+OTG_DATA[1] <> <UNC>
+OTG_DATA[2] <> <UNC>
+OTG_DATA[3] <> <UNC>
+OTG_DATA[4] <> <UNC>
+OTG_DATA[5] <> <UNC>
+OTG_DATA[6] <> <UNC>
+OTG_DATA[7] <> <UNC>
+OTG_DATA[8] <> <UNC>
+OTG_DATA[9] <> <UNC>
+OTG_DATA[10] <> <UNC>
+OTG_DATA[11] <> <UNC>
+OTG_DATA[12] <> <UNC>
+OTG_DATA[13] <> <UNC>
+OTG_DATA[14] <> <UNC>
+OTG_DATA[15] <> <UNC>
+OTG_ADDR[0] <= <GND>
+OTG_ADDR[1] <= <GND>
+OTG_CS_N <= <GND>
+OTG_RD_N <= <GND>
+OTG_WR_N <= <GND>
+OTG_RST_N <= <GND>
+OTG_FSPEED <= <GND>
+OTG_LSPEED <= <GND>
+OTG_INT0 => ~NO_FANOUT~
+OTG_INT1 => ~NO_FANOUT~
+OTG_DREQ0 => ~NO_FANOUT~
+OTG_DREQ1 => ~NO_FANOUT~
+OTG_DACK0_N <= <GND>
+OTG_DACK1_N <= <GND>
+LCD_ON <= <GND>
+LCD_BLON <= <GND>
+LCD_RW <= <GND>
+LCD_EN <= <GND>
+LCD_RS <= <GND>
+LCD_DATA[0] <> <UNC>
+LCD_DATA[1] <> <UNC>
+LCD_DATA[2] <> <UNC>
+LCD_DATA[3] <> <UNC>
+LCD_DATA[4] <> <UNC>
+LCD_DATA[5] <> <UNC>
+LCD_DATA[6] <> <UNC>
+LCD_DATA[7] <> <UNC>
+TDI => ~NO_FANOUT~
+TCK => ~NO_FANOUT~
+TCS => ~NO_FANOUT~
+TDO <= <GND>
+I2C_SDAT <> <UNC>
+I2C_SCLK <= <GND>
+PS2_DAT => ~NO_FANOUT~
+PS2_CLK => ~NO_FANOUT~
+VGA_CLK <= <GND>
+VGA_HS <= <GND>
+VGA_VS <= <GND>
+VGA_BLANK <= <GND>
+VGA_SYNC <= <GND>
+VGA_R[0] <= <GND>
+VGA_R[1] <= <GND>
+VGA_R[2] <= <GND>
+VGA_R[3] <= <GND>
+VGA_R[4] <= <GND>
+VGA_R[5] <= <GND>
+VGA_R[6] <= <GND>
+VGA_R[7] <= <GND>
+VGA_R[8] <= <GND>
+VGA_R[9] <= <GND>
+VGA_G[0] <= <GND>
+VGA_G[1] <= <GND>
+VGA_G[2] <= <GND>
+VGA_G[3] <= <GND>
+VGA_G[4] <= <GND>
+VGA_G[5] <= <GND>
+VGA_G[6] <= <GND>
+VGA_G[7] <= <GND>
+VGA_G[8] <= <GND>
+VGA_G[9] <= <GND>
+VGA_B[0] <= <GND>
+VGA_B[1] <= <GND>
+VGA_B[2] <= <GND>
+VGA_B[3] <= <GND>
+VGA_B[4] <= <GND>
+VGA_B[5] <= <GND>
+VGA_B[6] <= <GND>
+VGA_B[7] <= <GND>
+VGA_B[8] <= <GND>
+VGA_B[9] <= <GND>
+ENET_DATA[0] <> <UNC>
+ENET_DATA[1] <> <UNC>
+ENET_DATA[2] <> <UNC>
+ENET_DATA[3] <> <UNC>
+ENET_DATA[4] <> <UNC>
+ENET_DATA[5] <> <UNC>
+ENET_DATA[6] <> <UNC>
+ENET_DATA[7] <> <UNC>
+ENET_DATA[8] <> <UNC>
+ENET_DATA[9] <> <UNC>
+ENET_DATA[10] <> <UNC>
+ENET_DATA[11] <> <UNC>
+ENET_DATA[12] <> <UNC>
+ENET_DATA[13] <> <UNC>
+ENET_DATA[14] <> <UNC>
+ENET_DATA[15] <> <UNC>
+ENET_CMD <= <GND>
+ENET_CS_N <= <GND>
+ENET_WR_N <= <GND>
+ENET_RD_N <= <GND>
+ENET_RST_N <= <GND>
+ENET_INT => ~NO_FANOUT~
+ENET_CLK <= <GND>
+AUD_ADCLRCK <> <UNC>
+AUD_ADCDAT => ~NO_FANOUT~
+AUD_DACLRCK <> <UNC>
+AUD_DACDAT <= <GND>
+AUD_BCLK <> <UNC>
+AUD_XCK <= <GND>
+TD_DATA[0] => ~NO_FANOUT~
+TD_DATA[1] => ~NO_FANOUT~
+TD_DATA[2] => ~NO_FANOUT~
+TD_DATA[3] => ~NO_FANOUT~
+TD_DATA[4] => ~NO_FANOUT~
+TD_DATA[5] => ~NO_FANOUT~
+TD_DATA[6] => ~NO_FANOUT~
+TD_DATA[7] => ~NO_FANOUT~
+TD_HS => ~NO_FANOUT~
+TD_VS => ~NO_FANOUT~
+TD_RESET <= <GND>
+TD_CLK27 => ~NO_FANOUT~
+GPIO_0[0] <> <UNC>
+GPIO_0[1] <> <UNC>
+GPIO_0[2] <> <UNC>
+GPIO_0[3] <> <UNC>
+GPIO_0[4] <> <UNC>
+GPIO_0[5] <> <UNC>
+GPIO_0[6] <> <UNC>
+GPIO_0[7] <> <UNC>
+GPIO_0[8] <> <UNC>
+GPIO_0[9] <> <UNC>
+GPIO_0[10] <> <UNC>
+GPIO_0[11] <> <UNC>
+GPIO_0[12] <> <UNC>
+GPIO_0[13] <> <UNC>
+GPIO_0[14] <> <UNC>
+GPIO_0[15] <> <UNC>
+GPIO_0[16] <> <UNC>
+GPIO_0[17] <> <UNC>
+GPIO_0[18] <> <UNC>
+GPIO_0[19] <> <UNC>
+GPIO_0[20] <> <UNC>
+GPIO_0[21] <> <UNC>
+GPIO_0[22] <> <UNC>
+GPIO_0[23] <> <UNC>
+GPIO_0[24] <> <UNC>
+GPIO_0[25] <> <UNC>
+GPIO_0[26] <> <UNC>
+GPIO_0[27] <> <UNC>
+GPIO_0[28] <> <UNC>
+GPIO_0[29] <> <UNC>
+GPIO_0[30] <> <UNC>
+GPIO_0[31] <> <UNC>
+GPIO_0[32] <> <UNC>
+GPIO_0[33] <> <UNC>
+GPIO_0[34] <> <UNC>
+GPIO_0[35] <> <UNC>
+GPIO_1[0] <> <UNC>
+GPIO_1[1] <> <UNC>
+GPIO_1[2] <> <UNC>
+GPIO_1[3] <> <UNC>
+GPIO_1[4] <> <UNC>
+GPIO_1[5] <> <UNC>
+GPIO_1[6] <> <UNC>
+GPIO_1[7] <> <UNC>
+GPIO_1[8] <> <UNC>
+GPIO_1[9] <> <UNC>
+GPIO_1[10] <> <UNC>
+GPIO_1[11] <> <UNC>
+GPIO_1[12] <> <UNC>
+GPIO_1[13] <> <UNC>
+GPIO_1[14] <> <UNC>
+GPIO_1[15] <> <UNC>
+GPIO_1[16] <> <UNC>
+GPIO_1[17] <> <UNC>
+GPIO_1[18] <> <UNC>
+GPIO_1[19] <> <UNC>
+GPIO_1[20] <> <UNC>
+GPIO_1[21] <> <UNC>
+GPIO_1[22] <> <UNC>
+GPIO_1[23] <> <UNC>
+GPIO_1[24] <> <UNC>
+GPIO_1[25] <> <UNC>
+GPIO_1[26] <> <UNC>
+GPIO_1[27] <> <UNC>
+GPIO_1[28] <> <UNC>
+GPIO_1[29] <> <UNC>
+GPIO_1[30] <> <UNC>
+GPIO_1[31] <> <UNC>
+GPIO_1[32] <> <UNC>
+GPIO_1[33] <> <UNC>
+GPIO_1[34] <> <UNC>
+GPIO_1[35] <> <UNC>
+
+
+|ARM|ARM_cpu:CPU
 clock => clk.CLK
 rst => rst.IN13
 mode => hazard.IN1
@@ -44,7 +465,7 @@ sram_addr[16] <= SRAM_Controller:sram_controller.SRAM_ADDR
 sram_addr[17] <= SRAM_Controller:sram_controller.SRAM_ADDR
 
 
-|ARM_cpu|IF_Stage:if_stage
+|ARM|ARM_cpu:CPU|IF_Stage:if_stage
 clk => clk.IN1
 rst => rst.IN1
 freeze => _.IN1
@@ -147,7 +568,7 @@ Inst[30] <= InstMemory:InstMem.Inst
 Inst[31] <= InstMemory:InstMem.Inst
 
 
-|ARM_cpu|IF_Stage:if_stage|Register:PC_reg
+|ARM|ARM_cpu:CPU|IF_Stage:if_stage|Register:PC_reg
 clk => d_out[0]~reg0.CLK
 clk => d_out[1]~reg0.CLK
 clk => d_out[2]~reg0.CLK
@@ -310,7 +731,7 @@ d_out[30] <= d_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d_out[31] <= d_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|IF_Stage:if_stage|Mux2to1:mux32b
+|ARM|ARM_cpu:CPU|IF_Stage:if_stage|Mux2to1:mux32b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
@@ -441,7 +862,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|IF_Stage:if_stage|InstMemory:InstMem
+|ARM|ARM_cpu:CPU|IF_Stage:if_stage|InstMemory:InstMem
 AddrIn[0] => ~NO_FANOUT~
 AddrIn[1] => ~NO_FANOUT~
 AddrIn[2] => mem.RADDR
@@ -508,7 +929,7 @@ Inst[30] <= mem.DATAOUT30
 Inst[31] <= mem.DATAOUT31
 
 
-|ARM_cpu|IF_Stage_Reg:if_stage_reg
+|ARM|ARM_cpu:CPU|IF_Stage_Reg:if_stage_reg
 clk => Inst[0]~reg0.CLK
 clk => Inst[1]~reg0.CLK
 clk => Inst[2]~reg0.CLK
@@ -895,7 +1316,7 @@ Inst[30] <= Inst[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Inst[31] <= Inst[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|ID_Stage:id_stage
+|ARM|ARM_cpu:CPU|ID_Stage:id_stage
 clk => clk.IN3
 rst => rst.IN3
 wb_wb_en => wb_wb_en.IN1
@@ -1118,7 +1539,7 @@ val_rm[30] <= RegisterFile:reg_file.reg2
 val_rm[31] <= RegisterFile:reg_file.reg2
 
 
-|ARM_cpu|ID_Stage:id_stage|Mux2to1:mux4b
+|ARM|ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux4b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
@@ -1137,7 +1558,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|ID_Stage:id_stage|Mux2to1:mux9b
+|ARM|ARM_cpu:CPU|ID_Stage:id_stage|Mux2to1:mux9b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
@@ -1176,7 +1597,7 @@ y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[8] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|ID_Stage:id_stage|ControlUnit:control_unit
+|ARM|ARM_cpu:CPU|ID_Stage:id_stage|ControlUnit:control_unit
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 s => s_out.DATAA
@@ -1211,7 +1632,7 @@ exe_cmd[2] <= exe_cmd.DB_MAX_OUTPUT_PORT_TYPE
 exe_cmd[3] <= exe_cmd.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|ID_Stage:id_stage|ConditionCheck:condition_check
+|ARM|ARM_cpu:CPU|ID_Stage:id_stage|ConditionCheck:condition_check
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 cond[0] => Mux0.IN15
@@ -1237,7 +1658,7 @@ status_reg[3] => Mux0.IN3
 cond_out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|ID_Stage:id_stage|RegisterFile:reg_file
+|ARM|ARM_cpu:CPU|ID_Stage:id_stage|RegisterFile:reg_file
 clk => register_file[15][0].CLK
 clk => register_file[15][1].CLK
 clk => register_file[15][2].CLK
@@ -3612,7 +4033,7 @@ reg2[30] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
 reg2[31] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|Hazard_Detection_Unit:hazard_unit1
+|ARM|ARM_cpu:CPU|Hazard_Detection_Unit:hazard_unit1
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 two_src => hazard.OUTPUTSELECT
@@ -3654,7 +4075,7 @@ mem_dest[3] => Equal3.IN4
 hazard <= hazard.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|Hazard_Detection_Unit2:hazard_unit2
+|ARM|ARM_cpu:CPU|Hazard_Detection_Unit2:hazard_unit2
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 two_src => hazard.OUTPUTSELECT
@@ -3678,7 +4099,7 @@ exe_dest[3] => Equal1.IN4
 hazard <= hazard.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|ID_Stage_Reg:id_stage_reg
+|ARM|ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg
 clk => val_rm[0]~reg0.CLK
 clk => val_rm[1]~reg0.CLK
 clk => val_rm[2]~reg0.CLK
@@ -4629,7 +5050,7 @@ val_rm[30] <= val_rm[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 val_rm[31] <= val_rm[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|EXE_Stage:exe_stage
+|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage
 clk => ~NO_FANOUT~
 exe_cmd[0] => exe_cmd[0].IN1
 exe_cmd[1] => exe_cmd[1].IN1
@@ -4952,7 +5373,7 @@ status[2] <= ALU:alu_unit.status_bits
 status[3] <= ALU:alu_unit.status_bits
 
 
-|ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit
+|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|ALU:alu_unit
 in1[0] => Add0.IN32
 in1[0] => Add2.IN32
 in1[0] => x5[0].IN0
@@ -5531,7 +5952,7 @@ result[30] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 result[31] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen
+|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|Val2_Generator:val2_gen
 shift_operand[0] => val2[0].DATAB
 shift_operand[0] => ShiftRight2.IN68
 shift_operand[0] => ShiftRight2.IN69
@@ -5909,7 +6330,7 @@ val2[30] <= val2[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
 val2[31] <= val2[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn
+|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rn
 i0[0] => Mux31.IN0
 i0[1] => Mux30.IN0
 i0[2] => Mux29.IN0
@@ -6136,7 +6557,7 @@ y[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm
+|ARM|ARM_cpu:CPU|EXE_Stage:exe_stage|Mux4to1:mux_rm
 i0[0] => Mux31.IN0
 i0[1] => Mux30.IN0
 i0[2] => Mux29.IN0
@@ -6363,7 +6784,7 @@ y[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|EXE_Stage_Reg:exe_stage_reg
+|ARM|ARM_cpu:CPU|EXE_Stage_Reg:exe_stage_reg
 clk => dest[0]~reg0.CLK
 clk => dest[1]~reg0.CLK
 clk => dest[2]~reg0.CLK
@@ -6721,7 +7142,7 @@ dest[2] <= dest[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dest[3] <= dest[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|Status_Reg:st_reg
+|ARM|ARM_cpu:CPU|Status_Reg:st_reg
 clk => d_out[0]~reg0.CLK
 clk => d_out[1]~reg0.CLK
 clk => d_out[2]~reg0.CLK
@@ -6744,7 +7165,7 @@ d_out[2] <= d_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d_out[3] <= d_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|Forwarding_Unit:forwarding_unit
+|ARM|ARM_cpu:CPU|Forwarding_Unit:forwarding_unit
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 mem_wb_en => sel_src1.OUTPUTSELECT
@@ -6791,14 +7212,14 @@ sel_src2[0] <= sel_src2.DB_MAX_OUTPUT_PORT_TYPE
 sel_src2[1] <= sel_src2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|Mux2to1:mux_wb_en
+|ARM|ARM_cpu:CPU|Mux2to1:mux_wb_en
 i0[0] => y.DATAA
 i1[0] => y.DATAB
 sel => y.OUTPUTSELECT
 y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|SRAM_Controller:sram_controller
+|ARM|ARM_cpu:CPU|SRAM_Controller:sram_controller
 clk => state[0].CLK
 clk => state[1].CLK
 clk => state[2].CLK
@@ -7084,7 +7505,7 @@ read_data[62] <= high_data1[14].DB_MAX_OUTPUT_PORT_TYPE
 read_data[63] <= high_data1[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|Cache_Controller:cache_ctrl
+|ARM|ARM_cpu:CPU|Cache_Controller:cache_ctrl
 clk => clk.IN1
 rst => rst.IN1
 address[0] => address[0].IN1
@@ -7326,7 +7747,7 @@ sram_ready => write_cacheR.IN1
 sram_ready => write_cacheW.IN1
 
 
-|ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem
+|ARM|ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem
 clk => way0_data.we_a.CLK
 clk => way0_data.be_a[63].CLK
 clk => way0_data.be_a[62].CLK
@@ -13773,7 +14194,7 @@ data_out[62] <= data_out[62].DB_MAX_OUTPUT_PORT_TYPE
 data_out[63] <= data_out[63].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|MEM_Stage_Reg:memory_stage_reg
+|ARM|ARM_cpu:CPU|MEM_Stage_Reg:memory_stage_reg
 clk => mem_val_out[0]~reg0.CLK
 clk => mem_val_out[1]~reg0.CLK
 clk => mem_val_out[2]~reg0.CLK
@@ -14126,7 +14547,7 @@ mem_val_out[30] <= mem_val_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mem_val_out[31] <= mem_val_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ARM_cpu|WB_Stage:wb_stage
+|ARM|ARM_cpu:CPU|WB_Stage:wb_stage
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
 mem_r_en => mem_r_en.IN1
@@ -14228,7 +14649,7 @@ wb_val[30] <= Mux2to1:mux32b.y
 wb_val[31] <= Mux2to1:mux32b.y
 
 
-|ARM_cpu|WB_Stage:wb_stage|Mux2to1:mux32b
+|ARM|ARM_cpu:CPU|WB_Stage:wb_stage|Mux2to1:mux32b
 i0[0] => y.DATAA
 i0[1] => y.DATAA
 i0[2] => y.DATAA
