@@ -12,6 +12,6 @@ entity SRAM_Controller is
         ready           : out    vl_logic;
         SRAM_WE_N       : out    vl_logic;
         SRAM_ADDR       : out    vl_logic_vector(17 downto 0);
-        read_data       : out    vl_logic_vector(31 downto 0)
+        read_data       : out    vl_logic_vector(63 downto 0)
     );
 end SRAM_Controller;

@@ -39,11 +39,16 @@ module ARM_cpu (
     wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
     wire mux_wb_en_mem;
+    wire mem_ready;
     output sram_freeze, sram_ready;
     output sram_we_n;
     output [15:0] sram_dq;
     output [17:0] sram_addr;
-
+    wire w_en_cache, r_en_cache;
+    wire [31:0] cache_wdata;
+    wire [63:0] sram_rdata;
+    wire [31:0] cache_addr;
+    
     reg clk;
     always@(posedge clock, posedge rst)begin
         if(rst == 1'b1)
@@ -54,7 +59,7 @@ module ARM_cpu (
 
     assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
 
-    assign sram_freeze = ~sram_ready;
+    assign sram_freeze = ((mem_r_en_mem & ~mem_ready) | (mem_w_en_mem & ~mem_ready)) ? 1'b1 : 1'b0;
 
     IF_Stage if_stage (
         .clk(clk),
@@ -248,15 +253,15 @@ module ARM_cpu (
     SRAM_Controller sram_controller (
         .clk(clk),
         .rst(rst),
-        .rd_en(mem_r_en_mem),
-        .wr_en(mem_w_en_mem),
-        .address(alu_res_mem-32'd1024),
-        .write_data(st_value),
+        .rd_en(r_en_cache),
+        .wr_en(w_en_cache),
+        .address(cache_addr),
+        .write_data(cache_wdata),
         .SRAM_DQ(sram_dq),
         .ready(sram_ready),
         .SRAM_WE_N(sram_we_n),
         .SRAM_ADDR(sram_addr),
-        .read_data(mem_res)
+        .read_data(sram_rdata)
     );
 
     SRAM sram (
@@ -266,6 +271,23 @@ module ARM_cpu (
         .SRAM_DQ(sram_dq),
         .SRAM_ADDR(sram_addr)
     );
+
+    Cache_Controller cache_ctrl(
+        .clk(clk),
+        .rst(rst),
+        .address(alu_res_mem-32'd1024),
+        .wdata(st_value),
+        .MEM_R_EN(mem_r_en_mem),
+        .MEM_W_EN(mem_w_en_mem),
+        .rdata(mem_res),
+        .ready(mem_ready),
+        .sram_address(cache_addr),
+        .sram_wdata(cache_wdata),
+        .write(w_en_cache),
+        .read(r_en_cache),
+        .sram_rdata(sram_rdata),
+        .sram_ready(sram_ready)
+);
 
     MEM_Stage_Reg memory_stage_reg (
         .clk(clk),

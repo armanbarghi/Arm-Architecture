@@ -9,7 +9,7 @@ module ARM_Testbench();
         clk = 1'b1;
         mode = 1'b1;
         #20 rst = 1'b0;
-        #4000;
+        #40000;
         $stop;
     end
 

@@ -19,7 +19,7 @@ module SRAM_Controller (
     output [63:0] read_data;
 
     reg [2:0] state;
-    reg [15:0] high_data, low_data;
+    reg [15:0] high_data1, high_data0, low_data1, low_data0;
 
     // We asssume that the SRAM will works in 6 clock
 
@@ -32,32 +32,49 @@ module SRAM_Controller (
             state = state + 1'b1;
     end
 
-    always @(state, rd_en, wr_en) begin
-        if ((state == 3'b010) & rd_en)
-            low_data <= SRAM_DQ;
+    always @(state, rd_en, wr_en, SRAM_DQ) begin
+        SRAM_ADDR = 18'd0;
+        if ((state == 3'b001) & rd_en)
+            low_data0 <= SRAM_DQ;
+        else if ((state == 3'b010) & rd_en)
+            high_data0 <= SRAM_DQ;
         else if ((state == 3'b011) & rd_en)
-            high_data <= SRAM_DQ;
+             low_data1 <= SRAM_DQ;
+        else if ((state == 3'b100) & rd_en)
+            high_data1 <= SRAM_DQ;
         
-        if (wr_en | rd_en) begin
+        if (rd_en) begin
             if (state == 3'b001)
                 SRAM_ADDR = (address[17:0] >> 1);
             else if(state == 3'b010)
-                SRAM_ADDR = (address[17:0] >> 1) + 1'b1;
+                SRAM_ADDR = (address[17:0] >> 1) + 2'b01;
+            else if (state == 3'b011)
+                SRAM_ADDR = (address[17:0] >> 1) + 2'b10;
+            else if(state == 3'b100)
+                SRAM_ADDR = (address[17:0] >> 1) + 2'b11;
+        end
+        if(wr_en)begin
+            if (state == 3'b001)
+                SRAM_ADDR = (address[17:0] >> 1);
+            else if(state == 3'b010)
+                SRAM_ADDR = (address[17:0] >> 1) + 2'b01;
         end
     end
 
     assign SRAM_WE_N = (rd_en & state >= 3'b001) ? 1'b1:
-                       (wr_en) ? (state == 3'b001) ? 1'b0:
-                                 (state == 3'b010) ? 1'b0:
-                                 (state == 3'b011) ? 1'b1: 1'bz
-                        : 1'bz;
+                       (wr_en & state == 3'b001) ? 1'b0:
+                       (wr_en & state == 3'b010) ? 1'b0:
+                       (wr_en & state == 3'b011) ? 1'b1:
+                        1'b1;
 
     assign SRAM_DQ = ((state == 3'b001) & wr_en) ? write_data[15:0]:
                      ((state == 3'b010) & wr_en) ? write_data[31:16]:
                      16'bz;
 
-    assign read_data = {high_data, low_data, ,};
+    assign read_data = {high_data1, low_data1, high_data0, low_data0};
+
 
     assign ready = (state == 3'b101);
+
 
 endmodule
