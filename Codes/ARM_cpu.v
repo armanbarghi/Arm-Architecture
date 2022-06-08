@@ -40,9 +40,9 @@ module ARM_cpu (
     wire [31:0] fu_val_rm;
     wire mux_wb_en_mem;
     wire mem_ready;
-    output sram_freeze, sram_ready;
+    wire sram_freeze, sram_ready;
     output sram_we_n;
-    output [15:0] sram_dq;
+    inout [15:0] sram_dq;
     output [17:0] sram_addr;
     wire w_en_cache, r_en_cache;
     wire [31:0] cache_wdata;
