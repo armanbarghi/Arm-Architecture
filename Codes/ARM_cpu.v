@@ -43,6 +43,7 @@ module ARM_cpu (
     wire [31:0] cache_wdata;
     wire [63:0] sram_rdata;
     wire [31:0] cache_addr;
+    wire [31:0] instruction_if, pc_if;
 
     reg clk;
     always @(posedge clock, posedge rst) begin

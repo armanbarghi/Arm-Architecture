@@ -2,8 +2,8 @@ library verilog;
 use verilog.vl_types.all;
 entity Cache is
     port(
-        rst             : in     vl_logic;
         clk             : in     vl_logic;
+        rst             : in     vl_logic;
         write_cacheR    : in     vl_logic;
         write_cacheW    : in     vl_logic;
         rdata           : in     vl_logic_vector(63 downto 0);

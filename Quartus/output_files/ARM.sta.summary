@@ -3,46 +3,38 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -21.873
-TNS   : -218261.499
+Slack : -22.426
+TNS   : -29424.574
 
 Type  : Slow Model Setup 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -11.223
-TNS   : -340.675
-
-Type  : Slow Model Setup 'EXE_Stage_Reg:exe_stage_reg|mem_r_en'
-Slack : -10.056
-TNS   : -438.451
+Slack : -10.050
+TNS   : -306.658
 
 Type  : Slow Model Setup 'clock'
-Slack : 3.782
+Slack : 3.013
 TNS   : 0.000
 
-Type  : Slow Model Hold 'clock'
-Slack : -3.512
-TNS   : -3.512
+Type  : Slow Model Hold 'clk'
+Slack : -3.062
+TNS   : -12.703
 
-Type  : Slow Model Hold 'EXE_Stage_Reg:exe_stage_reg|mem_r_en'
-Slack : -3.323
-TNS   : -81.875
+Type  : Slow Model Hold 'clock'
+Slack : -2.743
+TNS   : -2.743
 
 Type  : Slow Model Hold 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -2.812
-TNS   : -61.151
-
-Type  : Slow Model Hold 'clk'
-Slack : -1.783
-TNS   : -200.100
-
-Type  : Slow Model Minimum Pulse Width 'clock'
-Slack : -1.380
-TNS   : -2.380
+Slack : -1.941
+TNS   : -41.029
 
 Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -0.500
-TNS   : -17272.000
+Slack : -1.627
+TNS   : -3559.614
 
-Type  : Slow Model Minimum Pulse Width 'EXE_Stage_Reg:exe_stage_reg|mem_r_en'
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.222
+TNS   : -2.222
+
+Type  : Slow Model Minimum Pulse Width 'Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]'
 Slack : 0.500
 TNS   : 0.000
 
@@ -51,46 +43,38 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'clk'
-Slack : -9.566
-TNS   : -93945.367
+Slack : -9.771
+TNS   : -12131.928
 
 Type  : Fast Model Setup 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -4.794
-TNS   : -146.379
-
-Type  : Fast Model Setup 'EXE_Stage_Reg:exe_stage_reg|mem_r_en'
-Slack : -4.288
-TNS   : -185.301
+Slack : -4.207
+TNS   : -128.041
 
 Type  : Fast Model Setup 'clock'
-Slack : 2.336
+Slack : 1.901
 TNS   : 0.000
 
-Type  : Fast Model Hold 'clock'
-Slack : -1.956
-TNS   : -1.956
+Type  : Fast Model Hold 'clk'
+Slack : -1.785
+TNS   : -15.912
 
-Type  : Fast Model Hold 'EXE_Stage_Reg:exe_stage_reg|mem_r_en'
-Slack : -1.906
-TNS   : -50.279
+Type  : Fast Model Hold 'clock'
+Slack : -1.521
+TNS   : -1.521
 
 Type  : Fast Model Hold 'ID_Stage_Reg:id_stage_reg|imm'
-Slack : -1.608
-TNS   : -38.654
-
-Type  : Fast Model Hold 'clk'
-Slack : -1.248
-TNS   : -1127.091
-
-Type  : Fast Model Minimum Pulse Width 'clock'
-Slack : -1.380
-TNS   : -2.380
+Slack : -1.218
+TNS   : -29.617
 
 Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -0.500
-TNS   : -17272.000
+Slack : -1.627
+TNS   : -3559.614
 
-Type  : Fast Model Minimum Pulse Width 'EXE_Stage_Reg:exe_stage_reg|mem_r_en'
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.222
+TNS   : -2.222
+
+Type  : Fast Model Minimum Pulse Width 'Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]'
 Slack : 0.500
 TNS   : 0.000
 

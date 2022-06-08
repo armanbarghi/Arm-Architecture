@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ARM
-Wed Jun 08 09:37:23 2022
+Wed Jun 08 10:50:16 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -72,16 +72,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 08 09:37:22 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 08 10:50:15 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ARM                                             ;
 ; Top-level Entity Name              ; ARM_cpu                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 34,332                                          ;
-;     Total combinational functions  ; 17,315                                          ;
-;     Dedicated logic registers      ; 18,893                                          ;
-; Total registers                    ; 18893                                           ;
-; Total pins                         ; 424                                             ;
+; Total logic elements               ; 5,769                                           ;
+;     Total combinational functions  ; 5,136                                           ;
+;     Dedicated logic registers      ; 2,451                                           ;
+; Total registers                    ; 2451                                            ;
+; Total pins                         ; 38                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 8,320                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -202,7 +202,6 @@ applicable agreement for further details.
 ; ../Codes/Val2_Ganerator.v         ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v         ;         ;
 ; ../Codes/Status_Reg.v             ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Status_Reg.v             ;         ;
 ; ../Codes/SRAM_Controller.v        ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/SRAM_Controller.v        ;         ;
-; ../Codes/SRAM.v                   ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/SRAM.v                   ;         ;
 ; ../Codes/RegisterFile.v           ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/RegisterFile.v           ;         ;
 ; ../Codes/Register.v               ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Register.v               ;         ;
 ; ../Codes/Mux4to1.v                ; yes             ; User Verilog HDL File        ; D:/term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux4to1.v                ;         ;
@@ -243,81 +242,80 @@ applicable agreement for further details.
 +-----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 34,332 ;
-;                                             ;        ;
-; Total combinational functions               ; 17315  ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 15493  ;
-;     -- 3 input functions                    ; 1472   ;
-;     -- <=2 input functions                  ; 350    ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 17090  ;
-;     -- arithmetic mode                      ; 225    ;
-;                                             ;        ;
-; Total registers                             ; 18893  ;
-;     -- Dedicated logic registers            ; 18893  ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 424    ;
-; Total memory bits                           ; 8320   ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 19023  ;
-; Total fan-out                               ; 125899 ;
-; Average fan-out                             ; 3.42   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 5,769 ;
+;                                             ;       ;
+; Total combinational functions               ; 5136  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 3631  ;
+;     -- 3 input functions                    ; 1221  ;
+;     -- <=2 input functions                  ; 284   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 4925  ;
+;     -- arithmetic mode                      ; 211   ;
+;                                             ;       ;
+; Total registers                             ; 2451  ;
+;     -- Dedicated logic registers            ; 2451  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 38    ;
+; Total memory bits                           ; 8320  ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 2581  ;
+; Total fan-out                               ; 27855 ;
+; Average fan-out                             ; 3.59  ;
++---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
-+----------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers  ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Library Name ;
-+----------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
-; |ARM_cpu                                     ; 17315 (32)        ; 18893 (1)     ; 8320        ; 0            ; 0       ; 0         ; 424  ; 0            ; |ARM_cpu                                                                                                       ; work         ;
-;    |Cache_Controller:cache_ctrl|             ; 2800 (164)        ; 1616 (0)      ; 8320        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl                                                                           ; work         ;
-;       |Cache:cache_mem|                      ; 2636 (2636)       ; 1616 (1616)   ; 8320        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem                                                           ; work         ;
-;          |altsyncram:LRU_rtl_0|              ; 0 (0)             ; 0 (0)         ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_0                                      ; work         ;
-;             |altsyncram_74i1:auto_generated| ; 0 (0)             ; 0 (0)         ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_0|altsyncram_74i1:auto_generated       ; work         ;
-;          |altsyncram:LRU_rtl_1|              ; 0 (0)             ; 0 (0)         ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_1                                      ; work         ;
-;             |altsyncram_74i1:auto_generated| ; 0 (0)             ; 0 (0)         ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_1|altsyncram_74i1:auto_generated       ; work         ;
-;          |altsyncram:way0_data_rtl_0|        ; 0 (0)             ; 0 (0)         ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way0_data_rtl_0                                ; work         ;
-;             |altsyncram_ftk1:auto_generated| ; 0 (0)             ; 0 (0)         ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way0_data_rtl_0|altsyncram_ftk1:auto_generated ; work         ;
-;          |altsyncram:way1_data_rtl_0|        ; 0 (0)             ; 0 (0)         ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way1_data_rtl_0                                ; work         ;
-;             |altsyncram_ftk1:auto_generated| ; 0 (0)             ; 0 (0)         ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way1_data_rtl_0|altsyncram_ftk1:auto_generated ; work         ;
-;    |EXE_Stage:exe_stage|                     ; 1098 (70)         ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage                                                                                   ; work         ;
-;       |ALU:alu_unit|                         ; 388 (322)         ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit                                                                      ; work         ;
-;          |lpm_add_sub:Add2|                  ; 66 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|lpm_add_sub:Add2                                                     ; work         ;
-;             |add_sub_8ri:auto_generated|     ; 66 (66)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|lpm_add_sub:Add2|add_sub_8ri:auto_generated                          ; work         ;
-;       |Mux4to1:mux_rm|                       ; 64 (64)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm                                                                    ; work         ;
-;       |Mux4to1:mux_rn|                       ; 64 (64)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn                                                                    ; work         ;
-;       |Val2_Generator:val2_gen|              ; 512 (512)         ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen                                                           ; work         ;
-;    |EXE_Stage_Reg:exe_stage_reg|             ; 0 (0)             ; 71 (71)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage_Reg:exe_stage_reg                                                                           ; work         ;
-;    |Forwarding_Unit:forwarding_unit|         ; 4 (4)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Forwarding_Unit:forwarding_unit                                                                       ; work         ;
-;    |Hazard_Detection_Unit:hazard_unit1|      ; 5 (5)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Hazard_Detection_Unit:hazard_unit1                                                                    ; work         ;
-;    |ID_Stage:id_stage|                       ; 84 (0)            ; 512 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage                                                                                     ; work         ;
-;       |ConditionCheck:condition_check|       ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ConditionCheck:condition_check                                                      ; work         ;
-;       |ControlUnit:control_unit|             ; 5 (5)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ControlUnit:control_unit                                                            ; work         ;
-;       |Mux2to1:mux4b|                        ; 4 (4)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux4b                                                                       ; work         ;
-;       |Mux2to1:mux9b|                        ; 7 (7)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux9b                                                                       ; work         ;
-;       |RegisterFile:reg_file|                ; 60 (60)           ; 512 (512)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|RegisterFile:reg_file                                                               ; work         ;
-;    |ID_Stage_Reg:id_stage_reg|               ; 704 (704)         ; 127 (127)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage_Reg:id_stage_reg                                                                             ; work         ;
-;    |IF_Stage:if_stage|                       ; 175 (0)           ; 30 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage                                                                                     ; work         ;
-;       |InstMemory:InstMem|                   ; 145 (145)         ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage|InstMemory:InstMem                                                                  ; work         ;
-;       |Register:PC_reg|                      ; 30 (30)           ; 30 (30)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage|Register:PC_reg                                                                     ; work         ;
-;    |IF_Stage_Reg:if_stage_reg|               ; 60 (60)           ; 59 (59)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage_Reg:if_stage_reg                                                                             ; work         ;
-;    |MEM_Stage_Reg:memory_stage_reg|          ; 0 (0)             ; 70 (70)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|MEM_Stage_Reg:memory_stage_reg                                                                        ; work         ;
-;    |SRAM:sram|                               ; 11954 (11954)     ; 16400 (16400) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|SRAM:sram                                                                                             ; work         ;
-;    |SRAM_Controller:sram_controller|         ; 367 (367)         ; 3 (3)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|SRAM_Controller:sram_controller                                                                       ; work         ;
-;    |Status_Reg:st_reg|                       ; 0 (0)             ; 4 (4)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Status_Reg:st_reg                                                                                     ; work         ;
-;    |WB_Stage:wb_stage|                       ; 32 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|WB_Stage:wb_stage                                                                                     ; work         ;
-;       |Mux2to1:mux32b|                       ; 32 (32)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|WB_Stage:wb_stage|Mux2to1:mux32b                                                                      ; work         ;
-+----------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; |ARM_cpu                                     ; 5136 (34)         ; 2451 (1)     ; 8320        ; 0            ; 0       ; 0         ; 38   ; 0            ; |ARM_cpu                                                                                                       ; work         ;
+;    |Cache_Controller:cache_ctrl|             ; 2801 (164)        ; 1616 (0)     ; 8320        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl                                                                           ; work         ;
+;       |Cache:cache_mem|                      ; 2637 (2637)       ; 1616 (1616)  ; 8320        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem                                                           ; work         ;
+;          |altsyncram:LRU_rtl_0|              ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_0                                      ; work         ;
+;             |altsyncram_74i1:auto_generated| ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_0|altsyncram_74i1:auto_generated       ; work         ;
+;          |altsyncram:LRU_rtl_1|              ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_1                                      ; work         ;
+;             |altsyncram_74i1:auto_generated| ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:LRU_rtl_1|altsyncram_74i1:auto_generated       ; work         ;
+;          |altsyncram:way0_data_rtl_0|        ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way0_data_rtl_0                                ; work         ;
+;             |altsyncram_ftk1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way0_data_rtl_0|altsyncram_ftk1:auto_generated ; work         ;
+;          |altsyncram:way1_data_rtl_0|        ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way1_data_rtl_0                                ; work         ;
+;             |altsyncram_ftk1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|altsyncram:way1_data_rtl_0|altsyncram_ftk1:auto_generated ; work         ;
+;    |EXE_Stage:exe_stage|                     ; 1086 (42)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage                                                                                   ; work         ;
+;       |ALU:alu_unit|                         ; 396 (330)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit                                                                      ; work         ;
+;          |lpm_add_sub:Add2|                  ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|lpm_add_sub:Add2                                                     ; work         ;
+;             |add_sub_8ri:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|lpm_add_sub:Add2|add_sub_8ri:auto_generated                          ; work         ;
+;       |Mux4to1:mux_rm|                       ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm                                                                    ; work         ;
+;       |Mux4to1:mux_rn|                       ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn                                                                    ; work         ;
+;       |Val2_Generator:val2_gen|              ; 520 (520)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen                                                           ; work         ;
+;    |EXE_Stage_Reg:exe_stage_reg|             ; 0 (0)             ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|EXE_Stage_Reg:exe_stage_reg                                                                           ; work         ;
+;    |Forwarding_Unit:forwarding_unit|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Forwarding_Unit:forwarding_unit                                                                       ; work         ;
+;    |Hazard_Detection_Unit:hazard_unit1|      ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Hazard_Detection_Unit:hazard_unit1                                                                    ; work         ;
+;    |ID_Stage:id_stage|                       ; 83 (1)            ; 512 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage                                                                                     ; work         ;
+;       |ConditionCheck:condition_check|       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ConditionCheck:condition_check                                                      ; work         ;
+;       |ControlUnit:control_unit|             ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|ControlUnit:control_unit                                                            ; work         ;
+;       |Mux2to1:mux4b|                        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux4b                                                                       ; work         ;
+;       |Mux2to1:mux9b|                        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|Mux2to1:mux9b                                                                       ; work         ;
+;       |RegisterFile:reg_file|                ; 60 (60)           ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage:id_stage|RegisterFile:reg_file                                                               ; work         ;
+;    |ID_Stage_Reg:id_stage_reg|               ; 690 (690)         ; 113 (113)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|ID_Stage_Reg:id_stage_reg                                                                             ; work         ;
+;    |IF_Stage:if_stage|                       ; 150 (0)           ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage                                                                                     ; work         ;
+;       |InstMemory:InstMem|                   ; 134 (134)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage|InstMemory:InstMem                                                                  ; work         ;
+;       |Register:PC_reg|                      ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage:if_stage|Register:PC_reg                                                                     ; work         ;
+;    |IF_Stage_Reg:if_stage_reg|               ; 21 (21)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|IF_Stage_Reg:if_stage_reg                                                                             ; work         ;
+;    |MEM_Stage_Reg:memory_stage_reg|          ; 0 (0)             ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|MEM_Stage_Reg:memory_stage_reg                                                                        ; work         ;
+;    |SRAM_Controller:sram_controller|         ; 230 (230)         ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|SRAM_Controller:sram_controller                                                                       ; work         ;
+;    |Status_Reg:st_reg|                       ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|Status_Reg:st_reg                                                                                     ; work         ;
+;    |WB_Stage:wb_stage|                       ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|WB_Stage:wb_stage                                                                                     ; work         ;
+;       |Mux2to1:mux32b|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ARM_cpu|WB_Stage:wb_stage|Mux2to1:mux32b                                                                      ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -357,15 +355,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[16] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[17] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[18] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; SRAM_Controller:sram_controller|low_data0[0]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
-; SRAM_Controller:sram_controller|low_data0[1]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
-; SRAM_Controller:sram_controller|low_data0[2]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
-; SRAM_Controller:sram_controller|low_data0[3]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[4]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
+; SRAM_Controller:sram_controller|low_data0[3]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
+; SRAM_Controller:sram_controller|low_data0[2]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
+; SRAM_Controller:sram_controller|low_data0[1]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
+; SRAM_Controller:sram_controller|low_data0[0]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[5]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[6]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
-; SRAM_Controller:sram_controller|low_data0[7]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[8]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
+; SRAM_Controller:sram_controller|low_data0[7]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[9]         ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[10]        ; SRAM_Controller:sram_controller|always1              ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data0[11]        ; SRAM_Controller:sram_controller|always1              ; yes                    ;
@@ -376,19 +374,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SRAM_Controller:sram_controller|high_data0[0]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data0[1]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data0[2]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[3]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[4]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[5]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[6]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[7]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[8]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[9]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[10]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[11]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[12]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[13]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[14]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data0[15]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[30] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[29] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
@@ -402,15 +387,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[21] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[20] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
 ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[19] ; EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] ; yes                    ;
-; SRAM_Controller:sram_controller|low_data1[0]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
-; SRAM_Controller:sram_controller|low_data1[1]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
-; SRAM_Controller:sram_controller|low_data1[2]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
-; SRAM_Controller:sram_controller|low_data1[3]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[4]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[4]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[5]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[6]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[7]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[8]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[9]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[10]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[11]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[12]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[13]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[14]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[15]       ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data0[3]        ; SRAM_Controller:sram_controller|high_data0[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|low_data1[3]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
+; SRAM_Controller:sram_controller|low_data1[2]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
+; SRAM_Controller:sram_controller|low_data1[1]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
+; SRAM_Controller:sram_controller|low_data1[0]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[5]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[6]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
-; SRAM_Controller:sram_controller|low_data1[7]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[8]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
+; SRAM_Controller:sram_controller|low_data1[7]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[9]         ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[10]        ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
 ; SRAM_Controller:sram_controller|low_data1[11]        ; SRAM_Controller:sram_controller|low_data1[15]        ; yes                    ;
@@ -421,7 +419,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SRAM_Controller:sram_controller|high_data1[0]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[1]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[2]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
-; SRAM_Controller:sram_controller|high_data1[3]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[4]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[5]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[6]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
@@ -434,6 +431,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SRAM_Controller:sram_controller|high_data1[13]       ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[14]       ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; SRAM_Controller:sram_controller|high_data1[15]       ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
+; SRAM_Controller:sram_controller|high_data1[3]        ; SRAM_Controller:sram_controller|high_data1[15]       ; yes                    ;
 ; Number of user-specified and inferred latches = 96   ;                                                      ;                        ;
 +------------------------------------------------------+------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -444,7 +442,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------------+---+
 ; Logic Cell Name                                        ;   ;
 +--------------------------------------------------------+---+
-; hazard~0                                               ;   ;
+; ID_Stage:id_stage|Mux2to1:mux9b|y[7]~0                 ;   ;
 ; Number of logic cells representing combinational loops ; 1 ;
 +--------------------------------------------------------+---+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -455,22 +453,16 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 ; Register name                                                                                                                                                                        ; Reason for Removal                                                                  ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[7,8,10,12,16,17,19,20,22]                                                                                                                    ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[7]                              ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[4]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[4]                              ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[10,12,14..16,19,21]                                                                                                                          ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[7]                              ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[6]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[6]                              ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[5]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]                              ;
 ; ID_Stage_Reg:id_stage_reg|signed_imm_24[3]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[3]                              ;
 ; ID_Stage_Reg:id_stage_reg|signed_imm_24[2]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[2]                              ;
 ; ID_Stage_Reg:id_stage_reg|signed_imm_24[1]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[1]                              ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[0]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[0]                              ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[9,11,13..15,18,21]                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|signed_imm_24[23]                             ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[7..9,11,13,17,18,20,22]                                                                                                                      ; Merged with ID_Stage_Reg:id_stage_reg|signed_imm_24[23]                             ;
 ; ID_Stage_Reg:id_stage_reg|signed_imm_24[23]                                                                                                                                          ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[7]                              ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[6]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[6]                              ;
-; ID_Stage_Reg:id_stage_reg|signed_imm_24[5]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]                              ;
-; ID_Stage_Reg:id_stage_reg|pc[1]                                                                                                                                                      ; Merged with ID_Stage_Reg:id_stage_reg|pc[0]                                         ;
-; IF_Stage_Reg:if_stage_reg|PC[1]                                                                                                                                                      ; Merged with IF_Stage_Reg:if_stage_reg|PC[0]                                         ;
-; IF_Stage:if_stage|Register:PC_reg|d_out[1]                                                                                                                                           ; Merged with IF_Stage:if_stage|Register:PC_reg|d_out[0]                              ;
-; IF_Stage_Reg:if_stage_reg|PC[0]                                                                                                                                                      ; Stuck at GND due to stuck port data_in                                              ;
-; ID_Stage_Reg:id_stage_reg|pc[0]                                                                                                                                                      ; Stuck at GND due to stuck port data_in                                              ;
-; IF_Stage:if_stage|Register:PC_reg|d_out[0]                                                                                                                                           ; Stuck at GND due to stuck port data_in                                              ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[4]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[4]                              ;
+; ID_Stage_Reg:id_stage_reg|signed_imm_24[0]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[0]                              ;
 ; Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data~0                                                                                                                              ; Merged with Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data~0                 ;
 ; Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data~0                                                                                                                              ; Merged with Cache_Controller:cache_ctrl|Cache:cache_mem|LRU~0                       ;
 ; Cache_Controller:cache_ctrl|Cache:cache_mem|LRU~0                                                                                                                                    ; Merged with Cache_Controller:cache_ctrl|Cache:cache_mem|LRU~2                       ;
@@ -588,22 +580,36 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data_rtl_0_bypass[79]                                                                                                               ; Merged with Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data_rtl_0_bypass[79]  ;
 ; Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data_rtl_0_bypass[13]                                                                                                               ; Merged with Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data_rtl_0_bypass[13]  ;
 ; Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data_rtl_0_bypass[77]                                                                                                               ; Merged with Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data_rtl_0_bypass[77]  ;
-; IF_Stage_Reg:if_stage_reg|Inst[7]                                                                                                                                                    ; Merged with IF_Stage_Reg:if_stage_reg|Inst[5]                                       ;
+; IF_Stage_Reg:if_stage_reg|Inst[5]                                                                                                                                                    ; Merged with IF_Stage_Reg:if_stage_reg|Inst[7]                                       ;
 ; IF_Stage_Reg:if_stage_reg|Inst[11]                                                                                                                                                   ; Merged with IF_Stage_Reg:if_stage_reg|Inst[9]                                       ;
-; ID_Stage_Reg:id_stage_reg|shift_operand[7]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[5]                              ;
+; ID_Stage_Reg:id_stage_reg|shift_operand[5]                                                                                                                                           ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[7]                              ;
 ; ID_Stage_Reg:id_stage_reg|shift_operand[11]                                                                                                                                          ; Merged with ID_Stage_Reg:id_stage_reg|shift_operand[9]                              ;
-; Total Number of Removed Registers = 271                                                                                                                                              ;                                                                                     ;
+; ID_Stage_Reg:id_stage_reg|pc[18..31]                                                                                                                                                 ; Lost fanout                                                                         ;
+; IF_Stage_Reg:if_stage_reg|PC[18..31]                                                                                                                                                 ; Lost fanout                                                                         ;
+; Total Number of Removed Registers = 293                                                                                                                                              ;                                                                                     ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                               ;
-+---------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                                      ;
-+---------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; IF_Stage_Reg:if_stage_reg|PC[0] ; Stuck at GND              ; ID_Stage_Reg:id_stage_reg|pc[0], IF_Stage:if_stage|Register:PC_reg|d_out[0] ;
-;                                 ; due to stuck port data_in ;                                                                             ;
-+---------------------------------+---------------------------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                    ;
++----------------------------------+--------------------+----------------------------------------+
+; Register name                    ; Reason for Removal ; Registers Removed due to This Register ;
++----------------------------------+--------------------+----------------------------------------+
+; ID_Stage_Reg:id_stage_reg|pc[18] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[18]       ;
+; ID_Stage_Reg:id_stage_reg|pc[19] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[19]       ;
+; ID_Stage_Reg:id_stage_reg|pc[20] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[20]       ;
+; ID_Stage_Reg:id_stage_reg|pc[21] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[21]       ;
+; ID_Stage_Reg:id_stage_reg|pc[22] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[22]       ;
+; ID_Stage_Reg:id_stage_reg|pc[23] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[23]       ;
+; ID_Stage_Reg:id_stage_reg|pc[24] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[24]       ;
+; ID_Stage_Reg:id_stage_reg|pc[25] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[25]       ;
+; ID_Stage_Reg:id_stage_reg|pc[26] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[26]       ;
+; ID_Stage_Reg:id_stage_reg|pc[27] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[27]       ;
+; ID_Stage_Reg:id_stage_reg|pc[28] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[28]       ;
+; ID_Stage_Reg:id_stage_reg|pc[29] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[29]       ;
+; ID_Stage_Reg:id_stage_reg|pc[30] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[30]       ;
+; ID_Stage_Reg:id_stage_reg|pc[31] ; Lost Fanouts       ; IF_Stage_Reg:if_stage_reg|PC[31]       ;
++----------------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -611,12 +617,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 18893 ;
-; Number of registers using Synchronous Clear  ; 66    ;
+; Total registers                              ; 2451  ;
+; Number of registers using Synchronous Clear  ; 92    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 974   ;
+; Number of registers using Asynchronous Clear ; 932   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 17401 ;
+; Number of registers using Clock Enable       ; 959   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -626,33 +632,33 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------------------------------------------------+---------+
 ; Inverted Register                                            ; Fan out ;
 +--------------------------------------------------------------+---------+
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][1]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][0]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][1]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][0]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][2]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][1]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][2]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][0]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][1]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][2]  ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][1] ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][3] ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][0] ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][1] ; 3       ;
-; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][3] ; 3       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][3]  ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][3] ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][3] ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[8][3]  ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][3] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[4][2]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][2]  ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][2] ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][2] ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[12][2] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[6][1]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[10][1] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[2][1]  ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[14][1] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][1] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][1]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][1]  ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[9][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[11][0] ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[5][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[7][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[1][0]  ; 2       ;
+; ID_Stage:id_stage|RegisterFile:reg_file|register_file[3][0]  ; 2       ;
 ; ID_Stage:id_stage|RegisterFile:reg_file|register_file[13][0] ; 2       ;
 ; Total number of inverted registers = 28                      ;         ;
 +--------------------------------------------------------------+---------+
@@ -981,152 +987,152 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 58 bits   ; 116 LEs       ; 58 LEs               ; 58 LEs                 ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|shift_operand[7]                  ;
-; 3:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |ARM_cpu|IF_Stage_Reg:if_stage_reg|Inst[3]                           ;
+; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|src1[1]                           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ARM_cpu|SRAM_Controller:sram_controller|state[0]                    ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[63][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[62][5] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[61][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[60][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[59][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[58][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[57][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[56][3] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[55][8] ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |ARM_cpu|IF_Stage_Reg:if_stage_reg|Inst[2]                           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[63][5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[62][3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[61][3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[60][9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[59][3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[58][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[57][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[56][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[55][2] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[54][2] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[53][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[52][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[51][6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[50][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[49][0] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[53][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[52][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[51][9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[50][9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[49][3] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[48][5] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[47][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[46][6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[45][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[44][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[47][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[46][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[45][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[44][0] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[43][8] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[42][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[42][1] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[41][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[40][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[39][5] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[38][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[37][5] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[36][1] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[40][9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[39][3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[38][5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[37][3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[36][6] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[35][4] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[34][3] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[33][6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[32][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[31][9] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[30][2] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[29][4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[33][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[32][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[31][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[30][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[29][2] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[28][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[27][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[26][6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[25][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[24][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[23][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[22][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[21][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[20][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[19][6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[18][6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[17][1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[16][8] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[15][4] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[14][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[13][9] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[12][8] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[11][3] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[10][0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[9][6]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[8][1]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[27][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[26][3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[25][4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[24][5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[23][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[22][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[21][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[20][6] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[19][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[18][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[17][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[16][4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[15][5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[14][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[13][1] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[12][2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[11][9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[10][7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[9][5]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[8][0]  ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[7][7]  ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[6][6]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[5][9]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[4][4]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[5][0]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[4][1]  ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[3][7]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[2][2]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[1][2]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[0][2]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[2][3]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[1][7]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_tag[0][7]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|mem_r_en                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|exe_cmd[1]                        ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[63][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[62][8] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|exe_cmd[0]                        ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[63][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[62][5] ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[61][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[60][2] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[59][2] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[58][2] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[57][1] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[56][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[55][4] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[54][3] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[53][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[52][4] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[60][3] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[59][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[58][1] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[57][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[56][1] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[55][9] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[54][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[53][2] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[52][1] ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[51][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[50][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[49][1] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[50][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[49][2] ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[48][1] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[47][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[46][0] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[45][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[44][5] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[43][3] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[42][9] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[41][0] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[40][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[39][4] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[38][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[37][1] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[36][0] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[35][4] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[34][4] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[47][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[46][3] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[45][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[44][9] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[43][8] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[42][8] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[41][8] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[40][1] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[39][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[38][8] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[37][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[36][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[35][6] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[34][7] ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[33][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[32][3] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[31][1] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[30][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[29][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[28][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[27][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[26][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[25][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[24][7] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[23][0] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[22][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[21][1] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[20][3] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[19][3] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[18][2] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[17][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[16][0] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[15][6] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[14][4] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[13][8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[12][9] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[11][2] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[32][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[31][9] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[30][0] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[29][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[28][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[27][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[26][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[25][4] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[24][2] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[23][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[22][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[21][0] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[20][4] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[19][1] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[18][5] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[17][3] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[16][4] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[15][2] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[14][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[13][9] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[12][7] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[11][5] ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[10][9] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[9][6]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[8][3]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[9][3]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[8][4]  ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[7][9]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[6][4]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[5][1]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[4][5]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[6][6]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[5][7]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[4][8]  ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[3][6]  ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[2][3]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[1][9]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]  ;
-; 18:1               ; 32 bits   ; 384 LEs       ; 352 LEs              ; 32 LEs                 ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|val_rn[31]                        ;
-; 18:1               ; 32 bits   ; 384 LEs       ; 352 LEs              ; 32 LEs                 ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|val_rm[15]                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn|Mux2                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm|Mux4                     ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[1][0]  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][3]  ;
+; 18:1               ; 32 bits   ; 384 LEs       ; 352 LEs              ; 32 LEs                 ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|val_rn[4]                         ;
+; 18:1               ; 32 bits   ; 384 LEs       ; 352 LEs              ; 32 LEs                 ; Yes        ; |ARM_cpu|ID_Stage_Reg:id_stage_reg|val_rm[26]                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rn|Mux17                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Mux4to1:mux_rm|Mux2                     ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data       ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data       ;
-; 64:1               ; 22 bits   ; 924 LEs       ; 924 LEs              ; 0 LEs                  ; No         ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|Mux4            ;
-; 11:1               ; 16 bits   ; 112 LEs       ; 64 LEs               ; 48 LEs                 ; No         ; |ARM_cpu|SRAM_Controller:sram_controller|SRAM_ADDR[7]                ;
+; 64:1               ; 22 bits   ; 924 LEs       ; 924 LEs              ; 0 LEs                  ; No         ; |ARM_cpu|Cache_Controller:cache_ctrl|Cache:cache_mem|Mux12           ;
+; 11:1               ; 16 bits   ; 112 LEs       ; 64 LEs               ; 48 LEs                 ; No         ; |ARM_cpu|SRAM_Controller:sram_controller|SRAM_ADDR[11]               ;
 ; 13:1               ; 30 bits   ; 240 LEs       ; 150 LEs              ; 90 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|ALU:alu_unit|Mux23                      ;
-; 9:1                ; 14 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[9]         ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[17]        ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[24]        ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[28]        ;
+; 9:1                ; 14 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[11]        ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[18]        ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[25]        ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[29]        ;
 ; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ARM_cpu|EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[30]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
@@ -1613,7 +1619,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:03:29     ;
+; Top            ; 00:01:05     ;
 +----------------+--------------+
 
 
@@ -1623,7 +1629,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 08 09:33:42 2022
+    Info: Processing started: Wed Jun 08 10:46:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARM -c ARM
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /term8/computer architecture lab/arm-architecture/codes/cache_controller.v
@@ -1695,7 +1701,7 @@ Info (12128): Elaborating entity "Mux2to1" for hierarchy "ID_Stage:id_stage|Mux2
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ID_Stage:id_stage|ControlUnit:control_unit"
 Info (12128): Elaborating entity "ConditionCheck" for hierarchy "ID_Stage:id_stage|ConditionCheck:condition_check"
 Info (12128): Elaborating entity "RegisterFile" for hierarchy "ID_Stage:id_stage|RegisterFile:reg_file"
-Warning (10240): Verilog HDL Always Construct warning at RegisterFile.v(22): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at RegisterFile.v(20): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
 Info (12128): Elaborating entity "Hazard_Detection_Unit" for hierarchy "Hazard_Detection_Unit:hazard_unit1"
 Info (12128): Elaborating entity "Hazard_Detection_Unit2" for hierarchy "Hazard_Detection_Unit2:hazard_unit2"
 Info (12128): Elaborating entity "ID_Stage_Reg" for hierarchy "ID_Stage_Reg:id_stage_reg"
@@ -1829,11 +1835,10 @@ Info (10041): Inferred latch for "low_data0[12]" at SRAM_Controller.v(35)
 Info (10041): Inferred latch for "low_data0[13]" at SRAM_Controller.v(35)
 Info (10041): Inferred latch for "low_data0[14]" at SRAM_Controller.v(35)
 Info (10041): Inferred latch for "low_data0[15]" at SRAM_Controller.v(35)
-Info (12128): Elaborating entity "SRAM" for hierarchy "SRAM:sram"
 Info (12128): Elaborating entity "Cache_Controller" for hierarchy "Cache_Controller:cache_ctrl"
-Warning (10230): Verilog HDL assignment warning at Cache_Controller.v(41): truncated value with size 64 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at Cache_Controller.v(42): truncated value with size 64 to match size of target (32)
 Info (12128): Elaborating entity "Cache" for hierarchy "Cache_Controller:cache_ctrl|Cache:cache_mem"
-Warning (10240): Verilog HDL Always Construct warning at Cache.v(38): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Cache.v(35): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
 Info (12128): Elaborating entity "MEM_Stage_Reg" for hierarchy "MEM_Stage_Reg:memory_stage_reg"
 Info (12128): Elaborating entity "WB_Stage" for hierarchy "WB_Stage:wb_stage"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
@@ -1905,8 +1910,6 @@ Warning (276020): Inferred RAM node "Cache_Controller:cache_ctrl|Cache:cache_mem
 Warning (276020): Inferred RAM node "Cache_Controller:cache_ctrl|Cache:cache_mem|LRU_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "Cache_Controller:cache_ctrl|Cache:cache_mem|way1_data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "Cache_Controller:cache_ctrl|Cache:cache_mem|way0_data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "SRAM:sram|mem" is uninferred due to asynchronous read logic
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/db/ARM.ram0_InstMemory_9a284327.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (19000): Inferred 4 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Cache_Controller:cache_ctrl|Cache:cache_mem|LRU_rtl_0" 
@@ -2024,23 +2027,6 @@ Info (12133): Instantiated megafunction "EXE_Stage:exe_stage|ALU:alu_unit|lpm_ad
     Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8ri.tdf
     Info (12023): Found entity 1: add_sub_8ri
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[0]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[1]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[2]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[3]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[4]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[5]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[6]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[7]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[8]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[9]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[10]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[11]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[12]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[13]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[14]" to the node "SRAM:sram|mem" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "SRAM_Controller:sram_controller|SRAM_DQ[15]" to the node "SRAM:sram|mem" into an OR gate
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ID_Stage_Reg:id_stage_reg|shift_operand[4]
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[3] has unsafe behavior
@@ -2079,70 +2065,6 @@ Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[17] has 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[18] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data0[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data0[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[31] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[30] has unsafe behavior
@@ -2169,105 +2091,23 @@ Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[20] has 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
 Warning (13012): Latch EXE_Stage:exe_stage|Val2_Generator:val2_gen|val2[19] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal EXE_Stage:exe_stage|control_input
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|low_data1[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
-Warning (13012): Latch SRAM_Controller:sram_controller|high_data1[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Cache_Controller:cache_ctrl|read
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[0]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[1]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[2]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[3]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[4]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[5]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[6]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[7]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[8]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[9]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[10]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[11]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[12]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[13]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[14]~synth"
-    Warning (13010): Node "SRAM_Controller:sram_controller|SRAM_DQ[15]~synth"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pc_if[0]" is stuck at GND
-    Warning (13410): Pin "pc_if[1]" is stuck at GND
+Info (17049): 28 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/term8/Computer Architecture Lab/Arm-Architecture/Quartus/output_files/ARM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 35069 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6097 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 421 output pins
-    Info (21061): Implemented 34515 logic cells
+    Info (21059): Implemented 19 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 5929 logic cells
     Info (21064): Implemented 130 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 333 warnings
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Wed Jun 08 09:37:23 2022
-    Info: Elapsed time: 00:03:41
-    Info: Total CPU time (on all processors): 00:03:38
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 168 warnings
+    Info: Peak virtual memory: 4931 megabytes
+    Info: Processing ended: Wed Jun 08 10:50:16 2022
+    Info: Elapsed time: 00:03:27
+    Info: Total CPU time (on all processors): 00:03:24
 
 
 +------------------------------------------+

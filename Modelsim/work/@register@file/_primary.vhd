@@ -10,16 +10,6 @@ entity RegisterFile is
         Result_WB       : in     vl_logic_vector(31 downto 0);
         writeBackEn     : in     vl_logic;
         reg1            : out    vl_logic_vector(31 downto 0);
-        reg2            : out    vl_logic_vector(31 downto 0);
-        rf0             : out    vl_logic_vector(31 downto 0);
-        rf1             : out    vl_logic_vector(31 downto 0);
-        rf2             : out    vl_logic_vector(31 downto 0);
-        rf3             : out    vl_logic_vector(31 downto 0);
-        rf4             : out    vl_logic_vector(31 downto 0);
-        rf5             : out    vl_logic_vector(31 downto 0);
-        rf6             : out    vl_logic_vector(31 downto 0);
-        rf7             : out    vl_logic_vector(31 downto 0);
-        rf10            : out    vl_logic_vector(31 downto 0);
-        rf11            : out    vl_logic_vector(31 downto 0)
+        reg2            : out    vl_logic_vector(31 downto 0)
     );
 end RegisterFile;
