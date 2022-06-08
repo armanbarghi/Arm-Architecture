@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Jun 03 16:09:34 2022
+Fitter Status : Successful - Wed Jun 08 11:23:52 2022
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ARM
-Top-level Entity Name : ARM_cpu
+Top-level Entity Name : ARM
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 23,435 / 33,216 ( 71 % )
-    Total combinational functions : 14,249 / 33,216 ( 43 % )
-    Dedicated logic registers : 17,273 / 33,216 ( 52 % )
-Total registers : 17273
-Total pins : 424 / 475 ( 89 % )
+Total logic elements : 6,199 / 33,216 ( 19 % )
+    Total combinational functions : 3,681 / 33,216 ( 11 % )
+    Dedicated logic registers : 4,500 / 33,216 ( 14 % )
+Total registers : 4500
+Total pins : 418 / 475 ( 88 % )
 Total virtual pins : 0
-Total memory bits : 0 / 483,840 ( 0 % )
+Total memory bits : 397,312 / 483,840 ( 82 % )
 Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

@@ -10,6 +10,7 @@ module ARM_cpu (
     output [17:0] sram_addr;
 
     wire [31:0] branch_addr;
+    wire [31:0] pc_if, instruction_if;
     wire [31:0] pc_id, instruction_id;
     wire [31:0] pc_exe;
     wire [3:0] status_bits_in, status_bits_out;
