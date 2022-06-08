@@ -1,16 +1,10 @@
 module ARM_cpu (
     clock, rst, mode,
-    pc_if, instruction_if,
-    rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11,
-    sram_freeze, sram_ready,
     sram_we_n,
     sram_dq,
     sram_addr
 );
     input clock, rst, mode;
-    output [31:0] pc_if, instruction_if;
-    output [31:0] rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11;
-    output sram_freeze, sram_ready;
     output sram_we_n;
     inout [15:0] sram_dq;
     output [17:0] sram_addr;
@@ -43,10 +37,11 @@ module ARM_cpu (
     wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
     wire mux_wb_en_mem;
+    wire sram_ready, sram_freeze;
 
     reg clk;
-    always@(posedge clock, posedge rst)begin
-        if(rst == 1'b1)
+    always @(posedge clock, posedge rst) begin
+        if (rst == 1'b1)
             clk <= 1'b0;
         else
 		    clk <= ~clk;
@@ -100,17 +95,7 @@ module ARM_cpu (
         .shift_operand(shift_operand_id),
         .signed_imm_24(signed_imm_24_id),
         .val_rn(val_rn_id),
-        .val_rm(val_rm_id),
-        .rf0(rf0),
-        .rf1(rf1),
-        .rf2(rf2),
-        .rf3(rf3),
-        .rf4(rf4),
-        .rf5(rf5),
-        .rf6(rf6),
-        .rf7(rf7),
-        .rf10(rf10),
-        .rf11(rf11)
+        .val_rm(val_rm_id)
     );
 
     Hazard_Detection_Unit hazard_unit1 (
@@ -198,7 +183,7 @@ module ARM_cpu (
         .status(status_bits_in)
     );
 
-    EXE_Stage_Reg exe_stage_reg(
+    EXE_Stage_Reg exe_stage_reg (
         .clk(clk),
         .rst(rst),
         .freeze(sram_freeze),
@@ -216,7 +201,7 @@ module ARM_cpu (
         .dest(dest_mem)
     );
 
-    Status_Reg st_reg(
+    Status_Reg st_reg (
         .clk(clk),
         .rst(rst),
         .ld(s_exe),

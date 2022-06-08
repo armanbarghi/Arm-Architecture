@@ -16,5 +16,5 @@ module Register #(parameter N = 32) (
         else
             d_out <= d_out;
     end
-    
+
 endmodule

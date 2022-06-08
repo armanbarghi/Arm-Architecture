@@ -11,8 +11,7 @@ module ID_Stage (
     src1, src2, dest,
     shift_operand,
     signed_imm_24,
-    val_rn, val_rm,
-    rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11
+    val_rn, val_rm
 );
     input clk, rst;
     input wb_wb_en, hazard;
@@ -27,7 +26,6 @@ module ID_Stage (
     output [11:0] shift_operand;
     output [23:0] signed_imm_24;
     output [31:0] val_rn, val_rm;
-    output [31:0] rf0, rf1, rf2, rf3, rf4, rf5, rf6, rf7, rf10, rf11;
 
     wire cu_mem_r_en, cu_mem_w_en, cu_wb_en, cu_b, cu_s;
     wire [3:0] cu_exe_cmd;
@@ -91,17 +89,7 @@ module ID_Stage (
         .Result_WB(wb_value),
         .writeBackEn(wb_wb_en),
         .reg1(val_rn),
-        .reg2(val_rm),
-        .rf0(rf0),
-        .rf1(rf1),
-        .rf2(rf2),
-        .rf3(rf3),
-        .rf4(rf4),
-        .rf5(rf5),
-        .rf6(rf6),
-        .rf7(rf7),
-        .rf10(rf10),
-        .rf11(rf11)
+        .reg2(val_rm)
     );
 
 endmodule

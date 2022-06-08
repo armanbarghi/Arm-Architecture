@@ -2,7 +2,7 @@
 module ARM_Testbench();
     reg clk, rst, mode;
 
-    ARM_cpu arm(clk, rst, mode,,,,,,,,,,,,,,,,,);
+    ARM_cpu arm(clk, rst, mode,,,);
 
     initial begin
         rst = 1'b1;
