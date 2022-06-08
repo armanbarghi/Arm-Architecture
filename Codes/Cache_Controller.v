@@ -21,12 +21,12 @@ module Cache_Controller(
     wire [63:0] cache_word;
     wire [31:0] cache_data;
 
-    Cache cache_mem(
+    Cache cache_mem (
         .rst(rst),
         .clk(clk),
         .write_cacheR(write_cacheR),
         .write_cacheW(write_cacheW),
-        .rdata(sram_rdata), //FIX ME
+        .rdata(sram_rdata),
         .wdata(wdata),
         .tag(address[18:9]),
         .index(address[8:3]),
@@ -34,6 +34,7 @@ module Cache_Controller(
         .hit(hit),
         .data_out(cache_word)
     );
+    
     assign ready = ((sram_ready | hit) & MEM_R_EN) | (sram_ready & MEM_W_EN);
   
     assign cache_data = (address[2] == 1'b1) ? cache_word[63:32] : cache_word[31:0];
@@ -47,7 +48,5 @@ module Cache_Controller(
     assign write = MEM_W_EN;
     assign sram_address = address;
     assign read = ~hit & MEM_R_EN;
-
-
 
 endmodule
