@@ -28,19 +28,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	IF_Stage
 
-} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EXE_Stage_Reg
-
-Top level modules:
-	EXE_Stage_Reg
-
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ALU.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ALU
 
 Top level modules:
 	ALU
+
+} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage_Reg
+
+Top level modules:
+	EXE_Stage_Reg
 
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Modelsim/ARM.vo} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Modelsim/ARM.vo}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -77,19 +77,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Q_ARM_Testbench
 
-} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Val2_Generator
-
-Top level modules:
-	Val2_Generator
-
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/MEM_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module MEM_Stage_Reg
 
 Top level modules:
 	MEM_Stage_Reg
+
+} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Val2_Ganerator.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Val2_Generator
+
+Top level modules:
+	Val2_Generator
 
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Hazard_Detection_Unit.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -142,13 +142,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	SRAM_Controller
 
-} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module IF_Stage_Reg
-
-Top level modules:
-	IF_Stage_Reg
-
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_cpu.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ARM_cpu
@@ -163,12 +156,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	InstMemory
 
-} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v}
+} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/IF_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Mux2to1
+-- Compiling module IF_Stage_Reg
 
 Top level modules:
-	Mux2to1
+	IF_Stage_Reg
 
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ID_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -177,12 +170,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ID_Stage
 
-} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Fowarding_Unit.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Fowarding_Unit.v}
+} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Mux2to1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Forwarding_Unit
+-- Compiling module Mux2to1
 
 Top level modules:
-	Forwarding_Unit
+	Mux2to1
 
 } {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -190,5 +183,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	ARM
+
+} {} {}} {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Fowarding_Unit.v} {1 {vlog -work work {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/Fowarding_Unit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Forwarding_Unit
+
+Top level modules:
+	Forwarding_Unit
 
 } {} {}}

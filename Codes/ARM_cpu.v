@@ -251,7 +251,7 @@ module ARM_cpu (
     );
 
     Cache_Controller cache_ctrl(
-        .clk(clk),
+        .clk(clock),
         .rst(rst),
         .address(alu_res_mem-32'd1024),
         .wdata(st_value),

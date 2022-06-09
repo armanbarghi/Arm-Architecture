@@ -18,7 +18,7 @@ module ARM_Testbench();
     end
 
     always begin
-        #25 clk = ~clk;
+        #10 clk = ~clk;
     end
 
 endmodule
