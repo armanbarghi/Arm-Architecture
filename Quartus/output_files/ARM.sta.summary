@@ -2,12 +2,84 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 97.778
+Type  : Slow Model Setup 'ARM_cpu:CPU|clk'
+Slack : -14.530
+TNS   : -29376.244
+
+Type  : Slow Model Setup 'ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm'
+Slack : -10.011
+TNS   : -283.661
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 2.651
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 97.778
+Type  : Slow Model Hold 'ARM_cpu:CPU|clk'
+Slack : -2.795
+TNS   : -3.937
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.381
+TNS   : -2.381
+
+Type  : Slow Model Hold 'ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm'
+Slack : -2.233
+TNS   : -47.080
+
+Type  : Slow Model Minimum Pulse Width 'ARM_cpu:CPU|clk'
+Slack : -1.627
+TNS   : -3559.614
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Slow Model Minimum Pulse Width 'ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'ARM_cpu:CPU|clk'
+Slack : -5.980
+TNS   : -11921.073
+
+Type  : Fast Model Setup 'ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm'
+Slack : -4.231
+TNS   : -118.366
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 1.679
+TNS   : 0.000
+
+Type  : Fast Model Hold 'ARM_cpu:CPU|clk'
+Slack : -1.670
+TNS   : -8.178
+
+Type  : Fast Model Hold 'ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm'
+Slack : -1.365
+TNS   : -32.762
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.299
+TNS   : -1.299
+
+Type  : Fast Model Minimum Pulse Width 'ARM_cpu:CPU|clk'
+Slack : -1.627
+TNS   : -3559.614
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Fast Model Minimum Pulse Width 'ARM_cpu:CPU|Cache_Controller:cache_ctrl|Cache:cache_mem|way0_tag[0][0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm'
+Slack : 0.500
 TNS   : 0.000
 
 ------------------------------------------------------------
