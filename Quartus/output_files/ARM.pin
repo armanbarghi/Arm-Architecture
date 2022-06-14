@@ -166,7 +166,7 @@ FL_DQ[1]                     : AC19      : bidir  : 3.3-V LVTTL       :         
 FL_DQ[5]                     : AC20      : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 LEDR[7]                      : AC21      : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR[3]                      : AC22      : output : 3.3-V LVTTL       :         : 7         : Y              
-GND*                         : AC23      :        :                   :         : 6         :                
+TD_CLK27                     : AC23      : input  : 3.3-V LVTTL       :         : 6         : N              
 NC                           : AC24      :        :                   :         :           :                
 HEX2[2]                      : AC25      : output : 3.3-V LVTTL       :         : 6         : Y              
 HEX2[3]                      : AC26      : output : 3.3-V LVTTL       :         : 6         : Y              
@@ -364,7 +364,7 @@ VGA_R[8]                     : F11       : output : 3.3-V LVTTL       :         
 VGA_B[2]                     : F12       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : F13       :        :                   :         : 4         :                
 TDO                          : F14       : output : 3.3-V LVTTL       :         : 4         : Y              
-TD_CLK27                     : F15       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : F15       :        :                   :         : 4         :                
 GND*                         : F16       :        :                   :         : 4         :                
 GND*                         : F17       :        :                   :         : 4         :                
 GND*                         : F18       :        :                   :         : 4         :                
@@ -487,7 +487,7 @@ LCD_ON                       : L4        : output : 3.3-V LVTTL       :         
 GND                          : L5        : gnd    :                   :         :           :                
 HEX7[3]                      : L6        : output : 3.3-V LVTTL       :         : 2         : Y              
 HEX7[4]                      : L7        : output : 3.3-V LVTTL       :         : 2         : Y              
-altera_reserved_tms          : L8        : input  : 3.3-V LVTTL       :         : 2         : N              
+TMS                          : L8        : input  :                   :         : 2         :                
 HEX7[2]                      : L9        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : L10       :        :                   :         : 2         :                
 VCCINT                       : L11       : power  :                   : 1.2V    :           :                
@@ -511,9 +511,9 @@ HEX6[3]                      : M2        : output : 3.3-V LVTTL       :         
 HEX6[4]                      : M3        : output : 3.3-V LVTTL       :         : 2         : Y              
 HEX6[6]                      : M4        : output : 3.3-V LVTTL       :         : 2         : Y              
 HEX6[5]                      : M5        : output : 3.3-V LVTTL       :         : 2         : Y              
-altera_reserved_tck          : M6        : input  : 3.3-V LVTTL       :         : 2         : N              
-altera_reserved_tdo          : M7        : output : 3.3-V LVTTL       :         : 2         : N              
-altera_reserved_tdi          : M8        : input  : 3.3-V LVTTL       :         : 2         : N              
+TCK                          : M6        : input  :                   :         : 2         :                
+TDO                          : M7        : output :                   :         : 2         :                
+TDI                          : M8        : input  :                   :         : 2         :                
 VCCIO2                       : M9        : power  :                   : 3.3V    : 2         :                
 VCCINT                       : M10       : power  :                   : 1.2V    :           :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
