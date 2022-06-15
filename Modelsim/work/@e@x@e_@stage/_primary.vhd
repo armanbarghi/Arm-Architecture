@@ -17,7 +17,8 @@ entity EXE_Stage is
         sel_src2        : in     vl_logic_vector(1 downto 0);
         mem_alu_res     : in     vl_logic_vector(31 downto 0);
         wb_value        : in     vl_logic_vector(31 downto 0);
-        alu_res         : out    vl_logic_vector(31 downto 0);
+        exp_en          : in     vl_logic;
+        alu_exp_res     : out    vl_logic_vector(31 downto 0);
         br_addr         : out    vl_logic_vector(31 downto 0);
         val_Rm_out      : out    vl_logic_vector(31 downto 0);
         status          : out    vl_logic_vector(3 downto 0)

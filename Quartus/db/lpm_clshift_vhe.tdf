@@ -1,0 +1,77 @@
+--lpm_clshift CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" LPM_PIPELINE=2 LPM_SHIFTTYPE="LOGICAL" LPM_WIDTH=38 LPM_WIDTHDIST=6 clock data direction distance result
+--VERSION_BEGIN 13.0 cbx_lpm_clshift 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = lut 81 
+SUBDESIGN lpm_clshift_vhe
+( 
+	clock	:	input;
+	data[37..0]	:	input;
+	direction	:	input;
+	distance[5..0]	:	input;
+	result[37..0]	:	output;
+) 
+VARIABLE 
+	direction_reg[1..0] : dffe;
+	pipe_wl1c[37..0] : dffe;
+	pipe_wl2c[37..0] : dffe;
+	sel_pipel3d1c : dffe;
+	sel_pipel4d1c : dffe;
+	sel_pipel5d1c : dffe;
+	aclr	: NODE;
+	clken	: NODE;
+	direction_w[2..0]	: WIRE;
+	pad_w[31..0]	: WIRE;
+	sbit_w[265..0]	: WIRE;
+	sel_w[5..0]	: WIRE;
+
+BEGIN 
+	direction_reg[].clk = clock;
+	direction_reg[].clrn = (! aclr);
+	direction_reg[].d = ( direction_w[1..0]);
+	direction_reg[].ena = clken;
+	pipe_wl1c[].clk = clock;
+	pipe_wl1c[].clrn = (! aclr);
+	pipe_wl1c[].d = ((((sel_w[2..2] & (! direction_w[0..0])) & ( sbit_w[109..76], pad_w[3..0])) # ((sel_w[2..2] & direction_w[0..0]) & ( pad_w[3..0], sbit_w[113..80]))) # ((! sel_w[2..2]) & sbit_w[113..76]));
+	pipe_wl1c[].ena = clken;
+	pipe_wl2c[].clk = clock;
+	pipe_wl2c[].clrn = (! aclr);
+	pipe_wl2c[].d = ((((sel_w[5..5] & (! direction_w[1..1])) & ( sbit_w[195..190], pad_w[31..0])) # ((sel_w[5..5] & direction_w[1..1]) & ( pad_w[31..0], sbit_w[227..222]))) # ((! sel_w[5..5]) & sbit_w[227..190]));
+	pipe_wl2c[].ena = clken;
+	sel_pipel3d1c.clk = clock;
+	sel_pipel3d1c.clrn = (! aclr);
+	sel_pipel3d1c.d = distance[3..3];
+	sel_pipel3d1c.ena = clken;
+	sel_pipel4d1c.clk = clock;
+	sel_pipel4d1c.clrn = (! aclr);
+	sel_pipel4d1c.d = distance[4..4];
+	sel_pipel4d1c.ena = clken;
+	sel_pipel5d1c.clk = clock;
+	sel_pipel5d1c.clrn = (! aclr);
+	sel_pipel5d1c.d = distance[5..5];
+	sel_pipel5d1c.ena = clken;
+	aclr = GND;
+	clken = VCC;
+	direction_w[] = ( direction_reg[1..0].q, direction);
+	pad_w[] = B"00000000000000000000000000000000";
+	result[37..0] = sbit_w[265..228];
+	sbit_w[] = ( pipe_wl2c[].q, ((((sel_w[4..4] & (! direction_w[1..1])) & ( sbit_w[173..152], pad_w[15..0])) # ((sel_w[4..4] & direction_w[1..1]) & ( pad_w[15..0], sbit_w[189..168]))) # ((! sel_w[4..4]) & sbit_w[189..152])), ((((sel_w[3..3] & (! direction_w[1..1])) & ( sbit_w[143..114], pad_w[7..0])) # ((sel_w[3..3] & direction_w[1..1]) & ( pad_w[7..0], sbit_w[151..122]))) # ((! sel_w[3..3]) & sbit_w[151..114])), pipe_wl1c[].q, ((((sel_w[1..1] & (! direction_w[0..0])) & ( sbit_w[73..38], pad_w[1..0])) # ((sel_w[1..1] & direction_w[0..0]) & ( pad_w[1..0], sbit_w[75..40]))) # ((! sel_w[1..1]) & sbit_w[75..38])), ((((sel_w[0..0] & (! direction_w[0..0])) & ( sbit_w[36..0], pad_w[0..0])) # ((sel_w[0..0] & direction_w[0..0]) & ( pad_w[0..0], sbit_w[37..1]))) # ((! sel_w[0..0]) & sbit_w[37..0])), data[]);
+	sel_w[] = ( sel_pipel5d1c.q, sel_pipel4d1c.q, sel_pipel3d1c.q, distance[2..0]);
+END;
+--VALID FILE

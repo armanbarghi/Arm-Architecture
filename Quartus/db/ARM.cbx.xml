@@ -1,5 +1,38 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ARM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_clshift:rbarrel_shift|lpm_clshift_vhe:auto_generated|altshift_taps:pipe_wl2c_rtl_0" CBX_FILE_NAME="shift_taps_u1m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mux:table_three" CBX_FILE_NAME="mux_upc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_ss14.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:invert_exp_value" CBX_FILE_NAME="add_sub_vti.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mult:man_prod" CBX_FILE_NAME="mult_19r.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mult:xi_ln2_prod" CBX_FILE_NAME="mult_v7r.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_aoc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_hdi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_compare:distance_overflow_comp" CBX_FILE_NAME="cmpr_fhg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_compare:underflow_compare" CBX_FILE_NAME="cmpr_fhg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mux:table_one" CBX_FILE_NAME="mux_0qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mux:table_two" CBX_FILE_NAME="mux_3qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:one_minus_xf" CBX_FILE_NAME="add_sub_1ji.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:xi_add_one" CBX_FILE_NAME="add_sub_kgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_clshift:rbarrel_shift" CBX_FILE_NAME="lpm_clshift_vhe.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mult:tbl1_tbl2_prod" CBX_FILE_NAME="mult_59r.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_02j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|altshift_taps:exp_value_b4_bias_dffe_0_rtl_0" CBX_FILE_NAME="shift_taps_r1m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|altshift_taps:sign_dffe11_rtl_0" CBX_FILE_NAME="shift_taps_s1m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:man_round" CBX_FILE_NAME="add_sub_3se.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mult:tbl3_taylor_prod" CBX_FILE_NAME="mult_29r.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_sbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|ALU:alu_unit|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_8ri.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:xf_minus_ln2" CBX_FILE_NAME="add_sub_1ji.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_mult:xi_prod" CBX_FILE_NAME="mult_o9p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|altshift_taps:input_is_infinity_16_pipes0_rtl_0" CBX_FILE_NAME="shift_taps_q1m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:exp_minus_bias" CBX_FILE_NAME="add_sub_ore.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:x_fixed_minus_xiln2" CBX_FILE_NAME="add_sub_8ji.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_compare:tbl1_compare" CBX_FILE_NAME="cmpr_hkg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:exp_value_add_bias" CBX_FILE_NAME="add_sub_fri.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ARM|ARM_cpu:arm|EXE_Stage:exe_stage|EXP1:exp_unit|EXP1_altfp_exp_1ic:EXP1_altfp_exp_1ic_component|lpm_add_sub:exp_value_man_over" CBX_FILE_NAME="add_sub_nqe.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

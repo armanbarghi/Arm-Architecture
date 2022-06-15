@@ -1,0 +1,226 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Modelsim/arm.mpf} 
+# Loading project arm
+# Compile of ALU.v was successful.
+# Compile of ARM.v was successful.
+# Compile of ARM_cpu.v was successful.
+# Compile of ARM_Testbench.v was successful.
+# Compile of ConditionCheck.v was successful with warnings.
+# Compile of ControlUnit.v was successful with warnings.
+# Compile of EXE_Stage.v was successful.
+# Compile of EXE_Stage_Reg.v was successful.
+# Compile of Fowarding_Unit.v was successful.
+# Compile of Hazard_Detection_Unit.v was successful.
+# Compile of Hazard_Detection_Unit2.v was successful.
+# Compile of ID_Stage.v was successful.
+# Compile of ID_Stage_Reg.v was successful.
+# Compile of IF_Stage.v was successful.
+# Compile of IF_Stage_Reg.v was successful.
+# Compile of InstMemory.v was successful.
+# Compile of MEM_Stage_Reg.v was successful.
+# Compile of Memory.v was successful.
+# Compile of Mux2to1.v was successful.
+# Compile of Mux4to1.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Status_Reg.v was successful.
+# Compile of Val2_Ganerator.v was successful.
+# Compile of WB_Stage.v was successful.
+# Compile of EXP.v was successful.
+# 26 compiles, 0 failed with no errors. 
+vsim -L lpm_ver -gui work.ARM_Testbench
+# vsim -L lpm_ver -gui work.ARM_Testbench 
+# Loading work.ARM_Testbench
+# Loading work.ARM_cpu
+# Loading work.IF_Stage
+# Loading work.Register
+# Loading work.Mux2to1
+# Loading work.InstMemory
+# Loading work.IF_Stage_Reg
+# Loading work.ID_Stage
+# Loading work.ControlUnit
+# Loading work.ConditionCheck
+# Loading work.RegisterFile
+# Loading work.Hazard_Detection_Unit
+# Loading work.Hazard_Detection_Unit2
+# Loading work.ID_Stage_Reg
+# Loading work.EXE_Stage
+# Loading work.ALU
+# ** Error: (vsim-3033) D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/EXE_Stage.v(44): Instantiation of 'EXP1' failed. The design unit was not found.
+# 
+#         Region: /ARM_Testbench/arm/exe_stage
+#         Searched libraries:
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/220model
+#             D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Modelsim/work
+# Loading work.Val2_Generator
+# Loading work.Mux4to1
+# Loading work.EXE_Stage_Reg
+# Loading work.Status_Reg
+# Loading work.Forwarding_Unit
+# Loading work.Memory
+# Loading work.MEM_Stage_Reg
+# Loading work.WB_Stage
+# Error loading design
+# Compile of ALU.v was successful.
+# Compile of ARM.v was successful.
+# Compile of ARM_cpu.v was successful.
+# Compile of ARM_Testbench.v was successful.
+# Compile of ConditionCheck.v was successful with warnings.
+# Compile of ControlUnit.v was successful with warnings.
+# Compile of EXE_Stage.v was successful.
+# Compile of EXE_Stage_Reg.v was successful.
+# Compile of Fowarding_Unit.v was successful.
+# Compile of Hazard_Detection_Unit.v was successful.
+# Compile of Hazard_Detection_Unit2.v was successful.
+# Compile of ID_Stage.v was successful.
+# Compile of ID_Stage_Reg.v was successful.
+# Compile of IF_Stage.v was successful.
+# Compile of IF_Stage_Reg.v was successful.
+# Compile of InstMemory.v was successful.
+# Compile of MEM_Stage_Reg.v was successful.
+# Compile of Memory.v was successful.
+# Compile of Mux2to1.v was successful.
+# Compile of Mux4to1.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Status_Reg.v was successful.
+# Compile of Val2_Ganerator.v was successful.
+# Compile of WB_Stage.v was successful.
+# Compile of EXP1.v was successful.
+# 26 compiles, 0 failed with no errors. 
+vsim -L lpm_ver -gui work.ARM_Testbench
+# vsim -L lpm_ver -gui work.ARM_Testbench 
+# Loading work.ARM_Testbench
+# Loading work.ARM_cpu
+# Loading work.IF_Stage
+# Loading work.Register
+# Loading work.Mux2to1
+# Loading work.InstMemory
+# Loading work.IF_Stage_Reg
+# Loading work.ID_Stage
+# Loading work.ControlUnit
+# Loading work.ConditionCheck
+# Loading work.RegisterFile
+# Loading work.Hazard_Detection_Unit
+# Loading work.Hazard_Detection_Unit2
+# Loading work.ID_Stage_Reg
+# Loading work.EXE_Stage
+# Loading work.ALU
+# Loading work.EXP1
+# Loading work.EXP1_altfp_exp_1ic
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_clshift
+# Loading lpm_ver.lpm_compare
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading lpm_ver.lpm_mux
+# Loading work.Val2_Generator
+# Loading work.Mux4to1
+# Loading work.EXE_Stage_Reg
+# Loading work.Status_Reg
+# Loading work.Forwarding_Unit
+# Loading work.Memory
+# Loading work.MEM_Stage_Reg
+# Loading work.WB_Stage
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/reg_file/register_file[0]
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/reg_file/register_file[1]
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/reg_file/register_file[2]
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/reg_file/register_file[3]
+run -all
+# Break in Module ARM_Testbench at D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v line 12
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/control_unit/clk
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/control_unit/exp_en
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/control_unit/exp_ready
+add wave -position end  sim:/ARM_Testbench/arm/id_stage/control_unit/exp_count
+restart -f
+run -all
+# Break in Module ARM_Testbench at D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v line 12
+restart -f
+run -all
+# Break in Module ARM_Testbench at D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v line 12
+# Compile of ALU.v was successful.
+# Compile of ARM.v was successful.
+# Compile of ARM_cpu.v was successful.
+# Compile of ARM_Testbench.v was successful.
+# Compile of ConditionCheck.v was successful with warnings.
+# Compile of ControlUnit.v was successful with warnings.
+# Compile of EXE_Stage.v was successful.
+# Compile of EXE_Stage_Reg.v was successful.
+# Compile of Fowarding_Unit.v was successful.
+# Compile of Hazard_Detection_Unit.v was successful.
+# Compile of Hazard_Detection_Unit2.v was successful.
+# Compile of ID_Stage.v was successful.
+# Compile of ID_Stage_Reg.v was successful.
+# Compile of IF_Stage.v was successful.
+# Compile of IF_Stage_Reg.v was successful.
+# Compile of InstMemory.v was successful.
+# Compile of MEM_Stage_Reg.v was successful.
+# Compile of Memory.v was successful.
+# Compile of Mux2to1.v was successful.
+# Compile of Mux4to1.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Status_Reg.v was successful.
+# Compile of Val2_Ganerator.v was successful.
+# Compile of WB_Stage.v was successful.
+# Compile of EXP1.v was successful.
+# 26 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ARM_Testbench
+# Loading work.ARM_cpu
+# Loading work.IF_Stage
+# Loading work.Register
+# Loading work.Mux2to1
+# Loading work.InstMemory
+# Loading work.IF_Stage_Reg
+# Loading work.ID_Stage
+# Loading work.ControlUnit
+# Loading work.ConditionCheck
+# Loading work.RegisterFile
+# Loading work.Hazard_Detection_Unit
+# Loading work.Hazard_Detection_Unit2
+# Loading work.ID_Stage_Reg
+# Loading work.EXE_Stage
+# Loading work.ALU
+# Loading work.EXP1
+# Loading work.EXP1_altfp_exp_1ic
+# Loading work.Val2_Generator
+# Loading work.Mux4to1
+# Loading work.EXE_Stage_Reg
+# Loading work.Status_Reg
+# Loading work.Forwarding_Unit
+# Loading work.Memory
+# Loading work.MEM_Stage_Reg
+# Loading work.WB_Stage
+run -all
+# Break in Module ARM_Testbench at D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v line 12
+restart -f
+# Compile of ALU.v was successful.
+# Compile of ARM.v was successful.
+# Compile of ARM_cpu.v was successful.
+# Compile of ARM_Testbench.v was successful.
+# Compile of ConditionCheck.v was successful with warnings.
+# Compile of ControlUnit.v was successful with warnings.
+# Compile of EXE_Stage.v was successful.
+# Compile of EXE_Stage_Reg.v was successful.
+# Compile of Fowarding_Unit.v was successful.
+# Compile of Hazard_Detection_Unit.v was successful.
+# Compile of Hazard_Detection_Unit2.v was successful.
+# Compile of ID_Stage.v was successful.
+# Compile of ID_Stage_Reg.v was successful.
+# Compile of IF_Stage.v was successful.
+# Compile of IF_Stage_Reg.v was successful.
+# Compile of InstMemory.v was successful.
+# Compile of MEM_Stage_Reg.v was successful.
+# Compile of Memory.v was successful.
+# Compile of Mux2to1.v was successful.
+# Compile of Mux4to1.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of Status_Reg.v was successful.
+# Compile of Val2_Ganerator.v was successful.
+# Compile of WB_Stage.v was successful.
+# Compile of EXP1.v was successful.
+# 26 compiles, 0 failed with no errors. 
+run -all
+# Break in Module ARM_Testbench at D:/Users/arman/Documents/Uni/Term8/Computer Architecture Lab/Arm-Architecture/Codes/ARM_Testbench.v line 12

@@ -5,6 +5,7 @@ module ID_Stage (
     status_reg,
     wb_value,
     wb_dest,
+    exp_en, exp_ready,
     two_src, imm,
     mem_r_en, mem_w_en, wb_en, b, s,
     exe_cmd,
@@ -19,6 +20,7 @@ module ID_Stage (
     input [31:0] wb_value;
     input [3:0] status_reg;
     input [3:0] wb_dest;
+    output exp_en, exp_ready;
     output two_src, imm;
     output mem_r_en, mem_w_en, wb_en, b, s;
     output [3:0] exe_cmd;
@@ -69,6 +71,8 @@ module ID_Stage (
         .wb_en(cu_wb_en),
         .b(cu_b),
         .s_out(cu_s),
+        .exp_en(exp_en),
+        .exp_ready(exp_ready),
         .exe_cmd(cu_exe_cmd)
     );
 

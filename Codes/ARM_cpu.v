@@ -21,7 +21,7 @@ module ARM_cpu (
     wire [23:0] signed_imm_24_id, signed_imm_24_exe;
     wire [3:0] status_bits_exe;
     wire [31:0] val_rn_id, val_rm_id, val_rn_exe, val_rm_exe;
-    wire [31:0] alu_res_exe, alu_res_mem, alu_res_wb;
+    wire [31:0] alu_exp_res_exe, alu_res_mem, alu_res_wb;
     wire mem_r_en_mem, mem_w_en_mem, wb_en_mem;
     wire [31:0] val_rm_mem;
     wire [31:0] mem_res_wb;
@@ -31,6 +31,9 @@ module ARM_cpu (
     wire mem_r_en_wb, wb_en_wb;
     wire hazard1, hazard2, hazard;
     wire [31:0] fu_val_rm;
+
+    wire exp_en_id, exp_en_exe;
+    wire exp_ready;
 
     assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
     reg clk;
@@ -44,7 +47,7 @@ module ARM_cpu (
     IF_Stage if_stage (
         .clk(clk),
         .rst(rst),
-        .freeze(hazard),
+        .freeze(hazard | ~exp_ready),
         .Branch_taken(b_exe),
         .BranchAddr(branch_addr),
         .PC(pc_if),
@@ -54,7 +57,7 @@ module ARM_cpu (
     IF_Stage_Reg if_stage_reg (
         .clk(clk),
         .rst(rst),
-        .freeze(hazard),
+        .freeze(hazard | ~exp_ready),
         .flush(b_exe),
         .PC_in(pc_if),
         .Inst_in(instruction_if),
@@ -71,6 +74,8 @@ module ARM_cpu (
         .status_reg(status_bits_out),
         .wb_value(wb_val),
         .wb_dest(wb_dest),
+        .exp_en(exp_en_id),
+        .exp_ready(exp_ready),
         .two_src(two_src_id),
         .imm(imm_id),
         .mem_r_en(mem_r_en_id),
@@ -122,6 +127,7 @@ module ARM_cpu (
         .wb_en_in(wb_en_id),
         .b_in(b_id),
         .s_in(s_id),
+        .exp_en_in(exp_en_id),
         .exe_cmd_in(exe_cmd_id),
         .dest_in(dest_id),
         .src1_in(src1),
@@ -138,6 +144,7 @@ module ARM_cpu (
         .wb_en(wb_en_exe),
         .b(b_exe),
         .s(s_exe),
+        .exp_en(exp_en_exe),
         .exe_cmd(exe_cmd_exe),
         .dest(dest_exe),
         .src1(fu_src1),
@@ -166,7 +173,8 @@ module ARM_cpu (
         .sel_src2(sel_src2 & {mode, mode}),
         .mem_alu_res(alu_res_mem),
         .wb_value(wb_val),
-        .alu_res(alu_res_exe),
+        .exp_en(exp_en_exe),
+        .alu_exp_res(alu_exp_res_exe),
         .br_addr(branch_addr),
         .val_Rm_out(fu_val_rm),
         .status(status_bits_in)
@@ -178,7 +186,7 @@ module ARM_cpu (
         .wb_en_in(wb_en_exe),
         .mem_r_en_in(mem_r_en_exe),
         .mem_w_en_in(mem_w_en_exe),
-        .alu_res_in(alu_res_exe),
+        .alu_res_in(alu_exp_res_exe),
         .val_rm_in(fu_val_rm),
         .dest_in(dest_exe),
         .wb_en(wb_en_mem),

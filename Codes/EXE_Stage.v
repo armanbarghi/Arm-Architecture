@@ -5,7 +5,8 @@ module EXE_Stage (
     signed_imm_24, SR, 
     sel_src1, sel_src2,
     mem_alu_res, wb_value,
-    alu_res, br_addr, val_Rm_out,
+    exp_en,
+    alu_exp_res, br_addr, val_Rm_out,
     status
 );
     input clk;
@@ -18,10 +19,12 @@ module EXE_Stage (
     input [3:0] SR;
     input [1:0] sel_src1, sel_src2;
     input [31:0] mem_alu_res, wb_value;
-    output [31:0] alu_res, br_addr, val_Rm_out;
+    input exp_en;
+    output [31:0] alu_exp_res, br_addr, val_Rm_out;
     output [3:0] status;
 
     wire control_input;
+    wire [31:0] alu_res, exp_res;
     wire [31:0] val2;
     wire [31:0] mux_rn_out, mux_rm_out;
 
@@ -33,6 +36,20 @@ module EXE_Stage (
         .status_bits(status),
         .result(alu_res)
     );
+
+    EXP1 exp_unit (
+        .clock(clk),
+	    .data(mux_rn_out),  //FIXME: val_rn or this?
+	    .result(exp_res)
+    );
+
+    Mux2to1 #(.N(32))
+        mux_alu_exp (
+            .i0(alu_res),
+            .i1(exp_res),
+            .sel(exp_en),
+            .y(alu_exp_res)
+        );
 
     Val2_Generator val2_gen (
         .shift_operand(shift_operand),

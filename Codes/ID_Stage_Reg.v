@@ -1,6 +1,7 @@
 module ID_Stage_Reg (
     clk, rst, flush,
     imm_in, mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in,
+    exp_en_in,
     exe_cmd_in,
     dest_in, status_reg_in,
     src1_in, src2_in,
@@ -8,6 +9,7 @@ module ID_Stage_Reg (
     signed_imm_24_in,
     pc_in, val_rn_in, val_rm_in,
     imm, mem_r_en, mem_w_en, wb_en, b, s,
+    exp_en,
     exe_cmd,
     dest, status_reg,
     src1, src2,
@@ -17,6 +19,7 @@ module ID_Stage_Reg (
 );
     input clk, rst, flush;
     input imm_in, mem_r_en_in, mem_w_en_in, wb_en_in, b_in, s_in;
+    input exp_en_in;
     input [3:0] exe_cmd_in;
     input [3:0] dest_in, status_reg_in;
     input [3:0] src1_in, src2_in;
@@ -24,6 +27,7 @@ module ID_Stage_Reg (
     input [23:0] signed_imm_24_in;
     input [31:0] pc_in, val_rn_in, val_rm_in;
     output reg imm, mem_r_en, mem_w_en, wb_en, b, s;
+    output reg exp_en;
     output reg [3:0] exe_cmd;
     output reg [3:0] dest, status_reg;
     output reg [3:0] src1, src2;
@@ -39,6 +43,7 @@ module ID_Stage_Reg (
             wb_en <= 1'b0;
             b <= 1'b0;
             s <= 1'b0;
+            exp_en <= 1'b0;
             exe_cmd <= 4'b0;
             dest <= 4'b0;
             src1 <= 4'b0;
@@ -57,6 +62,7 @@ module ID_Stage_Reg (
             wb_en <= 1'b0;
             b <= 1'b0;
             s <= 1'b0;
+            exp_en <= 1'b0;
             exe_cmd <= 4'b0;
             dest <= 4'b0;
             src1 <= 4'b0;
@@ -75,6 +81,7 @@ module ID_Stage_Reg (
             wb_en <= wb_en_in;
             b <= b_in;
             s <= s_in;
+            exp_en <= exp_en_in;
             exe_cmd <= exe_cmd_in;
             dest <= dest_in;
             src1 <= src1_in;

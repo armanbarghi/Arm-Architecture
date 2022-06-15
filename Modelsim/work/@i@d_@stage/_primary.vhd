@@ -10,6 +10,8 @@ entity ID_Stage is
         status_reg      : in     vl_logic_vector(3 downto 0);
         wb_value        : in     vl_logic_vector(31 downto 0);
         wb_dest         : in     vl_logic_vector(3 downto 0);
+        exp_en          : out    vl_logic;
+        exp_ready       : out    vl_logic;
         two_src         : out    vl_logic;
         imm             : out    vl_logic;
         mem_r_en        : out    vl_logic;

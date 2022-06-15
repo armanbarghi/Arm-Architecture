@@ -12,6 +12,8 @@ entity ControlUnit is
         wb_en           : out    vl_logic;
         b               : out    vl_logic;
         s_out           : out    vl_logic;
+        exp_en          : out    vl_logic;
+        exp_ready       : out    vl_logic;
         exe_cmd         : out    vl_logic_vector(3 downto 0)
     );
 end ControlUnit;

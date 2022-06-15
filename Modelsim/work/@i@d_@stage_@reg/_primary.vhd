@@ -11,6 +11,7 @@ entity ID_Stage_Reg is
         wb_en_in        : in     vl_logic;
         b_in            : in     vl_logic;
         s_in            : in     vl_logic;
+        exp_en_in       : in     vl_logic;
         exe_cmd_in      : in     vl_logic_vector(3 downto 0);
         dest_in         : in     vl_logic_vector(3 downto 0);
         status_reg_in   : in     vl_logic_vector(3 downto 0);
@@ -27,6 +28,7 @@ entity ID_Stage_Reg is
         wb_en           : out    vl_logic;
         b               : out    vl_logic;
         s               : out    vl_logic;
+        exp_en          : out    vl_logic;
         exe_cmd         : out    vl_logic_vector(3 downto 0);
         dest            : out    vl_logic_vector(3 downto 0);
         status_reg      : out    vl_logic_vector(3 downto 0);
