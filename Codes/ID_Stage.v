@@ -92,5 +92,4 @@ module ID_Stage (
         .reg2(val_rm)
     );
 
-
 endmodule

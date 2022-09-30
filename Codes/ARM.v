@@ -301,13 +301,22 @@ input          TD_CLK27;            //	TV Decoder 27MHz CLK
 ////////////////////////	GPIO	////////////////////////////////
 inout	[35:0]	GPIO_0;					//	GPIO Connection 0
 inout	[35:0]	GPIO_1;					//	GPIO Connection 1
-
+reg clock;
 	ARM_cpu CPU (
-		.clk(CLOCK_50),
+		.clock(CLOCK_50),
 		.rst(SW[0]),
-		.mode(SW[1])
+		.mode(SW[1]),
+		.pc_if(),
+		.instruction_if(),
+		.mem0(),
+		.mem1(),
+		.mem2(),
+		.mem3(),
+		.mem4(),
+		.mem5(),
+		.mem6()
 	);
-
+	
 	assign LEDG[0] = SW[0];
 	assign LEDG[1] = SW[1];
 

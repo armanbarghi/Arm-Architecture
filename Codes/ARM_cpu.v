@@ -1,10 +1,12 @@
 module ARM_cpu (
-    clk, rst, mode
+    clock, rst, mode,
+    pc_if, instruction_if,
+    mem0,mem1,mem2,mem3,mem4,mem5,mem6
 );
-    input clk, rst, mode;
+    input clock, rst, mode;
+    output [31:0] pc_if, instruction_if,mem0,mem1,mem2,mem3,mem4,mem5,mem6;
     
     wire [31:0] branch_addr;
-    wire [31:0] pc_if, instruction_if;
     wire [31:0] pc_id, instruction_id;
     wire [31:0] pc_exe;
     wire [3:0] status_bits_in, status_bits_out;
@@ -33,6 +35,13 @@ module ARM_cpu (
     wire [31:0] fu_val_rm;
 
     assign hazard = (hazard1 & ~mode) | (hazard2 & mode);
+    reg clk;
+    always@(posedge clock, posedge rst)begin
+        if(rst == 1'b1)
+            clk <= 1'b0;
+        else
+		    clk <= ~clk;
+	end
 
     IF_Stage if_stage (
         .clk(clk),
@@ -210,7 +219,8 @@ module ARM_cpu (
         .mem_write(mem_w_en_mem),
         .address(alu_res_mem-32'd1024),
         .data(val_rm_mem),
-        .mem_result(mem_res)
+        .mem_result(mem_res),
+        .mem0(mem0), .mem1(mem1), .mem2(mem2), .mem3(mem3), .mem4(mem4), .mem5(mem5), .mem6(mem6)
     );
 
     MEM_Stage_Reg memory_stage_reg(

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ARM
-Wed May 18 10:02:24 2022
+Wed Jun 01 11:16:13 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,30 +9,33 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow Model Fmax Summary
-  6. Slow Model Setup Summary
-  7. Slow Model Hold Summary
-  8. Slow Model Recovery Summary
-  9. Slow Model Removal Summary
- 10. Slow Model Minimum Pulse Width Summary
- 11. Propagation Delay
- 12. Minimum Propagation Delay
- 13. Fast Model Setup Summary
- 14. Fast Model Hold Summary
- 15. Fast Model Recovery Summary
- 16. Fast Model Removal Summary
- 17. Fast Model Minimum Pulse Width Summary
- 18. Propagation Delay
- 19. Minimum Propagation Delay
- 20. Multicorner Timing Analysis Summary
- 21. Progagation Delay
- 22. Minimum Progagation Delay
- 23. Clock Transfers
- 24. Report TCCS
- 25. Report RSKM
- 26. Unconstrained Paths
- 27. TimeQuest Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Minimum Pulse Width: 'altera_reserved_tck'
+ 13. Propagation Delay
+ 14. Minimum Propagation Delay
+ 15. Fast Model Setup Summary
+ 16. Fast Model Hold Summary
+ 17. Fast Model Recovery Summary
+ 18. Fast Model Removal Summary
+ 19. Fast Model Minimum Pulse Width Summary
+ 20. Fast Model Minimum Pulse Width: 'altera_reserved_tck'
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Multicorner Timing Analysis Summary
+ 24. Progagation Delay
+ 25. Minimum Progagation Delay
+ 26. Clock Transfers
+ 27. Report TCCS
+ 28. Report RSKM
+ 29. Unconstrained Paths
+ 30. TimeQuest Timing Analyzer Messages
 
 
 
@@ -68,21 +71,39 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 8      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; ARM.sdc       ; OK     ; Wed Jun 01 11:16:12 2022 ;
++---------------+--------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                    ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period  ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; altera_reserved_tck ; Base ; 100.000 ; 10.0 MHz  ; 0.000 ; 50.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck } ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
 
 
 ---------------------------
@@ -115,10 +136,22 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
-; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.778 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'altera_reserved_tck'                                                       ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.778 ; 100.000      ; 2.222          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
 +----------------------------------------------------+
@@ -126,8 +159,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
-; SW[1]      ; LEDG[1]     ; 5.459 ;    ;    ; 5.459 ;
+; SW[0]      ; LEDG[0]     ; 8.100 ;    ;    ; 8.100 ;
+; SW[1]      ; LEDG[1]     ; 5.508 ;    ;    ; 5.508 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -136,8 +169,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
-; SW[1]      ; LEDG[1]     ; 5.459 ;    ;    ; 5.459 ;
+; SW[0]      ; LEDG[0]     ; 8.100 ;    ;    ; 8.100 ;
+; SW[1]      ; LEDG[1]     ; 5.508 ;    ;    ; 5.508 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -165,10 +198,22 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
-; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.778 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'altera_reserved_tck'                                                       ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.778 ; 100.000      ; 2.222          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
 +----------------------------------------------------+
@@ -176,8 +221,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
-; SW[1]      ; LEDG[1]     ; 2.966 ;    ;    ; 2.966 ;
+; SW[0]      ; LEDG[0]     ; 4.233 ;    ;    ; 4.233 ;
+; SW[1]      ; LEDG[1]     ; 2.994 ;    ;    ; 2.994 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -186,19 +231,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
-; SW[1]      ; LEDG[1]     ; 2.966 ;    ;    ; 2.966 ;
+; SW[0]      ; LEDG[0]     ; 4.233 ;    ;    ; 4.233 ;
+; SW[1]      ; LEDG[1]     ; 2.994 ;    ;    ; 2.994 ;
 +------------+-------------+-------+----+----+-------+
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++----------------------+-------+------+----------+---------+---------------------+
+; Clock                ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack     ; N/A   ; N/A  ; N/A      ; N/A     ; 97.778              ;
+;  altera_reserved_tck ; N/A   ; N/A  ; N/A      ; N/A     ; 97.778              ;
+; Design-wide TNS      ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
+;  altera_reserved_tck ; N/A   ; N/A  ; N/A      ; N/A     ; 0.000               ;
++----------------------+-------+------+----------+---------+---------------------+
 
 
 +----------------------------------------------------+
@@ -206,8 +253,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 5.209 ;    ;    ; 5.209 ;
-; SW[1]      ; LEDG[1]     ; 5.459 ;    ;    ; 5.459 ;
+; SW[0]      ; LEDG[0]     ; 8.100 ;    ;    ; 8.100 ;
+; SW[1]      ; LEDG[1]     ; 5.508 ;    ;    ; 5.508 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -216,8 +263,8 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDG[0]     ; 2.847 ;    ;    ; 2.847 ;
-; SW[1]      ; LEDG[1]     ; 2.966 ;    ;    ; 2.966 ;
+; SW[0]      ; LEDG[0]     ; 4.233 ;    ;    ; 4.233 ;
+; SW[1]      ; LEDG[1]     ; 2.994 ;    ;    ; 2.994 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -245,9 +292,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Clocks            ; 3     ; 3    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 3093  ; 3093 ;
 ; Unconstrained Output Ports      ; 2     ; 2    ;
 ; Unconstrained Output Port Paths ; 2     ; 2    ;
 +---------------------------------+-------+------+
@@ -259,42 +306,93 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 18 10:02:22 2022
+    Info: Processing started: Wed Jun 01 11:16:09 2022
 Info: Command: quartus_sta ARM -c ARM
 Info: qsta_default_script.tcl version: #1
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'ARM.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 32 combinational loops as latches.
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity sld_jtag_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
+Info (332104): Reading SDC File: 'ARM.sdc'
+Warning (332174): Ignored filter at ARM.sdc(26): clk could not be matched with a port
+Warning (332049): Ignored create_clock at ARM.sdc(26): Argument <targets> is an empty collection
+    Info (332050): create_clock -name "clk" -period 30.000ns [get_ports {clk}] -waveform {0.000 15.000}
+Warning (332125): Found combinational loop of 37 nodes
+    Warning (332126): Node "CPU|hazard~7|combout"
+    Warning (332126): Node "CPU|id_stage|mux9b|y[7]~2|datab"
+    Warning (332126): Node "CPU|id_stage|mux9b|y[7]~2|combout"
+    Warning (332126): Node "CPU|id_stage|two_src|datad"
+    Warning (332126): Node "CPU|id_stage|two_src|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|dataa"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|combout"
+    Warning (332126): Node "CPU|hazard~7|dataa"
+    Warning (332126): Node "CPU|hazard~5|dataa"
+    Warning (332126): Node "CPU|hazard~5|combout"
+    Warning (332126): Node "CPU|hazard~6|datab"
+    Warning (332126): Node "CPU|hazard~6|combout"
+    Warning (332126): Node "CPU|hazard~7|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[1]~1|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[1]~1|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~0|datac"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~0|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datad"
+    Warning (332126): Node "CPU|hazard~3|datac"
+    Warning (332126): Node "CPU|hazard~3|combout"
+    Warning (332126): Node "CPU|hazard~5|datab"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[0]~2|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[0]~2|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~0|datad"
+    Warning (332126): Node "CPU|hazard~3|dataa"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[3]~3|datab"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[3]~3|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~1|datac"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~1|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~2|datab"
+    Warning (332126): Node "CPU|hazard~4|datab"
+    Warning (332126): Node "CPU|hazard~4|combout"
+    Warning (332126): Node "CPU|hazard~5|datac"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[2]~4|datad"
+    Warning (332126): Node "CPU|id_stage|mux4b|y[2]~4|combout"
+    Warning (332126): Node "CPU|hazard_unit1|hazard~1|dataa"
+    Warning (332126): Node "CPU|hazard~4|datad"
+Warning (332060): Node: ARM_cpu:CPU|clk was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm was determined to be a clock but was found without an associated clock assignment.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 97.778
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    97.778         0.000 altera_reserved_tck 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Warning (332060): Node: ARM_cpu:CPU|clk was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ARM_cpu:CPU|ID_Stage_Reg:id_stage_reg|imm was determined to be a clock but was found without an associated clock assignment.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 97.778
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    97.778         0.000 altera_reserved_tck 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4553 megabytes
-    Info: Processing ended: Wed May 18 10:02:24 2022
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Wed Jun 01 11:16:13 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 
